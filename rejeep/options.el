@@ -42,5 +42,8 @@
 ;; Show unfinished keystrokes early.
 (setq echo-keystrokes 0.1)
 
+;; Maximum decoration
+(setq font-lock-maximum-decoration t)
+
 ;; Alias to delete all trailing whitespace.
 (defalias 'dtw 'delete-trailing-whitespace)
