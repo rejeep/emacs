@@ -1,4 +1,4 @@
-;; Contains keybindings
+;; Keybindings.
 
 ;; Go to line.
 (global-set-key (kbd "M-g") 'goto-line)
