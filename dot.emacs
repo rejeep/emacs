@@ -2,6 +2,7 @@
 (load "~/.emacs.d/rejeep/loadpath.el")
 (load "~/.emacs.d/rejeep/options.el")
 (load "~/.emacs.d/rejeep/colors.el")
+(load "~/.emacs.d/rejeep/navigation.el")
 (load "~/.emacs.d/rejeep/keybindings.el")
 
 ;; Split window horizontally at startup.
