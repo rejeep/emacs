@@ -21,6 +21,9 @@
 ;; Paste from clippboard.
 (global-set-key (kbd "C-x M-v") 'clipboard-yank)
 
+;; Newline and then indent.
+(global-set-key (kbd "RET") 'newline-and-indent)
+
 ;; Opens line below and goes to that line.
 (global-set-key (kbd "<C-return>") 'open-line-below)
 
