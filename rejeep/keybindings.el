@@ -21,6 +21,12 @@
 ;; Paste from clippboard.
 (global-set-key (kbd "C-x M-v") 'clipboard-yank)
 
+;; Opens line below and goes to that line.
+(global-set-key (kbd "<C-return>") 'open-line-below)
+
+;; Opens line above and goes to that line.
+(global-set-key (kbd "<C-M-return>") 'open-line-above)
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 
