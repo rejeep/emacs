@@ -1,3 +1,5 @@
+;; Options that in some way change the behaviour of Emacs.
+
 ;; ido-mode for mini buffer.
 (ido-mode t)
 
