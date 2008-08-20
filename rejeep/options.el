@@ -39,5 +39,8 @@
 ;; Easy buffer switching by holding down shift and press any arrow key.
 (windmove-default-keybindings 'shift)
 
+;; Show unfinished keystrokes early.
+(setq echo-keystrokes 0.1)
+
 ;; Alias to delete all trailing whitespace.
 (defalias 'dtw 'delete-trailing-whitespace)
