@@ -30,6 +30,9 @@
 ;; Yellow cursor.
 (set-cursor-color "#FFFF00")
 
+;; White mouse pointer.
+(set-mouse-color "white")
+
 ;; So that you only have to type y / n instead of yes / no.
 (fset 'yes-or-no-p 'y-or-n-p)
 
