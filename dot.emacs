@@ -6,6 +6,7 @@
 (load "~/.emacs.d/rejeep/simple-extensions.el")
 (load "~/.emacs.d/rejeep/newcomment-extensions.el")
 (load "~/.emacs.d/rejeep/keybindings.el")
+(load "~/.emacs.d/rejeep/buffers.el")
 
 ;; Split window horizontally at startup.
 (split-window-horizontally)
