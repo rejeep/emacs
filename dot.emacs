@@ -1,5 +1,5 @@
 ;; Load all custom files
-(load "~/.emacs.d/rejeep/loadpath.el")
+(load "~/.emacs.d/rejeep/loadpaths.el")
 (load "~/.emacs.d/rejeep/options.el")
 (load "~/.emacs.d/rejeep/colors.el")
 (load "~/.emacs.d/rejeep/helpers.el")
