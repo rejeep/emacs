@@ -1,0 +1,6 @@
+#name : Else if
+# --
+else if(${1:condition})
+{
+  $0
+}

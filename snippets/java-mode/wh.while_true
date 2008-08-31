@@ -1,0 +1,7 @@
+#name : While true
+# --
+while(true)
+{
+  $0
+  break;
+}

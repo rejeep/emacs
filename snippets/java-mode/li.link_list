@@ -1,0 +1,3 @@
+#name : LinkedList
+# --
+List<${1:type}> ${2:variable_name} = new LinkedList<$1>();

@@ -1,0 +1,3 @@
+#name : Array
+# --
+${1:type}[] ${2:variable_name} = new $1[${4:size}];

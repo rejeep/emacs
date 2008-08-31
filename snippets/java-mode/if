@@ -1,0 +1,6 @@
+#name : If condition
+# --
+if(${1:condition})
+{
+  $0
+}

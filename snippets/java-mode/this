@@ -1,0 +1,3 @@
+#name : this.instance = variable
+# --
+this.${1:variable_name} = $1;

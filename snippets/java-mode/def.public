@@ -1,0 +1,6 @@
+#name : Public method
+# --
+public ${2:return_type} ${3:method_name}($4)
+{
+  $0
+}

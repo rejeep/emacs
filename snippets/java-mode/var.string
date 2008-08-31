@@ -1,0 +1,3 @@
+#name : String variable
+# --
+String ${1:variable_name} = "$2";

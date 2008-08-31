@@ -1,0 +1,10 @@
+#name : Catch exception
+# --
+try
+{
+  $0
+}
+catch(${1:type}Exception ${2:variable_name})
+{
+  $2.printStackTrace();
+}
