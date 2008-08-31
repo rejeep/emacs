@@ -1,0 +1,1 @@
+(load "~/.emacs.d/rejeep/programming/ruby.el")
