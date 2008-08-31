@@ -21,4 +21,20 @@
 
              ;; So that the left brace is placed on new row.
              (setq jde-gen-k&r nil)
+
+
+             ;; Generate getter and setter methods to variables.
+             (define-key jde-mode-map (kbd "C-c C-v w") 'jde-wiz-get-set-methods)
+             
+             ;; Generate variables and getter and setter methods to them.
+             (define-key jde-mode-map (kbd "C-c C-v g") 'jde-gen-get-set-methods)
+
+             ;; Fix imports.
+             (define-key jde-mode-map (kbd "C-c o")
+               (lambda ()
+                 (interactive)
+                 (jde-import-all)
+                 (jde-import-organize)
+                 (jde-import-kill-extra-imports)
+                 ))
              ))
