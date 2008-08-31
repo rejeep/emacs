@@ -11,3 +11,6 @@
 (require 'yasnippet)
 (yas/load-directory "~/.emacs.d/snippets")
 (yas/initialize)
+
+;; Emacs Code Browser.
+(require 'ecb)

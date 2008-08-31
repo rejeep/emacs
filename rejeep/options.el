@@ -47,5 +47,8 @@
 ;; Maximum decoration
 (setq font-lock-maximum-decoration t)
 
+;; No ECB tip of the day.
+(setq ecb-tip-of-the-day nil)
+
 ;; Alias to delete all trailing whitespace.
 (defalias 'dtw 'delete-trailing-whitespace)

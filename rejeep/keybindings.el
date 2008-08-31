@@ -30,6 +30,12 @@
 ;; Opens line above and goes to that line.
 (global-set-key (kbd "<C-M-return>") 'open-line-above)
 
+;; Activate ECB.
+(global-set-key (kbd "<M-f1>") 'ecb-activate)
+
+;; Toggle ECB show and hide.
+(global-set-key (kbd "§") 'ecb-toggle-ecb-windows)
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 
