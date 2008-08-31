@@ -33,8 +33,8 @@
              (define-key jde-mode-map (kbd "C-c o")
                (lambda ()
                  (interactive)
-                 (jde-import-all)
-                 (jde-import-organize)
-                 (jde-import-kill-extra-imports)
-                 ))
+                 (save-excursion
+                   (jde-import-all)
+                   (jde-import-organize)
+                   (jde-import-kill-extra-imports))))
              ))
