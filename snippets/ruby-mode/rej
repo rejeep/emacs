@@ -1,0 +1,3 @@
+name : reject { |variable_name| ... }
+# --
+reject { |${1:variable_name}| $0 }

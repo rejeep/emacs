@@ -1,0 +1,3 @@
+#name : Flash warning
+# --
+flash[:warning] = "$0"

@@ -1,0 +1,5 @@
+#name : Each
+# --
+${1:collection}s.each do |$1$2|
+  $0
+end

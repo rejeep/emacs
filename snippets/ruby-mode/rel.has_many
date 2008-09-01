@@ -1,0 +1,3 @@
+name : Has many
+# --
+has_many :

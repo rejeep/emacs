@@ -1,0 +1,5 @@
+#name : Validate each
+# --
+validates_each ${1:attributes} do |${2:record}, ${3:attr}, ${4:value}|
+  record.errors.add $3, "${5:message}"
+end
