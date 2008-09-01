@@ -1,4 +1,4 @@
-#name : For
+#name : for ... in ... end
 # --
 for ${1:variable_name} in $2$1s
   $0

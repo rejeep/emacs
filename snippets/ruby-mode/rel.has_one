@@ -1,3 +1,3 @@
-name : Has one
+name : has_one ...
 # --
 has_one :

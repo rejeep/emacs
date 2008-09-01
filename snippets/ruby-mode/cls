@@ -1,4 +1,4 @@
-#name : class Name
+#name : Class
 # --
 class ${1:class_name}
   $0
