@@ -1,4 +1,4 @@
-#name :  private method_name() { ... }
+#name : private method_name() { ... }
 # --
 private ${2:return_type} ${3:method_name}($4)
 {
