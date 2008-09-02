@@ -1,5 +1,6 @@
 (load "~/.emacs.d/rejeep/programming/ruby.el")
 (load "~/.emacs.d/rejeep/programming/java.el")
+(load "~/.emacs.d/rejeep/programming/rails.el")
 
 (add-hook 'find-file-hooks
 	  '(lambda ()
