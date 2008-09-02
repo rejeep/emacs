@@ -20,5 +20,4 @@ Then move to that line and indent accordning to mode"
   (interactive)
   (backward-word)
   (set-mark (point))
-  (forward-word)
-  )
+  (forward-word))
