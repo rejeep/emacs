@@ -14,3 +14,11 @@ Then move to that line and indent accordning to mode"
   (newline)
   (previous-line)
   (indent-according-to-mode))
+
+(defun mark-current-word()
+  "Mark the word cursor is on."
+  (interactive)
+  (backward-word)
+  (set-mark (point))
+  (forward-word)
+  )

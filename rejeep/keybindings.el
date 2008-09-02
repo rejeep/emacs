@@ -48,6 +48,9 @@
 ;; Yank and pop kill ring.
 (global-set-key (kbd "M-v") 'yank-pop)
 
+;; Mark word cursor is on.
+(global-set-key (kbd "M-a") 'mark-current-word)
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 
