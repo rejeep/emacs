@@ -51,6 +51,8 @@
 ;; Mark word cursor is on.
 (global-set-key (kbd "M-a") 'mark-current-word)
 
+(global-set-key (kbd "<M-backspace>") 'backward-delete-word)
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 
