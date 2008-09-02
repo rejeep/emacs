@@ -1,5 +1,3 @@
-;; This file contains functions similar those you find in Emacs builtin file simple.el
-
 (defun open-line-below()
   "Open a line below the line the point is at.
 Then move to that line and indent accordning to mode"

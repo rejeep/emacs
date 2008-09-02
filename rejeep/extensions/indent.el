@@ -5,7 +5,6 @@
       (call-interactively 'indent-region)
     (indent-buffer)))
 
-
 (defun indent-buffer()
   "Indents whole buffer."
   (interactive)
