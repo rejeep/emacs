@@ -7,6 +7,7 @@
 (load "~/.emacs.d/rejeep/extensions/simple.el")
 (load "~/.emacs.d/rejeep/extensions/newcomment.el")
 (load "~/.emacs.d/rejeep/extensions/indent.el")
+(load "~/.emacs.d/rejeep/extensions/c.el")
 (load "~/.emacs.d/rejeep/keybindings.el")
 (load "~/.emacs.d/rejeep/buffers.el")
 (load "~/.emacs.d/rejeep/programming.el")
