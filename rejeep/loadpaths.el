@@ -7,3 +7,4 @@
 (add-to-list 'load-path "~/.emacs.d/packages/rinari")
 (add-to-list 'load-path "~/.emacs.d/packages/rhtml")
 (add-to-list 'load-path "~/.emacs.d/packages/jump.el")
+(add-to-list 'load-path "~/.emacs.d/packages/yaml-mode")
