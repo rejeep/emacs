@@ -51,6 +51,7 @@
 ;; Mark word cursor is on.
 (global-set-key (kbd "M-a") 'mark-current-word)
 
+;; Delete work backwards without saving it to the kill ring.
 (global-set-key (kbd "<M-backspace>") 'backward-delete-word)
 
 ;; Fast access to ~/.emacs.
