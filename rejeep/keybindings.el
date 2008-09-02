@@ -36,6 +36,9 @@
 ;; Toggle ECB show and hide.
 (global-set-key (kbd "§") 'ecb-toggle-ecb-windows)
 
+;; Mark whole buffer.
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 
