@@ -1,4 +1,4 @@
-#name : While condition
+#name : while(condition) { ... }
 # --
 while(${1:condition})
 {

@@ -1,4 +1,4 @@
-#name : Catch exception
+#name : try { ... } catch { ... }
 # --
 try
 {

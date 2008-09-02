@@ -1,4 +1,4 @@
-#name : While true
+#name : while(true) { ... }
 # --
 while(true)
 {

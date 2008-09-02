@@ -1,4 +1,4 @@
-#name : Foreach
+#name : for( ... : ... ) { ... }
 # --
 for(${1:type} ${2:variable_name} : ${3:collection})
 {

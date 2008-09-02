@@ -1,0 +1,5 @@
+#name : Class
+# --
+class ${1:class_name}
+  $0
+end

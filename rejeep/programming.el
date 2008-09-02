@@ -16,6 +16,12 @@
 (yas/load-directory "~/.emacs.d/snippets")
 (yas/initialize)
 
+(add-hook 'yas/after-exit-snippet-hook
+	  '(lambda ()
+             ;; Indent whole snippet region.
+             (indent-region yas/snippet-beg yas/snippet-end)
+             ))
+
 ;; Emacs Code Browser.
 (require 'ecb)
 

@@ -1,4 +1,4 @@
-#name : For
+#name : for( ...; ...; ...) { ... }
 # --
 for(int ${1:variable_name} = ${2:variable_value}; $1 < ${3:collection}.length; $1++)
 {

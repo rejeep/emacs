@@ -1,0 +1,3 @@
+#name : flash[:error] = ...
+# --
+flash[:error] = "$0"

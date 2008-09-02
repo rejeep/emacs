@@ -1,4 +1,4 @@
-#name : Else if
+#name : else if(condition) { ... }
 # --
 else if(${1:condition})
 {
