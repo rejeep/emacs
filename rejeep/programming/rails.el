@@ -10,7 +10,7 @@
              ;; TAGS file is in rails root if any.
              (setq rinari-tags-file-name "TAGS")
 
-             ;; Rinari find methods.
+             ;; Keybindings to Rinari find methods.
              (define-key rinari-minor-mode-map (kbd "C-c c") 'rinari-find-controller)
              (define-key rinari-minor-mode-map (kbd "C-c m") 'rinari-find-model)
              (define-key rinari-minor-mode-map (kbd "C-c v") 'rinari-find-view)
