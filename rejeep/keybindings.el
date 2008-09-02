@@ -39,6 +39,9 @@
 ;; Mark whole buffer.
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
 
+;; Indent region or buffer.
+(global-set-key (kbd "C-S-f") 'indent-region-or-buffer)
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 
