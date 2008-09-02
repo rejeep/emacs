@@ -4,6 +4,7 @@
 (load "~/.emacs.d/rejeep/programming/java.el")
 (load "~/.emacs.d/rejeep/programming/rails.el")
 (load "~/.emacs.d/rejeep/programming/javascript.el")
+(load "~/.emacs.d/rejeep/programming/css.el")
 
 (add-hook 'find-file-hooks
 	  '(lambda ()
