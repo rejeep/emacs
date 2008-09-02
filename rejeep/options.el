@@ -50,5 +50,12 @@
 ;; No ECB tip of the day.
 (setq ecb-tip-of-the-day nil)
 
+;; Split window horizontally at startup.
+(split-window-horizontally)
+
+;; Stuff for the custom interface.
+(setq custom-file "~/.emacs.d/rejeep/custom.el")
+
+
 ;; Alias to delete all trailing whitespace.
 (defalias 'dtw 'delete-trailing-whitespace)
