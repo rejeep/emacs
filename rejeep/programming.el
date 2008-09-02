@@ -1,6 +1,9 @@
+;; Common programming stuff in this file.
+
 (load "~/.emacs.d/rejeep/programming/ruby.el")
 (load "~/.emacs.d/rejeep/programming/java.el")
 (load "~/.emacs.d/rejeep/programming/rails.el")
+(load "~/.emacs.d/rejeep/programming/javascript.el")
 
 (add-hook 'find-file-hooks
 	  '(lambda ()
