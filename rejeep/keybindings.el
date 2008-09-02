@@ -42,6 +42,12 @@
 ;; Indent region or buffer.
 (global-set-key (kbd "C-S-f") 'indent-region-or-buffer)
 
+;; Yank.
+(global-set-key (kbd "C-v") 'yank)
+
+;; Yank and pop kill ring.
+(global-set-key (kbd "M-v") 'yank-pop)
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 
