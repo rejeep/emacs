@@ -1,0 +1,3 @@
+#name : padding: ...px ...px ...px ...px;
+# --
+padding: ${1:top}px ${2:right}px ${3:bottom}px ${4:left}px;

@@ -1,0 +1,3 @@
+#name : border-right: ...px color style;
+# --
+border-right: $1px ${2:color} ${3:style};

@@ -1,0 +1,3 @@
+#name : margin: ...px ...px ...px ...px;
+# --
+margin: ${1:top}px ${2:right}px ${3:bottom}px ${4:left}px;

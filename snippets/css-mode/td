@@ -1,0 +1,3 @@
+#name : text-decoration
+# --
+text-decoration: $1;
