@@ -1,0 +1,3 @@
+#name : javascript_include_tag ...
+# --
+<%= javascript_include_tag :$1 %>
