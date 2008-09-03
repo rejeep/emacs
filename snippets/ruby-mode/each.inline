@@ -1,0 +1,3 @@
+#name : each { |variable_name| ... }
+# --
+each { |${1:variable_name}| $0 }
