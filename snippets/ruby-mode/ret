@@ -1,0 +1,3 @@
+#name : redirect_to ...
+# --
+redirect_to $1_path
