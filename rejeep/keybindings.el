@@ -57,6 +57,9 @@
 ;; Delete work backwards without saving it to the kill ring.
 (global-set-key (kbd "<M-backspace>") 'backward-delete-word)
 
+;; Google region.
+(global-set-key (kbd "C-c C-c g") 'google-region)
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 

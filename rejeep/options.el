@@ -53,6 +53,9 @@
 ;; Split window horizontally at startup.
 (split-window-horizontally)
 
+;; Use firefox as default browser.
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "/usr/bin/firefox")
 
 ;; Alias to delete all trailing whitespace.
 (defalias 'dtw 'delete-trailing-whitespace)
