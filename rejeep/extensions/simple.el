@@ -21,3 +21,15 @@ Then move to that line and indent accordning to mode"
   (backward-word)
   (set-mark (point))
   (forward-word))
+
+  "Moves to the beginning of indentation."
+  "If pressed again the cursor will be placed in the beginning of the line."
+
+(defun back-to-indentation-or-beginning-of-line()
+  "Moves point back to indentation if there is any
+non blank characters to the left of the cursor.
+Otherwise point moves to beginning of line."
+  (interactive)
+  (if (or (bolp) (string-match "^[ \t]*$" (buffer-substring (line-beginning-position) (point))))
+      (beginning-of-line)
+    (back-to-indentation)))

@@ -51,6 +51,9 @@
 ;; Mark word cursor is on.
 (global-set-key (kbd "M-a") 'mark-current-word)
 
+;; Back to indentation or beginning of line.
+(global-set-key (kbd "<home>") 'back-to-indentation-or-beginning-of-line)
+
 ;; Delete work backwards without saving it to the kill ring.
 (global-set-key (kbd "<M-backspace>") 'backward-delete-word)
 
