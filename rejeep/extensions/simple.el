@@ -22,9 +22,6 @@ Then move to that line and indent accordning to mode"
   (set-mark (point))
   (forward-word))
 
-  "Moves to the beginning of indentation."
-  "If pressed again the cursor will be placed in the beginning of the line."
-
 (defun back-to-indentation-or-beginning-of-line()
   "Moves point back to indentation if there is any
 non blank characters to the left of the cursor.
