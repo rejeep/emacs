@@ -8,5 +8,4 @@
  '(flymake-warnline ((((class color)) (:underline "yellow"))))
  '(yas/field-highlight-face ((t (:background "green" :foreground "black"))))
  '(yas/mirror-highlight-face ((t nil)))
- '(highline-face ((t (:background "#383838"))))
  )

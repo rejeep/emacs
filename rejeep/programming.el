@@ -10,9 +10,6 @@
 	  '(lambda ()
              ;; Make tab key to expand snippets.
 	     (local-set-key (kbd "<tab>") 'yas/expand)
-
-             ;; Activate highline.
-             (highline-mode 1)
              ))
 
 ;; Snippets.
