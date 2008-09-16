@@ -60,6 +60,12 @@
 ;; Google region.
 (global-set-key (kbd "C-c C-c g") 'google-region)
 
+;; Move cursor 30 lines down or to end of buffer.
+(global-set-key (kbd "<next>") (lambda() (interactive) (forward-line 30)))
+
+;; Move cursor 30 lines up or to beginning of buffer.
+(global-set-key (kbd "<prior>") (lambda() (interactive) (forward-line -30)))
+
 ;; Fast access to ~/.emacs.
 (global-set-key (kbd "C-x e") (lambda() (interactive) (find-file "~/.emacs")))
 
