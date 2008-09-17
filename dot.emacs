@@ -11,6 +11,7 @@
 (load "~/.emacs.d/rejeep/keybindings.el")
 (load "~/.emacs.d/rejeep/buffers.el")
 (load "~/.emacs.d/rejeep/programming.el")
+(load "~/.emacs.d/rejeep/other.el")
 
 ;; Gentoo stuff.
 (require 'site-gentoo)
