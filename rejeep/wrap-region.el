@@ -7,6 +7,13 @@
                           ("|" . "|"))
   "Characters and their right 'friend'.")
 
+(defvar wrap-region-hook
+  "Runned after a region is wrapped. These variables are set:
+wrap-region-beginning: The begining of the region before wrap.
+wrap-region-end:The end of the region before wrap."
+  '()
+  )
+
 (defun wrap-region(left right beg end)
   "Wraps a region with left and right."
   (save-excursion
@@ -14,7 +21,9 @@
     (insert left)
     (goto-char (+ end (length left)))
     (insert right)
-    (indent-region beg end)))
+    (let ((wrap-region-beginning beg) (wrap-region-end end))
+      (run-hooks 'wrap-region-hook)
+      )))
 
 (defun wrap-region-with-function(left)
   "Returns a function which, when called, will interactively `wrap-region-or-insert'."
