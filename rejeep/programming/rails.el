@@ -23,6 +23,12 @@
              (define-key rinari-minor-mode-map (kbd "C-c k") 'rinari-find-configuration)
              ))
 
+(add-hook 'rhtml-mode-hook
+          '(lambda()
+             (wrap-region-bind-keys rhtml-mode-map "\"" "'")
+             
+             (define-key rhtml-mode-map (kbd "<") 'wrap-region-with-tag-or-insert)
+             ))
 
 ;; Use rhtml-mode for html.erb files.
 (add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))

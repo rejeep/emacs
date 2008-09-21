@@ -13,7 +13,14 @@
     (goto-char beg)
     (insert left)
     (goto-char (+ end (length left)))
-    (insert right)))
+    (insert right)
+    (indent-region beg end)))
+
+(defun wrap-region-with-function(left)
+  "Returns a function which, when called, will interactively `wrap-region-or-insert'."
+  (interactive)
+  `(lambda() (interactive)
+     (wrap-region-or-insert ,left)))
 
 (defun wrap-region-or-insert(left)
   "Wraps a region with a region with punctuation characters
@@ -31,9 +38,14 @@ or inserts the characters and places the cursor in between them."
       (call-interactively 'wrap-region-with-tag)
     (insert "<")))
 
-(defun wrap-region-with-tag(tag beg end)
+(defun wrap-region-with-tag(tag)
   "Wraps a region with a tag."
-  (interactive "*sTag: \nr")
-  (wrap-region (concat "<" tag ">") (concat "</" tag ">") beg end))
+  (interactive "*sTag: ")
+  (wrap-region (concat "<" tag ">") (concat "</" tag ">") (region-beginning) (region-end)))
+
+(defun wrap-region-bind-keys(mode-map &rest punctuations)
+  "Set wrapper key bindings easy."
+  (dolist (punctuation punctuations)
+    (define-key mode-map punctuation (wrap-region-with-function punctuation))))
 
 (provide 'wrap-region)
