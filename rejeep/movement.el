@@ -15,13 +15,6 @@ Then move to that line and indent accordning to mode"
   (previous-line)
   (indent-according-to-mode))
 
-(defun mark-current-word()
-  "Mark the word cursor is on."
-  (interactive)
-  (backward-word)
-  (set-mark (point))
-  (forward-word))
-
 (defun back-to-indentation-or-beginning-of-line()
   "Moves point back to indentation if there is any
 non blank characters to the left of the cursor.
