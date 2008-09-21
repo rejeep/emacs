@@ -1,11 +1,15 @@
 ;; Common programming stuff in this file.
 
-(load "~/.emacs.d/rejeep/programming/ruby.el")
-(load "~/.emacs.d/rejeep/programming/java.el")
-(load "~/.emacs.d/rejeep/programming/rails.el")
-(load "~/.emacs.d/rejeep/programming/javascript.el")
-(load "~/.emacs.d/rejeep/programming/css.el")
+;; Some modes have on the fly syntax check enabled.
+(require 'flymake)
 
+;; Load files for all modes.
+(load "rejeep/programming/css.el")
+(load "rejeep/programming/java.el")
+(load "rejeep/programming/javascript.el")
+(load "rejeep/programming/ruby.el")
+
+;; Hook for opening files.
 (add-hook 'find-file-hooks
 	  '(lambda ()
              ;; Make tab key to expand snippets.

@@ -4,7 +4,6 @@
 ;; For rhtml and html.erb files.
 (require 'rhtml-mode)
 
-
 (add-hook 'rinari-minor-mode-hook
           '(lambda()
              ;; TAGS file is in rails root if any.

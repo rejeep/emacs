@@ -10,8 +10,8 @@
              (require 'jde-eclipse-compiler-server)
              
              ;; Turn on flymake-mode.
-             (flymake-mode 1)
-
+             (flymake-mode-on)
+             
              ;; No "final" when auto creating methods and variables.
              (setq jde-gen-final-arguments nil)
              (setq jde-gen-final-methods nil)
