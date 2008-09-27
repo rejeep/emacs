@@ -63,6 +63,9 @@
 ;; Expands a snippet
 (global-set-key (kbd "<tab>") 'yas/expand)
 
+;; Moves region to *scratch* buffer.
+(global-set-key (kbd "C-c s") 'move-region-to-scratch-buffer)
+
 ;; Move cursor 30 lines down or to end of buffer.
 (global-set-key (kbd "<next>") (lambda() (interactive) (forward-line 30)))
 
