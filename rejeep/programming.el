@@ -6,6 +6,9 @@
 ;; Some modes have on the fly syntax check enabled.
 (require 'flymake)
 
+;; Paste buffer/region or get pastie.
+(require 'pastie)
+
 ;; Snippets.
 (require 'yasnippet)
 (yas/load-directory "~/.emacs.d/snippets")
