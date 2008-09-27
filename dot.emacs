@@ -8,6 +8,7 @@
 (load "~/.emacs.d/rejeep/text.el")
 (load "~/.emacs.d/rejeep/movement.el")
 (load "~/.emacs.d/rejeep/buffers.el")
+(load "~/.emacs.d/rejeep/region.el")
 (load "~/.emacs.d/rejeep/programming.el")
 (load "~/.emacs.d/rejeep/other.el")
 (load "~/.emacs.d/rejeep/keybindings.el")
