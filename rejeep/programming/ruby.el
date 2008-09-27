@@ -20,4 +20,4 @@
              ))
 
 ;; Load Rails configuration file.
-(load "rejeep/programming/rails.el")
+(load "rejeep/programming/rails/init.el")
