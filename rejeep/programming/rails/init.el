@@ -55,7 +55,8 @@
                             (save-buffer)
                             (switch-to-buffer prev-buffer)
                             (insert (concat "<%= render :partial => \"" partial-name "\" %>"))
-                            (indent-for-tab-command))))))
+                            (indent-for-tab-command))
+                           (t (message "Partial with that name exists!"))))))
              ))
 
 ;; Use rhtml-mode for html.erb files.
