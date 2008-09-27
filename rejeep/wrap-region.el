@@ -59,12 +59,14 @@ Other remove character to the left."
   (interactive)
   (if (region-selected)
       (delete-region (region-beginning) (region-end))
-    (let ((before (char-to-string (char-before))) (after (char-to-string (char-after))) (key))
-      (setq key (find before (cdr (assoc major-mode wrap-mode-characters)) :test 'string=))
-      (if (and before after key (string= after (assoc-default before wrap-characters)))
-          (delete-region (- (point) 1) (+ (point) 1))
-        (backward-delete-char-untabify 1)))))
-        
+    (if (and (char-before) (char-after))
+        (let ((before (char-to-string (char-before))) (after (char-to-string (char-after))) (key))
+          (setq key (find before (cdr (assoc major-mode wrap-mode-characters)) :test 'string=))
+          (if (and key (string= after (assoc-default before wrap-characters)))
+              (delete-region (- (point) 1) (+ (point) 1))
+            (backward-delete-char-untabify 1)))
+      (backward-delete-char-untabify 1))))
+
 (defun wrap-region-bind-keys(mode-map &rest punctuations)
   "Set wrapper key bindings easy."
   (dolist (punctuation punctuations)
@@ -73,3 +75,5 @@ Other remove character to the left."
   (define-key mode-map (kbd "<backspace>") 'wrap-delete-backwards))
 
 (provide 'wrap-region)
+
+(print (char-to-string nil))
