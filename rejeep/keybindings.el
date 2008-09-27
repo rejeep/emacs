@@ -60,6 +60,9 @@
 ;; Google region.
 (global-set-key (kbd "C-c C-c g") 'google-region)
 
+;; Expands a snippet
+(global-set-key (kbd "<tab>") 'yas/expand)
+
 ;; Move cursor 30 lines down or to end of buffer.
 (global-set-key (kbd "<next>") (lambda() (interactive) (forward-line 30)))
 

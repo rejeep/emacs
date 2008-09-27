@@ -7,11 +7,13 @@
                           ("|" . "|"))
   "Characters and their right 'friend'.")
 
-(defvar wrap-region-hook
+(defvar wrap-mode-characters '()
+  "Key is the mode name. And the value is a list of all wrapper characters for that mode.")
+
+(defvar wrap-region-hook '()
   "Runned after a region is wrapped. These variables are set:
 wrap-region-beginning: The begining of the region before wrap.
-wrap-region-end: The end of the region before wrap."
-  '())
+wrap-region-end: The end of the region before wrap.")
 
 (defun wrap-region(left right beg end)
   "Wraps a region with left and right."
@@ -50,9 +52,24 @@ or inserts the characters and places the cursor in between them."
   (interactive "*sTag: ")
   (wrap-region (concat "<" tag ">") (concat "</" tag ">") (region-beginning) (region-end)))
 
+(defun wrap-delete-backwards()
+  "Deletes a region if any. If character to the left and
+right are same and exists in `wrap-mode-characters', delete both.
+Other remove character to the left."
+  (interactive)
+  (if (region-selected)
+      (delete-region (region-beginning) (region-end))
+    (let ((before (char-to-string (char-before))) (after (char-to-string (char-after))) (key))
+      (setq key (find before (cdr (assoc major-mode wrap-mode-characters)) :test 'string=))
+      (if (and before after key (string= after (assoc-default before wrap-characters)))
+          (delete-region (- (point) 1) (+ (point) 1))
+        (backward-delete-char-untabify 1)))))
+        
 (defun wrap-region-bind-keys(mode-map &rest punctuations)
   "Set wrapper key bindings easy."
   (dolist (punctuation punctuations)
-    (define-key mode-map punctuation (wrap-region-with-function punctuation))))
+    (define-key mode-map punctuation (wrap-region-with-function punctuation)))
+  (aput 'wrap-mode-characters major-mode punctuations)
+  (define-key mode-map (kbd "<backspace>") 'wrap-delete-backwards))
 
 (provide 'wrap-region)

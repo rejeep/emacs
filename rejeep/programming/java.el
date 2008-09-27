@@ -2,12 +2,12 @@
           '(lambda()
              ;; Two spaces wide indention.
              (setq c-basic-offset 2)             
-             
-             (wrap-region-bind-keys java-mode-map "\"" "'" "{" "[" "|")
              ))
 
 (add-hook 'jde-mode-hook
           '(lambda()
+             (wrap-region-bind-keys jde-mode-map "\"" "'" "{" "[" "|" "(")
+             
              ;; Show warnings and errors in code.
              (require 'jde-eclipse-compiler-server)
              
