@@ -75,5 +75,3 @@ Other remove character to the left."
   (define-key mode-map (kbd "<backspace>") 'wrap-delete-backwards))
 
 (provide 'wrap-region)
-
-(print (char-to-string nil))
