@@ -16,9 +16,10 @@
 
 ;; Load files for all modes.
 (load "rejeep/programming/css.el")
-(load "rejeep/programming/java.el")
+(load "rejeep/programming/java/init.el")
 (load "rejeep/programming/javascript.el")
 (load "rejeep/programming/ruby.el")
+(load "rejeep/programming/emacs-lisp.el")
 
 ;; Emacs Code Browser.
 (require 'ecb)
