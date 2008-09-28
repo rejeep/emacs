@@ -24,7 +24,12 @@
              ;; So that the left brace is placed on new row.
              (setq jde-gen-k&r nil)
 
+             ;; Load my completion extension.
+             (load "rejeep/programming/java/completion.el")
 
+             ;; Complete at point.
+             (define-key jde-mode-map (kbd "C-c <tab>") 'java-complete)
+             
              ;; Generate getter and setter methods to variables.
              (define-key jde-mode-map (kbd "C-c C-v w") 'jde-wiz-get-set-methods)
              
