@@ -1,0 +1,3 @@
+#name : after_filter ...
+# --
+after_filter :${1:method_name}, :${2:condition} => 
