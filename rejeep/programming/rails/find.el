@@ -12,7 +12,7 @@
 
 (defun rails-find-helper()
   (interactive)
-  (rails-find "app/helper"))
+  (rails-find "app/helpers"))
 
 (defun rails-find-migration()
   (interactive)
