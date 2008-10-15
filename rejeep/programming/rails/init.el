@@ -47,7 +47,7 @@
                      (setq partial-name (read-string "Name of partial? "))
                      (setq partial (concat "_" partial-name ".html.erb"))
                      (cond ((not (file-exists-p partial))
-                            (move-region-to-buffer partial)
+                            (append-to-buffer partial (region-beginning) (region-end))
                             (switch-to-buffer partial)
                             (create-file-buffer partial)
                             (write-file partial)
