@@ -63,6 +63,9 @@
 ;; Expands a snippet
 (global-set-key (kbd "<tab>") 'yas/expand)
 
+;; Comments or uncomments a line or region
+(global-set-key (kbd "C-7") 'comment-or-uncomment-whole-lines-region)
+
 ;; Moves region to *scratch* buffer.
 (global-set-key (kbd "C-c s") 'move-region-to-scratch-buffer)
 
