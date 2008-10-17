@@ -20,6 +20,7 @@
 (load "rejeep/programming/javascript.el")
 (load "rejeep/programming/ruby.el")
 (load "rejeep/programming/emacs-lisp.el")
+(load "rejeep/programming/bash.el")
 
 ;; Emacs Code Browser.
 (require 'ecb)
