@@ -1,4 +1,6 @@
-;; Load all custom files
+;; -*- mode: Emacs-Lisp -*-
+
+;; Load all custom files.
 (load "~/.emacs.d/rejeep/loadpaths.el")
 (load "~/.emacs.d/rejeep/options.el")
 (load "~/.emacs.d/rejeep/custom.el")
