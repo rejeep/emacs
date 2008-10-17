@@ -29,3 +29,21 @@
 (defun empty(list)
   "Returns true if list contains no elements. nil otherwise."
   (= (length list) 0))
+
+(defun mark-whole-lines-region(beg end)
+  "Marks whole lines in the selected region."
+  (interactive "r")
+  (if (< (point) (mark))
+      (beginning-of-line)
+    (end-of-line))
+  (exchange-point-and-mark)
+  (if (< (point) (mark))
+      (beginning-of-line)
+    (end-of-line))
+  (exchange-point-and-mark))
+
+(defun mark-current-line()
+  "Marks the current line. Mark is lower than point."
+  (interactive)
+  (set-mark (line-beginning-position))
+  (end-of-line))
