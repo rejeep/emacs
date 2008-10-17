@@ -13,6 +13,7 @@
 (load "~/.emacs.d/rejeep/region.el")
 (load "~/.emacs.d/rejeep/programming.el")
 (load "~/.emacs.d/rejeep/other.el")
+(load "~/.emacs.d/rejeep/drag-stuff.el")
 (load "~/.emacs.d/rejeep/keybindings.el")
 
 ;; Gentoo stuff.
