@@ -69,6 +69,13 @@
 ;; Moves region to *scratch* buffer.
 (global-set-key (kbd "C-c s") 'move-region-to-scratch-buffer)
 
+;; Moves line or region one line down.
+(global-set-key (kbd "<C-M-down>") 'drag-line-or-region-down)
+
+;; Moves line or region one line up.
+(global-set-key (kbd "<C-M-up>") 'drag-line-or-region-up)
+
+
 ;; Move cursor 30 lines down or to end of buffer.
 (global-set-key (kbd "<next>") (lambda() (interactive) (forward-line 30)))
 
@@ -90,3 +97,9 @@
                   (interactive)
                   (if (y-or-n-p "Quit Emacs? ")
                       (save-buffers-kill-emacs))))
+
+;; Moves line or region five lines up.
+(global-set-key (kbd "<C-M-prior>") '(lambda() (interactive) (drag-line-or-region-up 5)))
+
+;; Moves line or region five lines down.
+(global-set-key (kbd "<C-M-next>") '(lambda() (interactive) (drag-line-or-region-down 5)))
