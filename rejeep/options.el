@@ -50,12 +50,12 @@
 ;; No ECB tip of the day.
 (setq ecb-tip-of-the-day nil)
 
-;; Split window horizontally at startup.
-(split-window-horizontally)
-
 ;; Use firefox as default browser.
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "/usr/bin/firefox")
+
+;; Enable narrowing.
+(put 'narrow-to-region 'disabled nil)
 
 ;; Alias to delete all trailing whitespace.
 (defalias 'dtw 'delete-trailing-whitespace)
