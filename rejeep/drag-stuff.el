@@ -5,7 +5,7 @@
   (if (> (point) (mark))
       (exchange-point-and-mark))
   (let ((column (current-column))
-        (text (delete-and-extract-region (point) (mark))))
+        (text (delete-and-extract-region (region-beginning) (region-end))))
     (forward-line arg)
     (move-to-column column t)
     (set-mark (point))
