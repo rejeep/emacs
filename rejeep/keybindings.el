@@ -73,7 +73,10 @@
 (global-set-key (kbd "<C-M-down>") 'drag-line-or-region-down)
 
 ;; Moves line or region one line up.
-(global-set-key (kbd "<C-M-up>") 'drag-line-or-region-up)
+(global-set-key (kbd "<C-M-up>") 'drag-line-or-region-up) 
+
+;; Kills current word or region.
+(global-set-key (kbd "C-w") 'kill-region-or-current-word)
 
 
 ;; Move cursor 30 lines down or to end of buffer.

@@ -29,3 +29,10 @@ otherwise current line, comments it out and pastes an uncomment copy below."
       (goto-char (region-end))
       (insert (concat "\n" text)))
     (move-to-column column t)))
+
+(defun kill-region-or-current-word()
+  "Kills a region if selected. Otherwise current word is deleted."
+  (interactive)
+  (unless (region-selected)
+    (mark-current-word))
+  (kill-region (region-beginning) (region-end)))
