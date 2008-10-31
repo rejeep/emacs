@@ -30,6 +30,14 @@
              (define-key rinari-minor-mode-map (kbd "C-c C-c s") 'rinari-find-stylesheet)
              (define-key rinari-minor-mode-map (kbd "C-c C-c a") 'rinari-find-file-in-project)
              (define-key rinari-minor-mode-map (kbd "C-c C-c k") 'rinari-find-configuration)
+
+             (defun rinari-restart-passenger()
+               "Restarts passenger (mod_rails) server by touching RAILS_ROOT/tmp/restart.txt"
+               (interactive)
+               (shell-command (concat "touch " (rinari-root) "/tmp/restart.txt"))
+                (print "Passenger restarted"))
+             
+             (define-key rinari-minor-mode-map (kbd "C-c C-c r") 'rinari-restart-passenger)
              ))
 
 (add-hook 'rhtml-mode-hook
