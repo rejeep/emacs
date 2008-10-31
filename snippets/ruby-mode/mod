@@ -1,4 +1,4 @@
-name : Module
+#name : Module
 # --
 module ${1:module_name}
   $0

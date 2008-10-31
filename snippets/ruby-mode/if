@@ -1,4 +1,4 @@
-name : if condition ... end
+#name : if condition ... end
 # --
 if ${1:condition}
   $0
