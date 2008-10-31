@@ -78,6 +78,9 @@
 ;; Kills current word or region.
 (global-set-key (kbd "C-w") 'kill-region-or-current-word)
 
+;; Kills current word or region.
+(global-set-key (kbd "M-w") 'copy-region-or-current-word)
+
 
 ;; Move cursor 30 lines down or to end of buffer.
 (global-set-key (kbd "<next>") (lambda() (interactive) (forward-line 30)))

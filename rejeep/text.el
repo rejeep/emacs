@@ -36,3 +36,11 @@ otherwise current line, comments it out and pastes an uncomment copy below."
   (unless (region-selected)
     (mark-current-word))
   (kill-region (region-beginning) (region-end)))
+
+(defun copy-region-or-current-word()
+  "Copies a region if selected. Otherwise current word is copied."
+  (interactive)
+  (save-excursion
+    (unless (region-selected)
+      (mark-current-word))
+    (kill-ring-save (region-beginning) (region-end))))
