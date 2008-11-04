@@ -5,8 +5,7 @@
     (if (not (empty completion-list))
         (let ((choise))
           (setq choise (ido-completing-read "> " completion-list))
-          (while (not (string= (char-to-string (char-before)) "."))
-            (backward-delete-char-untabify 1))
+          (delete-back-to-period)
           (let ((method))
             (unless (string-match "^.*()$" choise)
               (progn
