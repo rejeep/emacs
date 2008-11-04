@@ -11,6 +11,18 @@
              (flymake-mode-on)
 
              (wrap-region-bind-keys ruby-mode-map "\"" "'" "{" "[" "|" "(")
+             
+             (require 'rcodetools)
+             
+             (defun rct-complete-symbol--ido()
+               (interactive)
+               (save-excursion
+                 (rct-try-completion))
+               (let ((choise (ido-completing-read "> " rct-method-completion-table)))
+                 (delete-back-to-period)
+                 (insert choise)))
+             
+             (define-key ruby-mode-map (kbd "M-/") 'rct-complete-symbol--ido)
              ))
 
 (add-hook 'rinari-minor-mode-hook
