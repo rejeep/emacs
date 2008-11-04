@@ -52,3 +52,10 @@ Otherwise current line is selected."
   (if (region-selected)
       (mark-whole-lines-region)
     (mark-current-line)))
+
+(defun delete-back-to-period()
+  "Deletes back to period (.). This can be usefull if you
+want to delete a method name that is called on and object or class."
+  (interactive)
+  (while (not (string= (char-to-string (char-before)) "."))
+    (backward-delete-char-untabify 1)))
