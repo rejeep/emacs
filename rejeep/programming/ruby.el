@@ -15,6 +15,7 @@
              (require 'rcodetools)
              
              (defun rct-complete-symbol--ido()
+               "Method completion using ido-mode"
                (interactive)
                (save-excursion
                  (rct-try-completion))
