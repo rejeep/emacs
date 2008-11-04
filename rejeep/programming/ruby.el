@@ -1,6 +1,7 @@
 ;; Use yaml-mode for yml files.
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 
 ;; Flymake.
 (load "rejeep/programming/flymake/ruby.el")
