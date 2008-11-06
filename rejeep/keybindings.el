@@ -81,6 +81,9 @@
 ;; Kills current word or region.
 (global-set-key (kbd "M-w") 'copy-region-or-current-word)
 
+;; Show occurances of regexp.
+(global-set-key (kbd "C-c o") 'occur)
+
 
 ;; Move cursor 30 lines down or to end of buffer.
 (global-set-key (kbd "<next>") (lambda() (interactive) (forward-line 30)))
