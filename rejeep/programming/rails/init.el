@@ -10,7 +10,7 @@
              (setq rinari-tags-file-name "TAGS")
 
              ;; Rails find helpers.
-             (load "rejeep/programming/rails/find.el")
+             (load "rejeep/programming/rails/find")
 
              ;; Keybindings to find methods.
              (define-key rinari-minor-mode-map (kbd "C-c c") 'rinari-find-controller)

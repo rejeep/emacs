@@ -25,7 +25,7 @@
              (setq jde-gen-k&r nil)
 
              ;; Load my completion extension.
-             (load "rejeep/programming/java/completion.el")
+             (load "rejeep/programming/java/completion")
 
              ;; Complete at point.
              (define-key jde-mode-map (kbd "M-/") 'java-complete)

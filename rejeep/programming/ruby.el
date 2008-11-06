@@ -4,7 +4,7 @@
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 
 ;; Flymake.
-(load "rejeep/programming/flymake/ruby.el")
+(load "rejeep/programming/flymake/ruby")
 
 (add-hook 'ruby-mode-hook
           '(lambda()
@@ -34,4 +34,4 @@
              ))
 
 ;; Load Rails configuration file.
-(load "rejeep/programming/rails/init.el")
+(load "rejeep/programming/rails/init")

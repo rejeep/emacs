@@ -15,12 +15,12 @@
 (yas/initialize)
 
 ;; Load files for all modes.
-(load "rejeep/programming/css.el")
-(load "rejeep/programming/java/init.el")
-(load "rejeep/programming/javascript.el")
-(load "rejeep/programming/ruby.el")
-(load "rejeep/programming/emacs-lisp.el")
-(load "rejeep/programming/bash.el")
+(load "rejeep/programming/css")
+(load "rejeep/programming/java/init")
+(load "rejeep/programming/javascript")
+(load "rejeep/programming/ruby")
+(load "rejeep/programming/emacs-lisp")
+(load "rejeep/programming/bash")
 
 ;; Emacs Code Browser.
 (require 'ecb)

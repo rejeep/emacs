@@ -1,20 +1,20 @@
 ;; -*- mode: Emacs-Lisp -*-
 
 ;; Load all custom files.
-(load "~/.emacs.d/rejeep/loadpaths.el")
-(load "~/.emacs.d/rejeep/options.el")
-(load "~/.emacs.d/rejeep/custom.el")
-(load "~/.emacs.d/rejeep/colors.el")
-(load "~/.emacs.d/rejeep/helpers.el")
-(load "~/.emacs.d/rejeep/indent.el")
-(load "~/.emacs.d/rejeep/text.el")
-(load "~/.emacs.d/rejeep/movement.el")
-(load "~/.emacs.d/rejeep/buffers.el")
-(load "~/.emacs.d/rejeep/region.el")
-(load "~/.emacs.d/rejeep/programming.el")
-(load "~/.emacs.d/rejeep/other.el")
-(load "~/.emacs.d/rejeep/drag-stuff.el")
-(load "~/.emacs.d/rejeep/keybindings.el")
+(load "~/.emacs.d/rejeep/loadpaths")
+(load "~/.emacs.d/rejeep/options")
+(load "~/.emacs.d/rejeep/custom")
+(load "~/.emacs.d/rejeep/colors")
+(load "~/.emacs.d/rejeep/helpers")
+(load "~/.emacs.d/rejeep/indent")
+(load "~/.emacs.d/rejeep/text")
+(load "~/.emacs.d/rejeep/movement")
+(load "~/.emacs.d/rejeep/buffers")
+(load "~/.emacs.d/rejeep/region")
+(load "~/.emacs.d/rejeep/programming")
+(load "~/.emacs.d/rejeep/other")
+(load "~/.emacs.d/rejeep/drag-stuff")
+(load "~/.emacs.d/rejeep/keybindings")
 
-;; Gentoo stuff.
+;; Require stuff
 (require 'site-gentoo)
