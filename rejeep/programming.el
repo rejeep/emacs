@@ -36,8 +36,6 @@
              (indent-region wrap-region-beginning wrap-region-end)
              ))
 
-(setq auto-mode-alist (cons '("\\.awesomerc$"  . lua-mode) auto-mode-alist))
-
 ;; Doc mode.
 (require 'doc-mode)
 (add-hook 'java-mode-hook 'doc-mode)
