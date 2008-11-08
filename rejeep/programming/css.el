@@ -5,5 +5,4 @@
      (setq css-indent-offset 2)
      
      (wrap-region-bind-keys css-mode-map "\"" "'" "{")
-  )
-)
+  ))
