@@ -9,3 +9,4 @@
 (add-to-list 'load-path "~/.emacs.d/packages/jump.el")
 (add-to-list 'load-path "~/.emacs.d/packages/yaml-mode")
 (add-to-list 'load-path "~/.emacs.d/packages/rcodetools")
+(add-to-list 'load-path "~/dev/stumpwm/contrib")

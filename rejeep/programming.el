@@ -34,3 +34,6 @@
 ;; Doc mode.
 (require 'doc-mode)
 (add-hook 'java-mode-hook 'doc-mode)
+
+;; For Stumpwm files.
+(require 'stumpwm-mode)
