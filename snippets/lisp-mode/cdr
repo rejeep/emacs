@@ -1,3 +1,0 @@
-#name : cdr ...
-# --
-(cdr ${1:collection})

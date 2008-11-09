@@ -1,3 +1,0 @@
-#name : insert ...
-# --
-(insert ${1:message})
