@@ -1,0 +1,9 @@
+#name : @After
+# --
+/**
+ * 
+ */
+@After public void ${1:method_name}($2)
+{
+  $0
+}
