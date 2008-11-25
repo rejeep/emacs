@@ -1,0 +1,3 @@
+#name : (\forall ...)
+# --
+(\forall int ${1:variables}; ${2:conditions}; ${3:statements});
