@@ -31,6 +31,9 @@
              (indent-region wrap-region-beginning wrap-region-end)
              ))
 
+;; Git interaction.
+(require 'magit)
+
 ;; Doc mode.
 (require 'doc-mode)
 (add-hook 'java-mode-hook 'doc-mode)
