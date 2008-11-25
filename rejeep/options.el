@@ -50,6 +50,9 @@
 ;; No ECB tip of the day.
 (setq ecb-tip-of-the-day nil)
 
+;; Wider IRC column.
+(setq rcirc-fill-column 150)
+
 ;; Use firefox as default browser.
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "/usr/bin/firefox")
