@@ -14,6 +14,9 @@
 ;; Show information in minibuffer instead of as a tooltip.
 (tooltip-mode nil)
 
+;; Hitting delete will delete region.
+(pending-delete-mode 1)
+
 ;; Indent with spaces, instead of TABs.
 (setq-default indent-tabs-mode nil)
 
@@ -52,6 +55,9 @@
 
 ;; Wider IRC column.
 (setq rcirc-fill-column 150)
+
+;; Yank where pointer is.
+(setq mouse-yank-at-point t)
 
 ;; Use firefox as default browser.
 (setq browse-url-browser-function 'browse-url-generic
