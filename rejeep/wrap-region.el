@@ -57,15 +57,13 @@ or inserts the characters and places the cursor in between them."
 right are same and exists in `wrap-mode-characters', delete both.
 Other remove character to the left."
   (interactive)
-  (if (region-selected)
-      (delete-region (region-beginning) (region-end))
     (if (and (char-before) (char-after))
         (let ((before (char-to-string (char-before))) (after (char-to-string (char-after))) (key))
           (setq key (find before (cdr (assoc major-mode wrap-mode-characters)) :test 'string=))
           (if (and key (string= after (assoc-default before wrap-characters)))
               (delete-region (- (point) 1) (+ (point) 1))
             (backward-delete-char-untabify 1)))
-      (backward-delete-char-untabify 1))))
+      (backward-delete-char-untabify 1)))
 
 (defun wrap-region-bind-keys(mode-map &rest punctuations)
   "Set wrapper key bindings easy."
