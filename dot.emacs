@@ -16,5 +16,5 @@
 (load "~/.emacs.d/rejeep/drag-stuff")
 (load "~/.emacs.d/rejeep/keybindings")
 
-;; Require stuff
+;; Require gentoo stuff.
 (require 'site-gentoo)
