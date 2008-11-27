@@ -5,7 +5,6 @@
     (if (not (empty completion-list))
         (let ((choise))
           (setq choise (ido-completing-read "> " completion-list))
-          (delete-back-to-period)
           (let ((method))
             (unless (string-match "^.*()$" choise)
               (progn
@@ -14,7 +13,7 @@
                 (setq method (replace-regexp-in-string "\)" "})" method))))
             (if method
                 (yas/expand-snippet (point) (point) method)
-              (insert choise))))
+              (jde-complete-insert-completion choise))))
       (message "No completions at point..."))))
 
 (defun completion-list()
