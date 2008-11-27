@@ -7,6 +7,13 @@
 (add-hook 'jde-mode-hook
           '(lambda()
              (wrap-region-bind-keys jde-mode-map "\"" "'" "{" "[" "|" "(")
+
+             ;; Must be required for jalopy.
+             (require 'beanshell)
+
+             ;; Code styling.
+             (setq jde-jalopy-option-path "~/.emacs.d/packages/jalopy-console")
+             (require 'jde-jalopy)
              
              ;; Show warnings and errors in code.
              (require 'jde-eclipse-compiler-server)
