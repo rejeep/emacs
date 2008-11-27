@@ -5,3 +5,7 @@
   (interactive)
   (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
                       (buffer-substring (region-beginning) (region-end)))))
+
+;; Open files with specified external programs.
+(require 'openwith)
+(openwith-mode t)
