@@ -11,3 +11,4 @@
 (add-to-list 'load-path "~/.emacs.d/packages/rcodetools")
 (add-to-list 'load-path "~/dev/stumpwm/contrib")
 (add-to-list 'load-path "~/dev/emacs/packages/mainline")
+(add-to-list 'load-path "~/dev/emacs/packages/doc-mode")
