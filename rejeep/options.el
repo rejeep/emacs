@@ -66,5 +66,8 @@
 ;; Enable narrowing.
 (put 'narrow-to-region 'disabled nil)
 
+;; Enable goal column.
+(put 'set-goal-column 'disabled nil)
+
 ;; Alias to delete all trailing whitespace.
 (defalias 'dtw 'delete-trailing-whitespace)
