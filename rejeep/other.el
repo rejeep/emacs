@@ -9,3 +9,19 @@
 ;; Open files with specified external programs.
 (require 'openwith)
 (openwith-mode t)
+
+;; Dabbrev-mode like feature.
+(require 'pabbrev)
+(global-pabbrev-mode)
+(define-key pabbrev-mode-map (kbd "M-/") 'pabbrev-expand-maybe)
+(define-key pabbrev-mode-map (kbd "<tab>") 'yas/expand)
+
+
+;; I/Fly-spell
+
+;; Default dictionary.
+(setq ispell-dictionary "english")
+
+;; Add flyspell to modes.
+(add-hook 'ruby-mode-hook 'flyspell-prog-mode)
+(add-hook 'magit-mode-hook 'flyspell-mode)
