@@ -4,7 +4,7 @@
 (global-set-key (kbd "M-g") 'goto-line)
 
 ;; Show which left parenthesis a right one belongs to by blinking.
-(global-set-key (kbd "C-.") 'blink-matching-open)
+(global-set-key (kbd "C-,") 'blink-matching-open)
 
 ;; Expand dabbrevs.
 (global-set-key (kbd "M-_") 'dabbrev-expand)
@@ -60,9 +60,6 @@
 ;; Google region.
 (global-set-key (kbd "C-c C-c g") 'google-region)
 
-;; Expands a snippet
-(global-set-key (kbd "<tab>") 'yas/expand)
-
 ;; Comments or uncomments a line or region
 (global-set-key (kbd "C-7") 'comment-or-uncomment-whole-lines-region)
 
@@ -83,6 +80,10 @@
 
 ;; Show occurances of regexp.
 (global-set-key (kbd "C-c o") 'occur)
+
+;; Fast access to kill ring contents.
+(global-set-key (kbd "C-c b") 'browse-kill-ring)
+
 
 
 ;; Move cursor 30 lines down or to end of buffer.
