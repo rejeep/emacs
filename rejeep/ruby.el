@@ -1,3 +1,5 @@
+;;; ruby.el --- Ruby and Rails specific settings
+
 (autoload 'yaml-mode "yaml-mode" "" t)
 (autoload 'ruby-mode "ruby-mode" "" t)
 (autoload 'rhtml-mode "rhtml-mode" "" t)

@@ -1,3 +1,5 @@
+;;; java.el --- Java specific settings
+
 (add-hook 'jde-mode-hook
           '(lambda()
              (wrap-region-bind-keys jde-mode-map "\"" "'" "{" "[" "|" "(")

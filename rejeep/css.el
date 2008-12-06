@@ -1,3 +1,5 @@
+;;; css.el --- CSS specific settings.
+
 (autoload 'css-mode "css-mode" "" t)
 
 (eval-after-load 'css-mode
