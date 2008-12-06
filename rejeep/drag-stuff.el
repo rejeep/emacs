@@ -1,4 +1,4 @@
-;; This file contains functions that helps you move a region or a line up and down in a buffer.
+;;; drag-stuff.el --- Helpers that moves a region or a line up and down in a buffer
 
 (defun drag-region(arg)
   "Drags a region up or down."
@@ -35,8 +35,10 @@ Otherwise line at point will be dragged."
   "Drag line or region down ARG rows."
   (interactive "*p")
   (drag-line-or-region arg))
-    
+
 (defun drag-line-or-region-up(arg)
   "Drag line or region up ARG rows."
   (interactive "*p")
   (drag-line-or-region (- arg)))
+
+(provide 'drag-stuff)

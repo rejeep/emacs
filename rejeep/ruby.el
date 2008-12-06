@@ -1,16 +1,65 @@
-;; Ruby on Rails minor mode.
-(require 'rinari)
+(autoload 'yaml-mode "yaml-mode" "" t)
+(autoload 'ruby-mode "ruby-mode" "" t)
+(autoload 'rhtml-mode "rhtml-mode" "" t)
 
-;; For rhtml and html.erb files.
-(require 'rhtml-mode)
+(eval-after-load 'ruby-mode
+  '(progn
+     (require 'rinari)
+
+     ;; Flymake for on the fly error checking.
+     (defun flymake-ruby-init()
+       (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                          'flymake-create-temp-inplace))
+              (local-file (file-relative-name
+                           temp-file
+                           (file-name-directory buffer-file-name))))
+         (list "ruby" (list "-c" local-file))))
+
+     (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
+     (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
+     (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
+
+     (flymake-mode-on)
+
+     (wrap-region-bind-keys ruby-mode-map "\"" "'" "{" "[" "|" "(")
+     ))
 
 (add-hook 'rinari-minor-mode-hook
           '(lambda()
+             ;; No # -*- coding: utf-8 -*- commets.
+             (setq ruby-insert-encoding-magic-comment nil)
+
              ;; TAGS file is in rails root if any.
              (setq rinari-tags-file-name "TAGS")
 
-             ;; Rails find helpers.
-             (load "rejeep/programming/rails/find")
+             (defun rails-find-model()
+               "Find all models in this project."
+               (interactive)
+               (rails-find "app/models"))
+
+             (defun rails-find-view()
+               "Find all views in this project."
+               (interactive)
+               (rails-find "app/views"))
+
+             (defun rails-find-controller()
+               "Find all controllers in this project."
+               (interactive)
+               (rails-find "app/controllers"))
+
+             (defun rails-find-helper()
+               "Find all helpers in this project."
+               (interactive)
+               (rails-find "app/helpers"))
+
+             (defun rails-find-migration()
+               "Find all migrations in this project."
+               (interactive)
+               (rails-find "db/migrate"))
+
+             (defun rails-find(location)
+               "Generic function for finding all files in some folder in this project."
+               (ido-find-file-in-dir (concat (rinari-root) "/" location)))
 
              ;; Keybindings to find methods.
              (define-key rinari-minor-mode-map (kbd "C-c c") 'rinari-find-controller)
@@ -19,6 +68,7 @@
              (define-key rinari-minor-mode-map (kbd "C-c h") 'rinari-find-helper)
              (define-key rinari-minor-mode-map (kbd "C-c g") 'rinari-find-migration)
 
+             ;; Rinaris default are to hard.
              (define-key rinari-minor-mode-map (kbd "C-c C-c c") 'rails-find-controller)
              (define-key rinari-minor-mode-map (kbd "C-c C-c m") 'rails-find-model)
              (define-key rinari-minor-mode-map (kbd "C-c C-c v") 'rails-find-view)
@@ -30,25 +80,16 @@
              (define-key rinari-minor-mode-map (kbd "C-c C-c s") 'rinari-find-stylesheet)
              (define-key rinari-minor-mode-map (kbd "C-c C-c a") 'rinari-find-file-in-project)
              (define-key rinari-minor-mode-map (kbd "C-c C-c k") 'rinari-find-configuration)
-
-             (defun rinari-restart-passenger()
-               "Restarts passenger (mod_rails) server by touching RAILS_ROOT/tmp/restart.txt"
-               (interactive)
-               (shell-command (concat "touch " (rinari-root) "/tmp/restart.txt"))
-                (print "Passenger restarted"))
-             
-             (define-key rinari-minor-mode-map (kbd "C-c C-c r") 'rinari-restart-passenger)
              ))
+
 
 (add-hook 'rhtml-mode-hook
           '(lambda()
              (wrap-region-bind-keys rhtml-mode-map "\"" "'")
-
              (define-key rhtml-mode-map (kbd "<") 'wrap-region-with-tag-or-insert)
-             (define-key rhtml-mode-map (kbd "C-c p") 'make-partial)
-             
+
              (defun make-partial(beg end)
-               "Puts region in a partial."
+               "Create a new partial and yanks the selected region in to it."
                (interactive "r")
                (if (region-selected)
                    (let ((partial-name) (partial) (prev-buffer (buffer-name)))
@@ -65,7 +106,8 @@
                             (insert (concat "<%= render :partial => \"" partial-name "\" %>"))
                             (indent-for-tab-command))
                            (t (message "Partial with that name exists!"))))))
+
+             (define-key rhtml-mode-map (kbd "C-c p") 'make-partial)
              ))
 
-;; Use rhtml-mode for html.erb files.
-(add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
+(provide 'ruby)

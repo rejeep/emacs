@@ -1,20 +1,41 @@
 ;; -*- mode: Emacs-Lisp -*-
 
-;; Load all custom files.
-(load "~/.emacs.d/rejeep/loadpaths")
-(load "~/.emacs.d/rejeep/options")
-(load "~/.emacs.d/rejeep/custom")
-(load "~/.emacs.d/rejeep/colors")
-(load "~/.emacs.d/rejeep/helpers")
-(load "~/.emacs.d/rejeep/indent")
-(load "~/.emacs.d/rejeep/text")
-(load "~/.emacs.d/rejeep/movement")
-(load "~/.emacs.d/rejeep/buffers")
-(load "~/.emacs.d/rejeep/region")
-(load "~/.emacs.d/rejeep/programming")
-(load "~/.emacs.d/rejeep/other")
-(load "~/.emacs.d/rejeep/drag-stuff")
-(load "~/.emacs.d/rejeep/keybindings")
+(add-to-list 'load-path "~/.emacs.d/rejeep")
 
-;; Require gentoo stuff.
-(require 'site-gentoo)
+(require 'cl)
+
+;; My custom stuff
+(require 'loadpaths)
+(require 'defuns)
+(require 'bindings)
+(require 'drag-stuff)
+(require 'misc)
+
+;; Programming
+(require 'java)
+(require 'ruby)
+(require 'css)
+(require 'javascript)
+(require 'bash)
+(require 'lisp)
+
+;; (setq eshell-cmpl-cycle-completions nil
+;;       eshell-save-history-on-exit t
+;;       eshell-cmpl-dir-ignore "\\`\\(\\.\\.?\\|CVS\\|\\.svn\\|\\.git\\)/\\'")
+
+;; (eval-after-load 'esh-opt
+;;   '(progn
+;;      (require 'em-prompt)
+;;      (require 'em-term)
+;;      (require 'em-cmpl)
+;;      (setenv "PAGER" "cat")
+;;      (set-face-attribute 'eshell-prompt nil :foreground "white")
+;;      (add-hook 'eshell-mode-hook ;; for some reason this needs to be a hook
+;;                '(lambda () (define-key eshell-mode-map "\C-a" 'eshell-bol)))
+;;      (add-to-list 'eshell-visual-commands "ssh")
+;;      (add-to-list 'eshell-visual-commands "tail")
+;;      (add-to-list 'eshell-command-completions-alist
+;;                   '("gunzip" "gz\\'"))
+;;      (add-to-list 'eshell-command-completions-alist
+;;                   '("tar" "\\(\\.tar|\\.tgz\\|\\.tar\\.gz\\)\\'"))
+;;      (add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)))

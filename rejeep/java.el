@@ -1,26 +1,20 @@
-(add-hook 'java-mode-hook
-          '(lambda()
-             ;; Two spaces wide indention.
-             (setq c-basic-offset 2)             
-             ))
-
 (add-hook 'jde-mode-hook
           '(lambda()
              (wrap-region-bind-keys jde-mode-map "\"" "'" "{" "[" "|" "(")
 
-             ;; Must be required for jalopy.
-             (require 'beanshell)
+             ;; Doc mode.
+             (require 'doc-mode)
+             (add-hook 'java-mode-hook 'doc-mode)
 
-             ;; Code styling.
-             (setq jde-jalopy-option-path "~/.emacs.d/packages/jalopy-console")
-             (require 'jde-jalopy)
-             
+             ;; Indent width is two spaces.
+             (setq c-basic-offset 2)
+
              ;; Show warnings and errors in code.
              (require 'jde-eclipse-compiler-server)
-             
+
              ;; Activate flymake.
              (flymake-mode-on)
-             
+
              ;; No "final" when auto creating methods and variables.
              (setq jde-gen-final-arguments nil)
              (setq jde-gen-final-methods nil)
@@ -28,18 +22,12 @@
              ;; Don't use JDE's builtin abbrevs.
              (setq jde-enable-abbrev-mode nil)
 
-             ;; So that the left brace is placed on new row.
+             ;; Place left brace on new row.
              (setq jde-gen-k&r nil)
 
-             ;; Load my completion extension.
-             (load "rejeep/programming/java/completion")
-
-             ;; Complete at point.
-             (define-key jde-mode-map (kbd "M-/") 'java-complete)
-             
              ;; Generate getter and setter methods to variables.
              (define-key jde-mode-map (kbd "C-c C-v w") 'jde-wiz-get-set-methods)
-             
+
              ;; Generate variables and getter and setter methods to them.
              (define-key jde-mode-map (kbd "C-c C-v g") 'jde-gen-get-set-methods)
 
@@ -52,3 +40,5 @@
                    (jde-import-organize)
                    (jde-import-kill-extra-imports))))
              ))
+
+(provide 'java)
