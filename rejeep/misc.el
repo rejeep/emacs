@@ -16,7 +16,8 @@
 
 ;; Add flyspell to modes.
 (add-hook 'ruby-mode-hook 'flyspell-prog-mode)
-(add-hook 'magit-mode-hook 'flyspell-mode)
+(add-hook 'emacs-lisp-mode-hook 'flyspell-prog-mode)
+(add-hook 'magit-log-edit-mode-hook 'flyspell-mode)
 
 ;; Interactively do, or ido
 (ido-mode t)
