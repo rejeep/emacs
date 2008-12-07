@@ -133,7 +133,7 @@
 (require 'wrap-region)
 
 ;; Run after wraping a region.
-(add-hook 'wrap-region-hook
+(add-hook 'wrap-region-after-hook
 	  '(lambda ()
              (indent-region wrap-region-beginning wrap-region-end)
              ))

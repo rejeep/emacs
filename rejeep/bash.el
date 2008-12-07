@@ -2,7 +2,7 @@
 
 (add-hook 'sh-mode-hook
           '(lambda()
-             (wrap-region-bind-keys sh-mode-map "\"" "'" "{" "[" "(")
+             (wrap-region-mode t)
 
              ;; Indent width is two spaces.
              (setq sh-indentation 2)

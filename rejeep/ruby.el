@@ -22,9 +22,12 @@
      (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
 
      (flymake-mode-on)
-
-     (wrap-region-bind-keys ruby-mode-map "\"" "'" "{" "[" "|" "(")
      ))
+
+(add-hook 'ruby-mode-hook
+          '(lambda()
+             (wrap-region-mode t)
+             ))
 
 (add-hook 'rinari-minor-mode-hook
           '(lambda()
@@ -84,11 +87,11 @@
              (define-key rinari-minor-mode-map (kbd "C-c C-c k") 'rinari-find-configuration)
              ))
 
-
 (add-hook 'rhtml-mode-hook
           '(lambda()
-             (wrap-region-bind-keys rhtml-mode-map "\"" "'")
-             (define-key rhtml-mode-map (kbd "<") 'wrap-region-with-tag-or-insert)
+             ;; < should insert tag.
+             (setq wrap-region-tag-active t)
+             (wrap-region-mode t)
 
              (defun make-partial(beg end)
                "Create a new partial and yanks the selected region in to it."

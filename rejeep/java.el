@@ -2,7 +2,7 @@
 
 (add-hook 'jde-mode-hook
           '(lambda()
-             (wrap-region-bind-keys jde-mode-map "\"" "'" "{" "[" "|" "(")
+             (wrap-region-mode t)
 
              ;; Doc mode.
              (require 'doc-mode)

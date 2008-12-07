@@ -4,7 +4,7 @@
 
 (eval-after-load 'js2-mode
   '(progn
-
+     (wrap-region-mode t)
      ))
 
 (provide 'javascript)

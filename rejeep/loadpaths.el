@@ -9,6 +9,7 @@
 (add-to-list 'load-path "~/.emacs.d/packages/mainline")
 (add-to-list 'load-path "~/.emacs.d/packages/doc-mode")
 (add-to-list 'load-path "~/.emacs.d/packages/js2-mode")
+(add-to-list 'load-path "~/.emacs.d/packages/wrap-region")
 (add-to-list 'load-path "/usr/local/lib/stumpwm/contrib")
 
 (provide 'loadpaths)

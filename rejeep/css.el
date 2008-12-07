@@ -4,7 +4,7 @@
 
 (eval-after-load 'css-mode
   '(progn
-     (wrap-region-bind-keys css-mode-map "\"" "'" "{")
+     (wrap-region-mode t)
 
      ;; Indention width is two spaces.
      (setq css-indent-offset 2)
