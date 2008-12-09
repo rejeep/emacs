@@ -48,9 +48,9 @@ Then move to that line and indent accordning to mode"
 non blank characters to the left of the cursor.
 Otherwise point moves to beginning of line."
   (interactive)
-  (if (or (bolp) (string-match "^[ \t]*$" (buffer-substring (line-beginning-position) (point))))
-      (beginning-of-line)
-    (back-to-indentation)))
+   (if (= (point) (save-excursion (back-to-indentation) (point)))
+       (beginning-of-line)
+     (back-to-indentation)))
 
 (defun copy-region-to-scratch-buffer ()
   "Copies region to *scratch* buffer."
