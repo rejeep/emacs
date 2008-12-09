@@ -19,14 +19,14 @@
 
      (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
      (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
-     (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
-
-     (flymake-mode-on)
+     (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)     
      ))
 
 (add-hook 'ruby-mode-hook
           '(lambda()
              (wrap-region-mode t)
+             
+             (flymake-mode-on)
              ))
 
 (add-hook 'rinari-minor-mode-hook
