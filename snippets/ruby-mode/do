@@ -1,5 +1,5 @@
 #name : do ... end
 # --
-$1do
+$1 do$2
   $0
 end
