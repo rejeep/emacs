@@ -14,17 +14,24 @@
   (interactive)
   (untabify (point-min) (point-max)))
 
-(defun indent-region-or-buffer ()
-  "Indents region if any. Otherwise whole buffer."
+(defun untabify-buffer-or-region ()
+  "Replaces all tabs in the buffer with spaces."
   (interactive)
-  (if (region-selected)
-      (call-interactively 'indent-region)
-    (indent-buffer)))
+  (if mark-active
+      (untabify-buffer)
+      (untabify (point-min) (point-max))))
 
 (defun indent-buffer ()
   "Indents whole buffer."
   (interactive)
   (indent-region (point-min) (point-max)))
+
+(defun indent-buffer-region-or ()
+  "Indents region if any. Otherwise whole buffer."
+  (interactive)
+  (if mark-active
+      (call-interactively 'indent-region)
+    (indent-buffer)))
 
 (defun open-line-below ()
   "Open a line below the line the point is at.
@@ -62,14 +69,6 @@ Otherwise point moves to beginning of line."
   (interactive)
   (delete-region (point) (progn (backward-word) (point))))
 
-(defun comment-or-uncomment-whole-lines-region ()
-  "Comments or uncomments whole lines in the selected region
-or on current line if no region is selected."
-  (interactive)
-  (save-excursion
-    (mark-current-line-or-whole-lines-region)
-    (comment-or-uncomment-region (region-beginning) (region-end))))
-
 (defun copy-and-comment-line-or-region ()
   "Takes whole lines in region if any region is selected,
 otherwise current line, comments it out and pastes an uncomment copy below."
@@ -100,8 +99,8 @@ Otherwise current line is selected."
 (defun mark-current-line ()
   "Marks the current line. Mark is lower than point."
   (interactive)
-  (set-mark (line-beginning-position))
-  (end-of-line))
+  (set-mark (line-end-position))
+  (back-to-indentation))
 
 (defun mark-whole-lines-region ()
   "Marks whole lines in the selected region."
@@ -113,5 +112,15 @@ Otherwise current line is selected."
       (beginning-of-line)
     (end-of-line))
   (exchange-point-and-mark))
+
+(defun comment-or-uncomment-whole-lines-or-region ()
+  "Comments or uncomments whole lines in region. If no region is selected,
+current line is commented or uncommented."
+  (interactive)
+  (save-excursion
+    (if mark-active
+        (mark-whole-lines-region)
+      (mark-current-line))
+  (comment-or-uncomment-region (region-beginning) (region-end))))
 
 (provide 'defuns)
