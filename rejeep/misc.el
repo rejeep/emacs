@@ -149,6 +149,9 @@
 ;; Emacs Code Browser.
 (require 'ecb)
 
+;; Easy building of regular expressions.
+(require re-builder)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
