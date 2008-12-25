@@ -15,7 +15,7 @@
   (interactive)
   (if mark-active
       (untabify-buffer)
-      (untabify (point-min) (point-max))))
+    (untabify (point-min) (point-max))))
 
 (defun indent-buffer ()
   "Indents whole buffer."
@@ -51,9 +51,9 @@ Then move to that line and indent accordning to mode"
 non blank characters to the left of the cursor.
 Otherwise point moves to beginning of line."
   (interactive)
-   (if (= (point) (save-excursion (back-to-indentation) (point)))
-       (beginning-of-line)
-     (back-to-indentation)))
+  (if (= (point) (save-excursion (back-to-indentation) (point)))
+      (beginning-of-line)
+    (back-to-indentation)))
 
 (defun copy-region-to-scratch-buffer ()
   "Copies region to *scratch* buffer."
@@ -109,6 +109,6 @@ current line is commented or uncommented."
     (if mark-active
         (mark-whole-lines-region)
       (mark-current-line))
-  (comment-or-uncomment-region (region-beginning) (region-end))))
+    (comment-or-uncomment-region (region-beginning) (region-end))))
 
 (provide 'defuns)
