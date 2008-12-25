@@ -92,27 +92,6 @@
              ;; < should insert tag.
              (setq wrap-region-tag-active t)
              (wrap-region-mode t)
-
-             (defun make-partial(beg end)
-               "Create a new partial and yanks the selected region in to it."
-               (interactive "r")
-               (if (region-selected)
-                   (let ((partial-name) (partial) (prev-buffer (buffer-name)))
-                     (setq partial-name (read-string "Name of partial? "))
-                     (setq partial (concat "_" partial-name ".html.erb"))
-                     (cond ((not (file-exists-p partial))
-                            (append-to-buffer partial (region-beginning) (region-end))
-                            (switch-to-buffer partial)
-                            (create-file-buffer partial)
-                            (write-file partial)
-                            (indent-buffer)
-                            (save-buffer)
-                            (switch-to-buffer prev-buffer)
-                            (insert (concat "<%= render :partial => \"" partial-name "\" %>"))
-                            (indent-for-tab-command))
-                           (t (message "Partial with that name exists!"))))))
-
-             (define-key rhtml-mode-map (kbd "C-c p") 'make-partial)
              ))
 
 (provide 'ruby)
