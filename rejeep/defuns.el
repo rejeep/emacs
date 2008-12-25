@@ -1,9 +1,5 @@
 ;;; defuns.el --- Custom functions
 
-(defun region-selected ()
-  "Returns true if a region is selected. False otherwise."
-  (and mark-active transient-mark-mode))
-
 (defun nuke-all-buffers ()
   "Kill all buffers, leaving *scratch* only."
   (interactive)
@@ -87,14 +83,6 @@ otherwise current line, comments it out and pastes an uncomment copy below."
   (interactive)
   (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
                       (buffer-substring (region-beginning) (region-end)))))
-
-(defun mark-current-line-or-whole-lines-region ()
-  "Selects whole lines in region if any region is selected.
-Otherwise current line is selected."
-  (interactive)
-  (if (region-selected)
-      (mark-whole-lines-region)
-    (mark-current-line)))
 
 (defun mark-current-line ()
   "Marks the current line. Mark is lower than point."
