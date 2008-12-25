@@ -3,10 +3,6 @@
 ;; Go to line.
 (global-set-key (kbd "M-g") 'goto-line)
 
-;; Expandations.
-(global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "M-_") 'dabbrev-expand)
-
 ;; Copy region to clippboard.
 (global-set-key (kbd "C-x M-w") 'clipboard-kill-ring-save)
 
