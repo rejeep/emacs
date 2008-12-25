@@ -27,7 +27,7 @@
 (defun drag-line-or-region(arg)
   "Drags a region if any region selected.
 Otherwise line at point will be dragged."
-  (if (region-selected)
+  (if mark-active
       (drag-region arg)
     (drag-line arg)))
 
