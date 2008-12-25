@@ -150,7 +150,7 @@
 (require 'ecb)
 
 ;; Easy building of regular expressions.
-(require re-builder)
+(require 're-builder)
 
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
