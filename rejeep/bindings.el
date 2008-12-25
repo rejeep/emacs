@@ -45,6 +45,9 @@
 ;; Show occurances of regexp.
 (global-set-key (kbd "C-o") 'occur)
 
+;; Toggle line numbers.
+(global-set-key (kbd "<f6>") 'linum-mode)
+
 ;; Magit status.
 (global-set-key (kbd "C-x g") 'magit-status)
 
