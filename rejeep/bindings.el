@@ -19,7 +19,7 @@
 (global-set-key (kbd "§") 'ecb-toggle-ecb-windows)
 
 ;; Indent region or buffer.
-(global-set-key (kbd "C-S-f") 'indent-region-or-buffer)
+(global-set-key (kbd "C-S-f") 'indent-buffer-or-region)
 
 ;; Back to indentation or beginning of line.
 (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning-of-line)

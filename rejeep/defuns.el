@@ -22,7 +22,7 @@
   (interactive)
   (indent-region (point-min) (point-max)))
 
-(defun indent-buffer-region-or ()
+(defun indent-buffer-or-region ()
   "Indents region if any. Otherwise whole buffer."
   (interactive)
   (if mark-active
