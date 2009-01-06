@@ -19,13 +19,13 @@
 
      (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
      (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
-     (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)     
+     (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
      ))
 
 (add-hook 'ruby-mode-hook
           '(lambda()
              (wrap-region-mode t)
-             
+
              (flymake-mode-on)
              ))
 
@@ -36,6 +36,9 @@
 
              ;; TAGS file is in rails root if any.
              (setq rinari-tags-file-name "TAGS")
+
+             ;; Show colors in rinari-console.
+             (ansi-color-for-comint-mode-on)
 
              (defun rails-find-model()
                "Find all models in this project."
@@ -66,25 +69,12 @@
                "Generic function for finding all files in some folder in this project."
                (ido-find-file-in-dir (concat (rinari-root) "/" location)))
 
-             ;; Keybindings to find methods.
-             (define-key rinari-minor-mode-map (kbd "C-c c") 'rinari-find-controller)
-             (define-key rinari-minor-mode-map (kbd "C-c m") 'rinari-find-model)
-             (define-key rinari-minor-mode-map (kbd "C-c v") 'rinari-find-view)
-             (define-key rinari-minor-mode-map (kbd "C-c h") 'rinari-find-helper)
-             (define-key rinari-minor-mode-map (kbd "C-c g") 'rinari-find-migration)
-
-             ;; Rinaris default are to hard.
+             ;; Find all *.
              (define-key rinari-minor-mode-map (kbd "C-c C-c c") 'rails-find-controller)
              (define-key rinari-minor-mode-map (kbd "C-c C-c m") 'rails-find-model)
              (define-key rinari-minor-mode-map (kbd "C-c C-c v") 'rails-find-view)
              (define-key rinari-minor-mode-map (kbd "C-c C-c h") 'rails-find-helper)
              (define-key rinari-minor-mode-map (kbd "C-c C-c g") 'rails-find-migration)
-             (define-key rinari-minor-mode-map (kbd "C-c C-c l") 'rinari-find-lib)
-             (define-key rinari-minor-mode-map (kbd "C-c C-c p") 'rinari-find-public)
-             (define-key rinari-minor-mode-map (kbd "C-c C-c j") 'rinari-find-javascript)
-             (define-key rinari-minor-mode-map (kbd "C-c C-c s") 'rinari-find-stylesheet)
-             (define-key rinari-minor-mode-map (kbd "C-c C-c a") 'rinari-find-file-in-project)
-             (define-key rinari-minor-mode-map (kbd "C-c C-c k") 'rinari-find-configuration)
              ))
 
 (add-hook 'rhtml-mode-hook
