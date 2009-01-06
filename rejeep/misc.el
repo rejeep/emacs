@@ -152,6 +152,14 @@
 ;; Easy building of regular expressions.
 (require 're-builder)
 
+;; Prefer utf8.
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; Colorize parenthesis.
+(require 'parenface)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
