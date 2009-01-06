@@ -1,0 +1,3 @@
+#name : SHOW FIELDS FROM ...;
+# --
+SHOW FIELDS FROM ${2:table};
