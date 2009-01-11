@@ -18,7 +18,7 @@
 
 (custom-set-faces
  '(minibuffer-prompt ((t (:foreground "#cf6a4c"))))
- '(default ((t (:background "#191919" :foreground "#FFFFFF"))))
+ '(default ((t (:background "black" :foreground "white"))))
  '(compilation-error ((t (:background "sienna4" :bold t))))
  '(compilation-info ((t (:inherit (quote font-lock-string-face) :bold t))))
  '(compilation-line-number ((t (:foreground "#FF6666" :bold t))))
@@ -34,14 +34,14 @@
  '(flymake-errline ((((class color)) (:underline "OrangeRed"))))
  '(flymake-warnline ((((class color)) (:underline "yellow"))))
 
- '(yas/field-highlight-face ((t (:background "green" :foreground "black"))))
+ '(yas/field-highlight-face ((t (:background "686868" :foreground "black"))))
  '(yas/mirror-highlight-face ((t nil)))
 
  '(font-lock-builtin-face ((t (:foreground "#cf6a4c"))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#5f5a60"))))
  '(font-lock-comment-face ((t (:italic t :foreground "#5f5a60"))))
  '(font-lock-constant-face ((t (:foreground "#cf6a4c"))))
- '(font-lock-function-name-face ((t (:bold t :foreground "#9b703f"))))
+ '(font-lock-function-name-face ((t (:bold t :foreground "#9B703F"))))
  '(font-lock-keyword-face ((t (:bold t :foreground "#cda869"))))
  '(font-lock-preprocessor-face ((t (:background "#202020"))))
  '(font-lock-string-face ((t (:foreground "#8f9d6a"))))
@@ -58,6 +58,8 @@
  '(match ((t :background "#4A6152")))
  '(minibuffer-noticeable-prompt ((t (:inherit (quote font-lock-builtin-face) :bold t))))
 
- '(region ((t :background "#686868")))
+ '(region ((t :background "#27292A")))
  '(show-paren-match ((t (:background "#DA44FF" :foreground "#F6CCFF" :bold t))))
- )
+ 
+ '(mode-line ((t (:background "grey75" :foreground "black")))) 
+)
