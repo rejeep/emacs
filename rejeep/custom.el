@@ -34,7 +34,7 @@
  '(flymake-errline ((((class color)) (:underline "OrangeRed"))))
  '(flymake-warnline ((((class color)) (:underline "yellow"))))
 
- '(yas/field-highlight-face ((t (:background "686868" :foreground "black"))))
+ '(yas/field-highlight-face ((t (:background "#cf6a4c" :foreground "black"))))
  '(yas/mirror-highlight-face ((t nil)))
 
  '(font-lock-builtin-face ((t (:foreground "#cf6a4c"))))
