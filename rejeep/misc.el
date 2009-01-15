@@ -163,6 +163,10 @@
 ;; Start server.
 (server-start)
 
+;; Show battery information in the mode-line.
+(require 'battery)
+(display-battery-mode)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
