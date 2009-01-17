@@ -1,0 +1,3 @@
+#name : $extend(original, extended);
+# --
+$extend($0)

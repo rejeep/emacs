@@ -1,0 +1,3 @@
+#name : $merge(obj1, obj2[, obj3[, ...]]);
+# --
+$merge($0)
