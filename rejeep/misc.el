@@ -167,6 +167,10 @@
 (require 'battery)
 (display-battery-mode)
 
+;; Flymake for shell mode.
+(require 'flymake-shell)
+(add-hook 'sh-mode-hook 'flymake-shell-load)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
