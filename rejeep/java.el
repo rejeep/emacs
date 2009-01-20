@@ -4,10 +4,6 @@
           '(lambda()
              (wrap-region-mode t)
 
-             ;; Doc mode.
-             (require 'doc-mode)
-             (add-hook 'java-mode-hook 'doc-mode)
-
              ;; Indent width is two spaces.
              (setq c-basic-offset 2)
 
