@@ -174,6 +174,10 @@
 (require 'flymake-shell)
 (add-hook 'sh-mode-hook 'flymake-shell-load)
 
+;; Show wireless information in mode-line.
+(require 'wireless)
+(display-wireless-mode t)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
