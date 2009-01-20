@@ -3,9 +3,9 @@
 (custom-set-variables
  '(jde-compiler (quote (("eclipse java compiler server" "/usr/share/eclipse-ecj-3.3/lib/ecj.jar"))))
  '(flymake-allowed-file-name-masks (quote (("\\.java\\'" jde-ecj-server-flymake-init jde-ecj-flymake-cleanup))))
- '(jde-jdk-registry (quote (("1.6" . "/opt/sun-jdk-1.6.0.10"))))
+ '(jde-jdk-registry (quote (("1.6" . "/opt/sun-jdk-1.6.0.11"))))
  '(jde-jdk (quote ("1.6")))
- '(jde-global-classpath (quote ("." "/opt/sun-jdk-1.6.0.10/jre/lib/rt.jar")))
+ '(jde-global-classpath (quote ("." "/opt/sun-jdk-1.6.0.11/jre/lib/rt.jar")))
  '(jde-complete-function (quote jde-complete-ido))
  '(ecb-options-version "2.32")
  '(truncate-lines t)
