@@ -20,6 +20,8 @@
      (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
      (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
      (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
+     
+     (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
      ))
 
 (add-hook 'ruby-mode-hook
