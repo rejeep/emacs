@@ -181,6 +181,11 @@
 ;; Indentation level by default is 2.
 (setq-default c-basic-offset 2)
 
+;; Display time and date in mode-line.
+(setq display-time-day-and-date t)
+(setq display-time-24hr-format t)
+(display-time)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
