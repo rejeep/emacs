@@ -49,6 +49,8 @@
  '(font-lock-variable-name-face ((t (:foreground "#7587a6"))))
  '(font-lock-warning-face ((t (:underline "red"))))
 
+ '(magit-branch ((t (:foreground "red" :bold t))))
+
  '(highlight ((t (:inherit (quote match)))))
  '(hl-line ((t :background "#0000")))
 
