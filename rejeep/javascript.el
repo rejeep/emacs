@@ -4,9 +4,6 @@
 
 (eval-after-load 'espresso-mode
   '(progn
-
-     (setq espresso-indent-level 2)
-
      (defconst flymake-allowed-js-file-name-masks '(("\\.json$" flymake-js-init)
                                                     ("\\.js$" flymake-js-init)))
      (defcustom flymake-js-detect-trailing-comma t nil :type 'boolean)
