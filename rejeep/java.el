@@ -45,7 +45,7 @@
                  (dolist (element (jde-complete-find-completion-for-pair (jde-complete-get-pair (jde-parse-java-variable-at-point) nil) nil))
                    (add-to-list 'completion-list (cdr element)))
                  (if completion-list
-                     (let ((choise (ido-completing-read "&gt; " completion-list)) (method))
+                     (let ((choise (ido-completing-read "> " completion-list)) (method))
                        (unless (string-match "^.*()$" choise)
                          (setq method (replace-regexp-in-string ")" "})"(replace-regexp-in-string ", " "}, ${" (replace-regexp-in-string "(" "(${" choise)))))
                        (delete-region (point) (re-search-backward "\\." (line-beginning-position)))
