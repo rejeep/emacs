@@ -51,6 +51,9 @@
 ;; Magit status.
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; Goto matching paren.
+(global-set-key "%" 'match-paren)
+
 ;; So that Emacs never is quit by mistake.
 (global-set-key (kbd "C-x C-c")
                 (lambda ()

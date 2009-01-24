@@ -111,4 +111,11 @@ current line is commented or uncommented."
       (mark-current-line))
     (comment-or-uncomment-region (region-beginning) (region-end))))
 
+(defun match-paren (arg)
+  "Go to the matching paren if on a paren; otherwise insert %."
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1))
+        ((looking-back "\\s\)") (backward-list 1))
+        (t (self-insert-command arg))))
+
 (provide 'defuns)
