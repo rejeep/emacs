@@ -1,0 +1,3 @@
+#name : Model.find(...)
+# --
+`(capitalize (file-name-sans-extension (file-name-nondirectory (ido-read-file-name "Model" (concat (rinari-root) "app/models")))))`.find$1($0)
