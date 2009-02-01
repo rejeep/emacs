@@ -186,9 +186,6 @@
 (setq display-time-24hr-format t)
 (display-time)
 
-;; Org mode is default mode.
-(setq default-major-mode 'org-mode)
-
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
