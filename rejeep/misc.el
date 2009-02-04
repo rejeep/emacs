@@ -185,6 +185,10 @@
 (setq display-time-24hr-format t)
 (display-time)
 
+;; Use keats to handle keyboard shortcuts.
+(require 'keats)
+(keats-mode t)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
