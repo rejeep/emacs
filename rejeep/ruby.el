@@ -20,8 +20,17 @@
      (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
      (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
      (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
-     
+
      (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
+     
+     ;; Wraps region like this: "#{REGION}"
+     (define-key ruby-mode-map (kbd "C-c w") (lambda (beg end)
+                                               (interactive "r")
+                                               (save-excursion
+                                                 (goto-char end)
+                                                 (insert "}\"")
+                                                 (goto-char beg)
+                                                 (insert "\"#{"))))
      ))
 
 (add-hook 'ruby-mode-hook
