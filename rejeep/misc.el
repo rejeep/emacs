@@ -138,8 +138,7 @@
 ;; Run after wraping a region.
 (add-hook 'wrap-region-after-hook
           '(lambda ()
-             (indent-region wrap-region-beginning wrap-region-end)
-             ))
+             (indent-region wrap-region-beginning wrap-region-end)))
 
 ;; Paste buffer/region or get pastie.
 (require 'pastie)
