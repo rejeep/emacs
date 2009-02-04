@@ -1,4 +1,4 @@
 #name : defvar ...
 # --
-(defvar ${1:variable_name} "${2:value}"
+(defvar ${1:variable_name} ${2:value}
   "$0")
