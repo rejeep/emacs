@@ -3,16 +3,18 @@
 (custom-set-variables
  '(jde-compiler (quote (("eclipse java compiler server" "/usr/share/eclipse-ecj-3.3/lib/ecj.jar"))))
  '(flymake-allowed-file-name-masks (quote (("\\.java\\'" jde-ecj-server-flymake-init jde-ecj-flymake-cleanup))))
- '(jde-jdk-registry (quote (("1.6" . "/opt/sun-jdk-1.6.0.11"))))
+ '(jde-jdk-registry (quote (("1.5" . "/usr/lib/jvm/sun-jdk-1.5") ("1.6" . "/usr/lib/jvm/sun-jdk-1.6"))))
  '(jde-jdk (quote ("1.6")))
- '(jde-global-classpath (quote ("." "/opt/sun-jdk-1.6.0.11/jre/lib/rt.jar")))
+ '(jde-global-classpath (quote ("." "/usr/lib/jvm/sun-jdk-1.6")))
+ '(jde-jdk-doc-url "/usr/share/doc/java-sdk-docs-1.6.0/html/api/index.html")
+ '(jde-sourcepath "/usr/lib/jvm/sun-jdk-1.6/src.zip")
  '(jde-complete-function (quote jde-complete-ido))
  '(ecb-options-version "2.32")
  '(truncate-lines t)
  '(openwith-associations (quote (("\\.odt|\\.doc?\\'" "oowriter" (file))
                                  ("\\.pdf\\'" "epdfview" (file))
                                  ("\\.mp3\\'" "mocp" (file))
-                                 ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mov\\)\\'" "mplayer" ("-idx" file))
+                                 ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mov\\|ogg\\)\\'" "mplayer" ("-idx" file))
                                  ("\\.\\(?:jp?g\\|png\\)\\'" "xli" (file)))))
  )
 
@@ -62,6 +64,6 @@
 
  '(region ((t :background "#27292A")))
  '(show-paren-match ((t (:background "#DA44FF" :foreground "#F6CCFF" :bold t))))
- 
- '(mode-line ((t (:background "grey75" :foreground "black")))) 
-)
+
+ '(mode-line ((t (:background "grey75" :foreground "black"))))
+ )
