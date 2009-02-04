@@ -78,11 +78,10 @@ otherwise current line, comments it out and pastes an uncomment copy below."
       (insert (concat "\n" text)))
     (move-to-column column t)))
 
-(defun google-region ()
+(defun google-region (beg end)
   "Google the selected region."
-  (interactive)
-  (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
-                      (buffer-substring (region-beginning) (region-end)))))
+  (interactive "r")
+  (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
 
 (defun mark-current-line ()
   "Marks the current line. Mark is lower than point."
