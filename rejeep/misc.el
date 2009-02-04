@@ -189,6 +189,9 @@
 (require 'keats)
 (keats-mode t)
 
+;; delete-trailing-whitespace is to long.
+(defalias 'dtw 'delete-trailing-whitespace)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
