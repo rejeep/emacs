@@ -187,6 +187,7 @@
 
 ;; Use keats to handle keyboard shortcuts.
 (require 'keats)
+(require 'keats-interactive)
 (keats-mode t)
 
 ;; delete-trailing-whitespace is to long.
