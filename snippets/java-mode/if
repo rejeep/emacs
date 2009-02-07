@@ -1,6 +1,6 @@
 #name : if(condition) { ... }
 # --
-if(${1:condition})
+if( ${1:condition} )
 {
   $0
 }

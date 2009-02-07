@@ -1,3 +1,3 @@
 #name : System.err.println(...)
 # --
-System.err.println($0);
+System.err.println( $0 );

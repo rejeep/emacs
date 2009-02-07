@@ -1,6 +1,6 @@
 #name : while(true) { ... }
 # --
-while(true)
+while( true )
 {
   $0
   break;

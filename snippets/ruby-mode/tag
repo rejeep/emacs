@@ -1,0 +1,3 @@
+#name : content_tag
+# --
+content_tag(:${1:tag}, $0)
