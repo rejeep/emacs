@@ -170,10 +170,6 @@
 (require 'battery)
 (display-battery-mode)
 
-;; Flymake for shell mode.
-(require 'flymake-shell)
-(add-hook 'sh-mode-hook 'flymake-shell-load)
-
 ;; Show wireless information in mode-line.
 (require 'wireless)
 (display-wireless-mode t)
