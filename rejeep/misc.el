@@ -33,7 +33,7 @@
 (setq ido-create-new-buffer 'always)
 
 ;; Look for filename at point.
-(setq ido-use-filename-at-point t)
+(setq ido-use-filename-at-point nil)
 
 ;; Show max 10 matches.
 (setq ido-max-prospects 10)
