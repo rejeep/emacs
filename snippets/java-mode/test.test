@@ -3,7 +3,7 @@
 /**
  * 
  */
-@Test public void ${1:method_name}($2)
+@Test public void test${1:method_name}($2)
 {
   $0
 }
