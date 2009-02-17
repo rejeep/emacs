@@ -4,7 +4,7 @@
 (require 'flymake)
 
 ;; Custom file.
-(setq custom-file "~/.emacs.d/rejeep/custom")
+(setq custom-file "~/.emacs.d/rejeep/custom.el")
 (load custom-file)
 
 ;; Open files with specified external programs.
