@@ -36,12 +36,6 @@
 ;; Moves region to *scratch* buffer.
 (global-set-key (kbd "C-c s") 'copy-region-to-scratch-buffer)
 
-;; Moves line or region one line down.
-(global-set-key (kbd "<C-M-down>") 'drag-line-or-region-down)
-
-;; Moves line or region one line up.
-(global-set-key (kbd "<C-M-up>") 'drag-line-or-region-up)
-
 ;; Show occurances of regexp.
 (global-set-key (kbd "C-o") 'occur)
 
