@@ -62,7 +62,7 @@
  '(match ((t :background "#4A6152")))
  '(minibuffer-noticeable-prompt ((t (:inherit (quote font-lock-builtin-face) :bold t))))
 
- '(region ((t :background "#27292A")))
+ '(region ((t :background "#FF8F8F")))
  '(show-paren-match ((t (:background "#DA44FF" :foreground "#F6CCFF" :bold t))))
 
  '(mode-line ((t (:background "grey75" :foreground "black"))))
