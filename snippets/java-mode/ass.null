@@ -1,0 +1,3 @@
+#name : assertNull(...)
+# --
+assertNull( "${1:message}", ${2:object} );

@@ -1,0 +1,3 @@
+#name : goto-char ...
+# --
+(goto-char $0)
