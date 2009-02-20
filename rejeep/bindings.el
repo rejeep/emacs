@@ -63,4 +63,8 @@
                   (delete-trailing-whitespace)
                   (indent-buffer)))
 
+;; Fast go to .emacs.
+(global-set-key (kbd "<f12>") (lambda ()
+                                (interactive)
+                                (find-file "~/.emacs")))
 (provide 'bindings)
