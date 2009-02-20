@@ -1,0 +1,3 @@
+#name : assertFalse(...)
+# --
+assertFalse( "${1:message}", ${2:expression} );
