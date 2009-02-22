@@ -36,6 +36,7 @@
                  (save-excursion
                    (jde-import-all)
                    (jde-import-organize)
+                   (jde-import-expand-imports)
                    (jde-import-kill-extra-imports))))
 
              (defun jde-complete-ido ()
