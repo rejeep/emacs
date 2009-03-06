@@ -39,16 +39,20 @@
                    (jde-import-organize)
                    (jde-import-all))))
 
+             (setq jde-space-in-param t)
+
              (defun jde-complete-ido ()
                "Custom method completion for JDE using ido-mode and yasnippet."
                (interactive)
-               (let ((completion-list))
-                 (dolist (element (jde-complete-find-completion-for-pair (jde-complete-get-pair (jde-parse-java-variable-at-point) nil) nil))
+               (let ((completion-list '()) (variable-at-point (jde-parse-java-variable-at-point)))
+                 (dolist (element (jde-complete-find-completion-for-pair variable-at-point nil) nil)
                    (add-to-list 'completion-list (cdr element)))
                  (if completion-list
-                     (let ((choise (ido-completing-read "> " completion-list)) (method))
+                     (let ((choise (ido-completing-read "> " completion-list nil nil (car (cdr variable-at-point)))) (method))
                        (unless (string-match "^.*()$" choise)
-                         (setq method (replace-regexp-in-string ")" "})"(replace-regexp-in-string ", " "}, ${" (replace-regexp-in-string "(" "(${" choise)))))
+                         (setq method (replace-regexp-in-string ")" "})" (replace-regexp-in-string ", " "}, ${" (replace-regexp-in-string "(" "(${" choise))))
+                         (if jde-space-in-param
+                             (setq method (replace-regexp-in-string ")" " )" (replace-regexp-in-string "(" "( " method)))))
                        (delete-region (point) (re-search-backward "\\." (line-beginning-position)))
                        (insert ".")
                        (if method
