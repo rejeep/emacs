@@ -34,10 +34,10 @@
                (lambda ()
                  (interactive)
                  (save-excursion
-                   (jde-import-all)
-                   (jde-import-organize)
                    (jde-import-expand-imports)
-                   (jde-import-kill-extra-imports))))
+                   (jde-import-kill-extra-imports)
+                   (jde-import-organize)
+                   (jde-import-all))))
 
              (defun jde-complete-ido ()
                "Custom method completion for JDE using ido-mode and yasnippet."
