@@ -132,9 +132,6 @@
      (set-face-foreground 'magit-diff-add "green3")
      (set-face-foreground 'magit-diff-del "red3")))
 
-;; Wrap stuff.
-(require 'wrap-region)
-
 ;; Don't insert twice when no region is selected.
 (setq wrap-region-insert-twice nil)
 
@@ -185,8 +182,6 @@
 (display-time)
 
 ;; Use keats to handle keyboard shortcuts.
-(require 'keats)
-(require 'keats-interactive)
 (setq keats-file "~/other/cheats/emacs/keats")
 (keats-mode t)
 
