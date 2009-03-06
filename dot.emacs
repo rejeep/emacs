@@ -2,8 +2,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/rejeep")
 
-(require 'cl)
-
 ;; My custom stuff
 (require 'loadpaths)
 (require 'defuns)
