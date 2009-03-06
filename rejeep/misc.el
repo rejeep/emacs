@@ -191,6 +191,15 @@
 ;; Remember window configuration.
 (winner-mode 1)
 
+;; W3M settings.
+(setq w3m-use-cookies t)
+(setq w3m-coding-system 'utf-8
+      w3m-file-coding-system 'utf-8
+      w3m-file-name-coding-system 'utf-8
+      w3m-input-coding-system 'utf-8
+      w3m-output-coding-system 'utf-8
+      w3m-terminal-coding-system 'utf-8)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
