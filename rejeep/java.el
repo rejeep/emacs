@@ -29,6 +29,9 @@
              ;; Generate variables and getter and setter methods to them.
              (define-key jde-mode-map (kbd "C-c C-v g") 'jde-gen-get-set-methods)
 
+             ;; Run ant task.
+             (define-key jde-mode-map (kbd "C-c a") 'jde-ant-build)
+
              ;; Fix imports.
              (define-key jde-mode-map (kbd "C-c o")
                (lambda ()
