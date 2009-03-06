@@ -1,3 +1,3 @@
-#name : $each(iterable, fn[, bind]);
+#name : $each( iterable, fn[, bind] );
 # --
-$each($0)
+$each( $0 )

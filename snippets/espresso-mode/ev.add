@@ -1,3 +1,3 @@
-#name : addEvent(...)
+#name : addEvent( ... )
 # --
-addEvent('$0')
+addEvent( '$0' )

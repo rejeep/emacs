@@ -1,3 +1,5 @@
 #name : thead
 # --
-<thead>$0</thead>
+<thead>
+  $0
+</thead>

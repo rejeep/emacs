@@ -1,0 +1,3 @@
+#name : JLabel
+# --
+${1:JLabel} ${2:variable_name} = new $1($3);

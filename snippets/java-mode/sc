@@ -1,3 +1,12 @@
 #name : Scanner
 # --
-Scanner ${1:variable_name} = new Scanner( $0 );
+Scanner ${1:variable_name} = null;
+
+try
+{
+  $1 = new Scanner( $0 );
+}
+catch( FileNotFoundException ${2:e} )
+{
+  
+}

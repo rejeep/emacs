@@ -1,0 +1,7 @@
+#name : Request.JSON( ... )
+# --
+new Request.JSON($0 {
+  onSuccess: function( responseJSON, responseText ) {
+    
+  }
+} ).${1:send}( ${2:url} );
