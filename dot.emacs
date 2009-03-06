@@ -10,6 +10,7 @@
 (require 'misc)
 
 ;; Programming
+(require 'programming)
 (require 'java)
 (require 'ruby)
 (require 'css)
