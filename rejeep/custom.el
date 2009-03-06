@@ -14,7 +14,7 @@
  '(jde-help-docsets (quote (("JDK API" "/usr/share/doc/java-sdk-docs-1.6.0/html/api/" nil) ("User (javadoc)" "~/dev/apes/doc/javadoc" nil))))
  '(jde-jdk (quote ("1.6")))
  '(jde-jdk-doc-url "/usr/share/doc/java-sdk-docs-1.6.0/html/api/index.html")
- '(jde-jdk-registry (quote (("1.5" . "/usr/lib/jvm/sun-jdk-1.5") ("1.6" . "/usr/lib/jvm/sun-jdk-1.6"))))
+ '(jde-jdk-registry (quote (("1.6" . "/usr/lib/jvm/sun-jdk-1.6"))))
  '(jde-sourcepath "/usr/lib/jvm/sun-jdk-1.6/src.zip")
  '(openwith-associations (quote (("\\.odt|\\.doc?\\'" "oowriter" (file)) ("\\.pdf\\'" "epdfview" (file)) ("\\.mp3\\'" "mocp" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mov\\|ogg\\)\\'" "mplayer" ("-idx" file)) ("\\.\\(?:jp?g\\|png\\)\\'" "xli" (file)) ("\\.xls" "oocalc" (file)))))
  '(truncate-lines t))
