@@ -200,6 +200,11 @@
       w3m-output-coding-system 'utf-8
       w3m-terminal-coding-system 'utf-8)
 
+;; Add parts of each file's directory to the buffer name if not
+;; unique.
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
