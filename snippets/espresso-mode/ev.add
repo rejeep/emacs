@@ -1,3 +1,5 @@
 #name : addEvent( ... )
 # --
-addEvent( '$0' )
+addEvent( '${1:event}', function($2) {
+  $0
+} );
