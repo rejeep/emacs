@@ -1,4 +1,4 @@
-#name : comment ( /* ... */ )
+#name : comment (/* ... */)
 # --
 /*
  * $0

@@ -1,4 +1,4 @@
-#name : function name( ... ) { ... }
+#name : function name(...) { ... }
 # --
 function ${1:function_name}($2) {
   $0
