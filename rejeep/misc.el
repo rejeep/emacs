@@ -210,6 +210,11 @@
 ;; Minimal finge.
 (fringe-mode 'minimal)
 
+
+;; Allow up and down case of region.
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
