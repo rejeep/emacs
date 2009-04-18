@@ -1,0 +1,3 @@
+#name : text_field_tag ...
+# --
+<%= text_field_tag ${1:name} %>

@@ -1,0 +1,3 @@
+#name : should_redirect_to ...
+# --
+should_redirect_to("$1") { $0 }

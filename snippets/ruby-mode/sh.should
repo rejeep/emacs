@@ -1,5 +1,5 @@
 #name : should "..." do ... end
-# -
-should "..." do
-  
+# --
+should "$1" do
+  $0
 end
