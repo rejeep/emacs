@@ -210,6 +210,17 @@
 ;; Minimal finge.
 (fringe-mode 'minimal)
 
+;; Auto complete settings.
+(require 'auto-complete)
+(global-auto-complete-mode t)
+(global-set-key (kbd "M-/") 'ac-start)
+(define-key ac-complete-mode-map (kbd "C-n") 'ac-next)
+(define-key ac-complete-mode-map (kbd "n") 'ac-next)
+(define-key ac-complete-mode-map (kbd "C-p") 'ac-previous)
+(define-key ac-complete-mode-map (kbd "p") 'ac-previous)
+(define-key ac-complete-mode-map (kbd "C-g") 'ac-stop)
+(setq ac-auto-start nil)
+(setq-default ac-sources '(ac-source-words-in-all-buffer))
 
 ;; Allow up and down case of region.
 (put 'downcase-region 'disabled nil)
