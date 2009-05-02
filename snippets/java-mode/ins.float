@@ -1,3 +1,6 @@
 #name : Float instance variable
 # --
-private float ${1:variable_value} = $2;
+/**
+ * 
+ */
+private float ${1:variable_value};

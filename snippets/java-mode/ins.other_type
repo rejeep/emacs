@@ -1,3 +1,6 @@
 #name : Other type instance variable
 # --
-private ${1:type} ${2:variable_value} = $3;
+/**
+ * 
+ */
+private ${1:type} ${2:variable_value};
