@@ -1,3 +1,3 @@
 #name : assertNotNull(...)
 # --
-assertNotNull( "${1:message}", ${2:object} );
+assertNotNull("${1:message}", ${2:object});

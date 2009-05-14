@@ -4,9 +4,9 @@ Scanner ${1:variable_name} = null;
 
 try
 {
-  $1 = new Scanner( $0 );
+  $1 = new Scanner($0);
 }
-catch( FileNotFoundException ${2:e} )
+catch(FileNotFoundException ${2:e})
 {
   
 }
