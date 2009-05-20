@@ -164,9 +164,6 @@
 ;; Colorize parenthesis.
 (require 'parenface)
 
-;; Start server.
-(server-start)
-
 ;; Show battery information in the mode-line.
 (require 'battery)
 (display-battery-mode)
