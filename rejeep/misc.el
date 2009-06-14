@@ -224,7 +224,7 @@
 (put 'upcase-region 'disabled nil)
 
 ;; Associate modes with file extensions.
-(add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
