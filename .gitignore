@@ -2,3 +2,4 @@ auto-save-list
 *.elc
 /saveplace
 /TAGS
+/smex.save
