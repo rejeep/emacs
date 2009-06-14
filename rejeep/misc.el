@@ -182,6 +182,8 @@
 
 ;; Use keats to handle keyboard shortcuts.
 (setq keats-file "~/other/cheats/emacs/keats")
+(require 'keats)
+(require 'keats-interactive)
 (keats-mode t)
 
 ;; delete-trailing-whitespace is to long.
