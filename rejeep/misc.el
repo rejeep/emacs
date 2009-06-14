@@ -224,6 +224,12 @@
 (require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-X") 'smex)
+
+;; Save place in files.
+(setq save-place-file "~/.emacs.d/saveplace")
+(setq-default save-place t)
+(require 'saveplace)
+
 ;; Allow up and down case of region.
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
