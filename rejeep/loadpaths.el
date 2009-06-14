@@ -7,6 +7,7 @@
 (add-to-list 'load-path "~/.emacs.d/packages/magit")
 (add-to-list 'load-path "~/.emacs.d/packages/rinari")
 (add-to-list 'load-path "~/.emacs.d/packages/js2/build")
+(add-to-list 'load-path "~/.emacs.d/packages/smex")
 (add-to-list 'load-path "~/dev/wrap-region")
 (add-to-list 'load-path "/usr/local/lib/stumpwm/contrib")
 
