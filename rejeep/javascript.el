@@ -9,15 +9,15 @@
      (add-hook 'js2-mode-hook 'local-comment-auto-fill)
      (add-hook 'js2-mode-hook 'turn-on-hl-line-mode)
 
-     (define-key js2-mode-map "\C-\M-h" 'backward-kill-word)
-
      (define-key js2-mode-map (kbd "TAB") (lambda()
                                             (interactive)
                                             (let ((yas/fallback-behavior 'return-nil))
                                               (unless (yas/expand)
-                                                (indent-for-tab-command)))))
+                                                (indent-for-tab-command)
+                                                (if (looking-back "^\s*")
+                                                    (back-to-indentation))))))
 
-     (define-key js2-mode-map "C-a" 'back-to-indentation-or-beginning-of-line)
+     (define-key js2-mode-map (kbd "C-a") 'back-to-indentation-or-beginning-of-line)
 
      (setq js2-bounce-indent-flag nil
            js2-indent-on-enter-key nil)
