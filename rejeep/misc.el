@@ -181,7 +181,7 @@
 (display-time)
 
 ;; Use keats to handle keyboard shortcuts.
-(setq keats-file "~/other/cheats/emacs/keats")
+(setq keats-file "~/dev/emacs/keats")
 (require 'keats)
 (require 'keats-interactive)
 (keats-mode t)
