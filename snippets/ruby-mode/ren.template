@@ -1,0 +1,3 @@
+#name : template
+# --
+render :template => "${1:template}"
