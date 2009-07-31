@@ -1,5 +1,5 @@
-#name : form_for(...)
+#name : form_for
 # --
-<% form_for(${1:record_or_name_or_array}, ${2:*args}) %>
+<% form_for ${1:variable} do |f| %>
   $0
 <% end %>

@@ -1,6 +1,6 @@
-#name : f.text_area ...
+#name : f.date_select ...
 # --
 <p>
   <%= f.label :${1:attribute}, ${2:label} %>
-  <%= f.text_area :$1 %>
+  <%= f.date_select :$1 %>
 </p>

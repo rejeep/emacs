@@ -1,5 +1,5 @@
-#name : def self.method ... end
+#name : class << self
 # --
-def self.${1:method_name}
+class << self
   $0
 end

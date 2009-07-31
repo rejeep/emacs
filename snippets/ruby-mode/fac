@@ -1,5 +1,3 @@
-#name : Factory.define ... do ... end
+#name : Factory(...)
 # --
-Factory.define :${1:name} do |f|
-  $0
-end
+Factory(:$0)

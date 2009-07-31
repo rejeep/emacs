@@ -1,0 +1,6 @@
+#name : f.datetime_select ...
+# --
+<p>
+  <%= f.label :${1:attribute}, ${2:label} %>
+  <%= f.datetime_select :$1 %>
+</p>

@@ -1,5 +1,5 @@
-#name : form_tag(...)
+#name : form_tag
 # --
-<% form_tag(${1:url_for_options}, ${2:options}, ${3:*parameters_for_url}) do %>
+<% form_tag ${1:url_for_options} do %>
   $0
 <% end %>
