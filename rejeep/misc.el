@@ -144,6 +144,7 @@
 (require 'pastie)
 
 ;; Snippets.
+(require 'dropdown-list)
 (require 'yasnippet)
 (yas/load-directory "~/.emacs.d/snippets")
 (yas/initialize)
