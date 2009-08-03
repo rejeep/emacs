@@ -5,10 +5,6 @@
   '(progn
      (wrap-region-mode t)
 
-     (add-hook 'js2-mode-hook 'local-column-number-mode)
-     (add-hook 'js2-mode-hook 'local-comment-auto-fill)
-     (add-hook 'js2-mode-hook 'turn-on-hl-line-mode)
-
      (define-key js2-mode-map (kbd "TAB") (lambda()
                                             (interactive)
                                             (let ((yas/fallback-behavior 'return-nil))
