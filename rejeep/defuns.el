@@ -137,4 +137,17 @@ current line is commented or uncommented."
              (message
               "The region has %d words." count))))))
 
+(defun duplicate-current-line ()
+  "Duplicates the current line by placing it right under the
+current."
+  (interactive)
+  (beginning-of-line nil)
+  (let ((b (point)))
+    (end-of-line nil)
+    (copy-region-as-kill b (point)))
+  (beginning-of-line 2)
+  (open-line 1)
+  (yank)
+  (back-to-indentation))
+
 (provide 'defuns)

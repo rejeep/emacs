@@ -48,6 +48,8 @@
 ;; Goto matching paren.
 (global-set-key "%" 'match-paren)
 
+(global-set-key (kbd "C-c d") 'duplicate-current-line)
+
 ;; So that Emacs never is quit by mistake.
 (global-set-key (kbd "C-x C-c")
                 (lambda ()
