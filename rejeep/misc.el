@@ -237,6 +237,9 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
+;; Set font-size.
+(set-face-attribute 'default nil :height 110)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
