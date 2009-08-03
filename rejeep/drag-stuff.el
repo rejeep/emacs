@@ -41,4 +41,7 @@ Otherwise line at point will be dragged."
   (interactive "*p")
   (drag-line-or-region (- arg)))
 
+(global-set-key (kbd "<C-M-down>") 'drag-line-or-region-down)
+(global-set-key (kbd "<C-M-up>") 'drag-line-or-region-up)
+
 (provide 'drag-stuff)
