@@ -62,4 +62,6 @@
  (:key "M-:" :description "Lisp eval expression")
  (:key "C-M-x" :description "Eval defun")
  (:key "C-M-t" :description "Transpose balanced expressions")
- (:key "C-x DEL" :description "Backward kill sentence"))
+ (:key "C-x DEL" :description "Backward kill sentence")
+ (:key "C-x C-+" :description "Increase font size")
+ (:key "C-x C--" :description "Decrease font size"))
