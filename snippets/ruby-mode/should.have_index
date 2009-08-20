@@ -1,0 +1,3 @@
+#name : should_have_index attr, options
+# --
+should_have_index :${1:attribute}
