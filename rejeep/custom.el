@@ -16,7 +16,7 @@
  '(jde-jdk-doc-url "/usr/share/doc/java-sdk-docs-1.6.0/html/api/index.html")
  '(jde-jdk-registry (quote (("1.6" . "/usr/lib/jvm/sun-jdk-1.6"))))
  '(jde-sourcepath "/usr/lib/jvm/sun-jdk-1.6/src.zip")
- '(openwith-associations (quote (("\\.odt|\\.doc?\\'" "oowriter" (file)) ("\\.pdf\\'" "pdf" (file)) ("\\.mp3\\'" "mocp" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mov\\|ogg\\)\\'" "mplayer" ("-idx" file)) ("\\.\\(?:jp?g\\|png\\)\\'" "img" (file)) ("\\.xls" "oocalc" (file)))))
+ '(openwith-associations (quote (("\\.odt|\\.doc?\\'" "oowriter" (file)) ("\\.pdf\\'" "pdf" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mov\\|ogg\\)\\'" "mplayer" ("-idx" file)) ("\\.\\(?:jp?g\\|png\\)\\'" "img" (file)) ("\\.xls" "oocalc" (file)))))
  '(truncate-lines t)
  '(yas/prompt-functions (quote (yas/dropdown-prompt yas/ido-prompt yas/x-prompt yas/completing-prompt yas/no-prompt))))
 
