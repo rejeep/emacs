@@ -3,11 +3,12 @@
 (autoload 'yaml-mode "yaml-mode" "" t)
 (autoload 'ruby-mode "ruby-mode" "" t)
 (autoload 'rhtml-mode "rhtml-mode" "" t)
+(autoload 'feature-mode "feature-mode" "Mode for editing cucumber files" t)
 
 (eval-after-load 'ruby-mode
   '(progn
      (require 'rinari)
-
+     
      ;; Flymake for on the fly error checking.
      (defun flymake-ruby-init()
        (let* ((temp-file (flymake-init-create-temp-buffer-copy
