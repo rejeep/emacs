@@ -223,12 +223,6 @@
 (setq ac-auto-start nil)
 (setq-default ac-sources '(ac-source-words-in-all-buffer))
 
-;; Ido for M-x.
-(setq smex-save-file "~/.emacs.d/smex.save")
-(require 'smex)
-(smex-initialize)
-(global-set-key (kbd "M-X") 'smex)
-
 ;; Save place in files.
 (setq save-place-file "~/.emacs.d/saveplace")
 (setq-default save-place t)
