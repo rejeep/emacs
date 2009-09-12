@@ -154,6 +154,7 @@
 
 ;; Easy building of regular expressions.
 (require 're-builder)
+(require 're-builder+)
 
 ;; Prefer utf8.
 (setq locale-coding-system 'utf-8)
