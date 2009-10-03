@@ -46,7 +46,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; Goto matching paren.
-(global-set-key "%" 'match-paren)
+(global-set-key (kbd "%") 'match-paren)
 
 ;; Duplicates the current line.
 (global-set-key (kbd "C-c d") 'duplicate-current-line)
@@ -70,4 +70,5 @@
 (global-set-key (kbd "<f12>") (lambda ()
                                 (interactive)
                                 (find-file "~/.emacs")))
+
 (provide 'bindings)
