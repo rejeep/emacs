@@ -1,5 +1,5 @@
 #name : content_for ... do ... end
 # --
-<% content_for :${1:target} do -%>
+<% content_for :${1:target} do %>
   $0
-<% end -%>
+<% end %>
