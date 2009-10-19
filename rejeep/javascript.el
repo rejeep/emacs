@@ -1,6 +1,5 @@
 ;;; javascript.el --- Javascript settings
 
-(autoload 'js2-mode "js2" nil t)
 (eval-after-load 'js2-mode
   '(progn
      (wrap-region-mode t)
