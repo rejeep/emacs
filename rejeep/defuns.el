@@ -150,4 +150,9 @@ current."
   (yank)
   (back-to-indentation))
 
+(defun google (query)
+  "googles a query"
+  (interactive "sQuery: ")
+  (browse-url (concat "http://www.google.com/search?q=" query)))
+
 (provide 'defuns)
