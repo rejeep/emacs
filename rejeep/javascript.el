@@ -6,9 +6,6 @@
 
      (define-key js2-mode-map (kbd "C-a") 'back-to-indentation-or-beginning-of-line)
 
-     (setq js2-bounce-indent-flag nil
-           js2-indent-on-enter-key nil)
-
      (defun js-continued-var-decl-list-p ()
        "Return non-nil if point is inside a continued variable declaration list."
        (interactive)
