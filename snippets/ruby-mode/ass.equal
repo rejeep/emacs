@@ -1,3 +1,3 @@
-#name : assert_equal ..., ...
+#name : assert_equal exected, actual
 # --
 assert_equal ${1:expected}, ${2:actual}
