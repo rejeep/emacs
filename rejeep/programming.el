@@ -3,4 +3,7 @@
 (add-hook 'c-mode-common-hook
           (lambda () (c-subword-mode 1)))
 
+(require 'haml-mode)
+(require 'sass-mode)
+
 (provide 'programming)
