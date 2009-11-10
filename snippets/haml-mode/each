@@ -1,0 +1,4 @@
+#name : each do ... end
+# --
+- ${2:collection}.each do |${1:element}|
+  $0

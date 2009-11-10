@@ -1,0 +1,4 @@
+#name : - method do ...
+# --
+- $1 do
+  $0

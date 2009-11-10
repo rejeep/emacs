@@ -1,0 +1,4 @@
+#name : unless condition ...
+# --
+- unless ${1:condition}
+  $0
