@@ -1,0 +1,3 @@
+#name : border: width color style
+# --
+border: $1px ${2:color} ${3:style}
