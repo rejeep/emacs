@@ -7,10 +7,6 @@
 (setq custom-file "~/.emacs.d/rejeep/custom.el")
 (load custom-file)
 
-;; Open files with specified external programs.
-(require 'openwith)
-(openwith-mode t)
-
 ;; Default spelling dictionary.
 (setq ispell-dictionary "english")
 
