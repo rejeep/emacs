@@ -229,7 +229,7 @@
 (put 'upcase-region 'disabled nil)
 
 ;; Set font-size.
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 110 :family "Consolas")
 
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
