@@ -5,5 +5,6 @@
 
 (require 'haml-mode)
 (require 'sass-mode)
+(require 'markdown-mode)
 
 (provide 'programming)
