@@ -241,5 +241,6 @@
 (add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+(add-to-list 'auto-mode-alist '("\.markdown$" . markdown-mode))
 
 (provide 'misc)
