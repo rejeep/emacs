@@ -5,6 +5,9 @@
 
 (require 'haml-mode)
 (require 'sass-mode)
+
 (require 'markdown-mode)
+
+(add-hook 'magit-mode-hook 'rinari-launch)
 
 (provide 'programming)
