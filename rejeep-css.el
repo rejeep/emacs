@@ -1,6 +1,4 @@
-;;; css.el --- CSS specific settings.
-
-(autoload 'css-mode "css-mode" "" t)
+;;; rejeep-css.el --- CSS specific settings.
 
 (eval-after-load 'css-mode
   '(progn
@@ -10,4 +8,4 @@
      (setq css-indent-offset 2)
      ))
 
-(provide 'css)
+(provide 'rejeep-css)

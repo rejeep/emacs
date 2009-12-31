@@ -1,4 +1,4 @@
-;;; defuns.el --- Custom functions
+;;; rejeep-defuns.el --- Custom functions
 
 (defun nuke-all-buffers ()
   "Kill all buffers, leaving *scratch* only."
@@ -155,4 +155,4 @@ current."
   (interactive "sQuery: ")
   (browse-url (concat "http://www.google.com/search?q=" query)))
 
-(provide 'defuns)
+(provide 'rejeep-defuns)

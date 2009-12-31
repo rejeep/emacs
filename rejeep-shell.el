@@ -1,4 +1,4 @@
-;;; bash.el --- (ba)sh specific settings.
+;;; rejeep-bash.el --- (ba)sh specific settings.
 
 (add-hook 'sh-mode-hook
           '(lambda()
@@ -12,4 +12,4 @@
              (add-hook 'sh-mode-hook 'flymake-shell-load)
              ))
 
-(provide 'bash)
+(provide 'rejeep-bash)

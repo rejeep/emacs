@@ -1,6 +1,4 @@
-auto-save-list
+/auto-save-list
 *.elc
 /saveplace
-/TAGS
-/smex.save
-/tramp
+/elpa/*

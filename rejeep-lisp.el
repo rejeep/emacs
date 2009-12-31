@@ -1,6 +1,4 @@
-;;; lisp.el --- All that has to do with (any dialect of) Lisp
-
-(autoload 'stumpwm-mode "stumpwm-mode" nil t)
+;;; rejeep-lisp.el --- All that has to do with (any dialect of) Lisp
 
 (add-hook 'emacs-lisp-mode-hook
           '(lambda ()
@@ -10,4 +8,4 @@
              (define-key lisp-mode-shared-map (kbd "C-\\") 'lisp-complete-symbol)
              ))
 
-(provide 'lisp)
+(provide 'rejeep-lisp)

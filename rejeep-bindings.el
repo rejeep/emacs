@@ -1,13 +1,10 @@
-;;; bindings.el --- Set up of key bindings
+;;; rejeep-bindings.el --- Set up of key bindings
 
 ;; Go to line.
 (global-set-key (kbd "M-g") 'goto-line)
 
 ;; Copy region to clippboard.
 (global-set-key (kbd "C-x M-w") 'clipboard-kill-ring-save)
-
-;; Newline and then indent.
-(global-set-key (kbd "RET") 'reindent-then-newline-and-indent)
 
 ;; Open line below and go to that line.
 (global-set-key (kbd "M-n") 'open-line-below)
@@ -71,4 +68,4 @@
                                 (interactive)
                                 (find-file "~/.emacs")))
 
-(provide 'bindings)
+(provide 'rejeep-bindings)
