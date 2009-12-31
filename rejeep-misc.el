@@ -19,10 +19,8 @@
 ;; Show information in minibuffer instead of as a tooltip.
 (tooltip-mode nil)
 
-;; Hitting delete will delete region
-;; and selecting a region and then
-;; press a character will replace
-;; region with that character.
+;; Hitting delete will delete region and selecting a region and then
+;; press a character will replace region with that character.
 (pending-delete-mode 1)
 
 ;; Indent with spaces, instead of tabs.
