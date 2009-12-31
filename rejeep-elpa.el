@@ -9,7 +9,8 @@
                               'sass-mode
                               'yaml-mode
                               'css-mode
-                              'pastie)
+                              'pastie
+                              'highline
                               'highlight-parentheses
                               'highlight-symbol
   "Libraries that should be installed by default.")
