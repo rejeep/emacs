@@ -4,3 +4,6 @@
 [submodule "packages/twilight"]
 	path = packages/twilight
 	url = git://github.com/crafterm/twilight-emacs.git
+[submodule "snippets"]
+	path = snippets
+	url = git://github.com/rejeep/yasnippets.git
