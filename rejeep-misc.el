@@ -133,16 +133,7 @@
 ;; Set font size.
 (set-face-attribute 'default nil :height 110)
 
-;; Associate modes with file extensions.
-(add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
-(add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
+;; Associate file extensions with modes.
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
-(add-to-list 'auto-mode-alist '("\.markdown$" . markdown-mode))
 
 (provide 'rejeep-misc)
