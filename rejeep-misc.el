@@ -120,8 +120,10 @@
 (load-file "~/.emacs.d/packages/twilight/color-theme-twilight.el")
 (color-theme-twilight)
 
-;; Light Symbol mode.
-(light-symbol-mode t)
+;; Automatic and manual symbol highlighting.
+(setq highlight-symbol-idle-delay 0.5)
+(add-hook 'find-file-hook 'highlight-symbol-mode)
+
 
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js$" . js-mode))

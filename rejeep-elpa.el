@@ -6,11 +6,11 @@
   (package-initialize))
 
 (defvar rejeep-packages (list 'haml-mode
-                              'light-symbol
                               'sass-mode
                               'yaml-mode
                               'css-mode
                               'pastie)
+                              'highlight-symbol
   "Libraries that should be installed by default.")
 
 (defun rejeep-elpa-install ()
