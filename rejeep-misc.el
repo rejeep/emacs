@@ -130,6 +130,9 @@
 (add-hook 'find-file-hook 'highline-mode-on)
 (add-hook 'magit-mode-hook 'highline-mode-off)
 
+;; Set font size.
+(set-face-attribute 'default nil :height 110)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
