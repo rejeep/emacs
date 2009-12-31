@@ -14,7 +14,7 @@
                               'highline
                               'highlight-parentheses
                               'highlight-symbol
-  "Libraries that should be installed by default.")
+                              "Libraries that should be installed by default."))
 
 (defun rejeep-elpa-install ()
   "Install all packages that aren't installed."
