@@ -125,6 +125,9 @@
 (add-hook 'find-file-hook 'highlight-symbol-mode)
 
 
+;; Highlight surrounding parentheses.
+(add-hook 'find-file-hook 'highlight-parentheses-mode t)
+
 ;; Associate modes with file extensions.
 (add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))

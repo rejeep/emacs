@@ -10,6 +10,7 @@
                               'yaml-mode
                               'css-mode
                               'pastie)
+                              'highlight-parentheses
                               'highlight-symbol
   "Libraries that should be installed by default.")
 
