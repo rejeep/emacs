@@ -1,3 +1,0 @@
-#name : submit
-# --
-<input type="submit" value="$1"$0 />

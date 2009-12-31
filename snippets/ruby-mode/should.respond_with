@@ -1,3 +1,0 @@
-#name : should_respond_with response
-# --
-should_respond_with :${1:response}

@@ -1,5 +1,0 @@
-#name : form
-# --
-<form method="${1:post}">
-  $0
-</form>

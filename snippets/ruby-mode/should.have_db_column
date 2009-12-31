@@ -1,3 +1,0 @@
-#name : should_have_db_column attr, options
-# --
-should_have_db_column :${1:attribute}

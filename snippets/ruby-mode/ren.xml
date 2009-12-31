@@ -1,3 +1,0 @@
-#name : xml
-# --
-render :xml => ${1:xml}

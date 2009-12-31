@@ -1,5 +1,0 @@
-#name : cond condition ...
-# --
-(cond (${1:condition}
-  $0
-  ))

@@ -1,3 +1,0 @@
-#name : Object
-# --
-${1:Object} ${2:variable_name} = new $1($3);

@@ -1,5 +1,0 @@
-#name : mapcar ...
-# --
-(mapcar (lambda (${1:element})
-  $0)
-${2:collection})

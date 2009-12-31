@@ -1,3 +1,0 @@
-#name : should_allow_values_for :attr, value1, value2
-# --
-should_allow_values_for :${1:attribute}, ${1:value}

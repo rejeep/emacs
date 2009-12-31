@@ -1,5 +1,0 @@
-#name : unless condition ... end
-# --
-unless ${1:condition}
-  $0
-end

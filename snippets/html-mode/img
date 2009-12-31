@@ -1,3 +1,0 @@
-#name : img
-# --
-<img src="$1" alt="$2" />

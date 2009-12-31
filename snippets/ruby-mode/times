@@ -1,5 +1,0 @@
-#name : x.times do ... end
-# --
-${1:num}.times do$2
-  $0
-end

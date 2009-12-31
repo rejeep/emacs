@@ -1,6 +1,0 @@
-#name : protected method_name() { ... }
-# --
-protected ${2:return_type} ${3:method_name}($4)
-{
-  $0
-}

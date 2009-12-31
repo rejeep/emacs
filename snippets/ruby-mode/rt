@@ -1,3 +1,0 @@
-#name : render :text => ...
-# --
-render :text => $1

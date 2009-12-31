@@ -1,3 +1,0 @@
-#name : should_ensure_length_in_range attr, range
-# --
-should_ensure_length_in_range :${1:attribute}, ${2:range}

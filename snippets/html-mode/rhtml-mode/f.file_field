@@ -1,6 +1,0 @@
-#name : f.file_field ...
-# --
-<p>
-  <%= f.label :${1:attribute}, ${2:label} %>
-  <%= f.file_field :$1 %>
-</p>

@@ -1,5 +1,0 @@
-#name : Constructor
-# --
-initialize: function($1) {
-  $0
-}

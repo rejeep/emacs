@@ -1,3 +1,0 @@
-#name : yield ...
-# --
-<%= yield $0%>

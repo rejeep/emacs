@@ -1,3 +1,0 @@
-#name : options[...]
-# --
-options[:${1:option}]

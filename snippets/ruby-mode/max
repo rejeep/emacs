@@ -1,3 +1,0 @@
-#name : maximum(...)
-# --
-maximum(:${1:column})

@@ -1,3 +1,0 @@
-#name : should_change("...") { ... }
-# --
-should_change("${1:description}"$2) { $0 }

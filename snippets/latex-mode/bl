@@ -1,5 +1,0 @@
-#name : \begin ... \end
-# --
-\begin{${1:section}}
-  $0
-\end{$1}

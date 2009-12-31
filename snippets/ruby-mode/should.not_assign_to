@@ -1,3 +1,0 @@
-#name : should_not_assign_to attr1, attr2
-# --
-should_not_assign_to :${1:attribute}

@@ -1,3 +1,0 @@
-#name : Validate inclusion
-# --
-validates_inclusion_of :${1:attributes}

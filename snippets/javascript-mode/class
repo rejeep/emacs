@@ -1,7 +1,0 @@
-#name : Class
-# --
-var ${1:class_name} = new Class({
-  initialize: function($2) {
-    $0
-  }
-});

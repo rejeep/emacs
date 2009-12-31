@@ -1,3 +1,0 @@
-#name : should_assign_to :variable
-# --
-should_assign_to :${1:variable}

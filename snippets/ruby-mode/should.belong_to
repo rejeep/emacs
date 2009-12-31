@@ -1,3 +1,0 @@
-#name : should_belong_to :association
-# --
-should_belong_to :${1:association}

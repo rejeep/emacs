@@ -1,3 +1,0 @@
-#name : Validate numericality
-# --
-validates_numericality_of :${1:attributes}

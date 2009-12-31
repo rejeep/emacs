@@ -1,3 +1,0 @@
-#name : named_scope ...
-# --
-named_scope :${1:scope_name}, con

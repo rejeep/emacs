@@ -1,3 +1,0 @@
-#name : border-bottom: ...px color style;
-# --
-border-bottom: $1px ${2:color} ${3:style};

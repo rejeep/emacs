@@ -1,3 +1,0 @@
-#name : should_validate_presence_of attr1, attr2
-# --
-should_validate_presence_of :${1:attribute}

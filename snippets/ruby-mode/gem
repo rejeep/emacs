@@ -1,3 +1,0 @@
-#name : config.gem ...
-# --
-config.gem '${1:gem}', :version => '${2:version}'

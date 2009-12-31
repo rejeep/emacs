@@ -1,3 +1,0 @@
-#name : Javadoc link
-# --
-{@link ${1:class}#${2:method} $3}

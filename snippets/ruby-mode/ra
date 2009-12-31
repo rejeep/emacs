@@ -1,3 +1,0 @@
-#name : read_attribute :attribute
-# --
-read_attribute(:$1)

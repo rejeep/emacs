@@ -1,3 +1,0 @@
-#name : Validate format
-# --
-validates_format_of :${1:attributes}, :with => /$0/

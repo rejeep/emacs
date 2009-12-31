@@ -1,3 +1,0 @@
-#name : text
-# --
-render :text => "${1:text}"

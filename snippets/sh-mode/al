@@ -1,3 +1,0 @@
-#name : alias name='...'
-# --
-alias ${1:alias_name}='$0'

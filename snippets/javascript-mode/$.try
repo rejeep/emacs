@@ -1,3 +1,0 @@
-#name : $try(fn[, fn, fn, fn, ...]);
-# --
-$try($0)

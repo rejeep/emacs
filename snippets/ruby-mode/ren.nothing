@@ -1,3 +1,0 @@
-#name : nothing
-# --
-render :nothing => true

@@ -1,3 +1,0 @@
-#name : Float variable
-# --
-float ${1:variable_name} = $2;

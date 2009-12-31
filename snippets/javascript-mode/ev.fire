@@ -1,3 +1,0 @@
-#name : fireEvent(...)
-# --
-fireEvent('$0')

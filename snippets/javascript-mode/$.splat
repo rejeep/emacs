@@ -1,3 +1,0 @@
-#name : $splat(obj);
-# --
-$splat($0)

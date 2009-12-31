@@ -1,5 +1,0 @@
-#name : test ... do ... end
-# --
-test "${1:what to test}" do
-  $0
-end

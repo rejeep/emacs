@@ -1,3 +1,0 @@
-#name : HashMap
-# --
-Map<${1:key_type}, ${2:value_type}> ${3:variable_name} = new HashMap<$1, $2>($4);

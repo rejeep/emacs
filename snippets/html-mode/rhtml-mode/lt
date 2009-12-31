@@ -1,3 +1,0 @@
-#name : link_to ...
-# --
-<%= link_to ${1:name}, ${2:target} %>

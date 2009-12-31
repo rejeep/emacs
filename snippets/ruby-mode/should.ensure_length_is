@@ -1,3 +1,0 @@
-#name : should_ensure_length_is attr, length
-# --
-should_ensure_length_is :${1:attribute}, ${2:length}

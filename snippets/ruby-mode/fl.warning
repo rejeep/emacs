@@ -1,3 +1,0 @@
-#name : flash[:warning] = ...
-# --
-flash[:warning] = "$0"

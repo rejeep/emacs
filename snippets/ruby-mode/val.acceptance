@@ -1,3 +1,0 @@
-#name : Validate acceptance
-# --
-validates_acceptance_of :${1:attributes}

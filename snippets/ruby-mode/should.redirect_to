@@ -1,3 +1,0 @@
-#name : should_redirect_to("...") { url }
-# --
-should_redirect_to("${1:description}") { $0 }

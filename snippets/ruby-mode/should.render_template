@@ -1,3 +1,0 @@
-#name : should_render_template name
-# --
-should_render_template ${1:name}

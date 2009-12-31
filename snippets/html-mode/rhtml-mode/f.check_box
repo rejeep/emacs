@@ -1,6 +1,0 @@
-#name : f.check_box ...
-# --
-<p>
-  <%= f.label :${1:attribute}, ${2:label} %>
-  <%= f.check_box :$1 %>
-</p>

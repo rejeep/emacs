@@ -1,3 +1,0 @@
-#name : should_have_readonly_attributes attr1, attr2
-# --
-should_have_readonly_attributes :${1:attribute}

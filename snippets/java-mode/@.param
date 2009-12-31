@@ -1,3 +1,0 @@
-#name : Javadoc @param
-# --
-@param ${1:variable_name} ${2:descrition}

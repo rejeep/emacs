@@ -1,3 +1,0 @@
-#name : clear
-# --
-clear: $1;

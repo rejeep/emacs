@@ -1,3 +1,0 @@
-#name : hidden_field_tag ...
-# --
-<%= hidden_field_tag ${1:name} %>

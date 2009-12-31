@@ -1,6 +1,0 @@
-#name : f.text_area ...
-# --
-<p>
-  <%= f.label :${1:attribute}, ${2:label} %>
-  <%= f.text_area :$1 %>
-</p>

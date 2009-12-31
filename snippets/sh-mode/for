@@ -1,5 +1,0 @@
-#name : for ... in ... do ... done
-# --
-for ${1:variable} in "\${${2:collection}[@]}"; do
-  $0
-done

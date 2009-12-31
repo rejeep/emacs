@@ -1,5 +1,0 @@
-#name : do ... end
-# --
-${1:method} do$2
-  $0
-end

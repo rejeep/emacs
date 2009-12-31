@@ -1,5 +1,0 @@
-#name : save-excursion ...
-# --
-(save-excursion
-  $0
-)

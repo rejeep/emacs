@@ -1,6 +1,0 @@
-#name : function function_name { ... }
-# --
-function ${1:function_name}()
-{
-  $0
-}

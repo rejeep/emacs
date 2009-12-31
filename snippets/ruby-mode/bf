@@ -1,3 +1,0 @@
-#name : before_filter ...
-# --
-before_filter :${1:method_name}, :${2:condition} => 

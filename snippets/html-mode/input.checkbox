@@ -1,3 +1,0 @@
-#name : checkbox
-# --
-<input type="checkbox" value="$1"$0 />

@@ -1,3 +1,0 @@
-#name : sort { |variable_one, variable_two| ... <=> ... }
-# --
-sort { |${1:variable_one}, ${2:variable_two}| $0$1 <=> $2 }

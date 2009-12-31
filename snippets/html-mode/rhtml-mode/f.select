@@ -1,6 +1,0 @@
-#name : f.select ...
-# --
-<p>
-  <%= f.label :${1:attribute}, ${2:label} %>
-  <%= f.select :$1, ${3:collection} %>
-</p>

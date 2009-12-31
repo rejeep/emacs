@@ -1,3 +1,0 @@
-#name : Validate length
-# --
-validates_length_of :${1:attributes}
