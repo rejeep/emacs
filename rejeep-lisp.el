@@ -5,7 +5,6 @@
              (wrap-region-mode t)
 
              ;; Completion.
-             (define-key lisp-mode-shared-map (kbd "C-\\") 'lisp-complete-symbol)
-             ))
+             (define-key lisp-mode-shared-map (kbd "C-\\") 'lisp-complete-symbol)))
 
 (provide 'rejeep-lisp)

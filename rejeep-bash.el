@@ -5,7 +5,6 @@
              (wrap-region-mode t)
  
              ;; Indent width is two spaces.
-             (setq sh-indentation 2)
-             ))
+             (setq sh-indentation 2)))
  
 (provide 'rejeep-bash)

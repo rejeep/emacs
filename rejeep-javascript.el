@@ -4,7 +4,6 @@
   '(progn
      (wrap-region-mode t)
 
-     (setq javascript-indent-level 2)
-     ))
+     (setq javascript-indent-level 2)))
 
 (provide 'rejeep-javascript)

@@ -1,7 +1,6 @@
 ;;; rejeep-programming.el --- Programming stuff, not connected to any specific language.
 
-(add-hook 'c-mode-common-hook
-          (lambda () (c-subword-mode 1)))
+(add-hook 'c-mode-common-hook (lambda () (c-subword-mode 1)))
 
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
@@ -9,8 +8,7 @@
 (add-hook 'markdown-mode-hook
           '(lambda()
              (wrap-region-set-mode-punctuations '("[" "("))
-             (wrap-region-mode t)
-             ))
+             (wrap-region-mode t)))
 
 ;; Magit
 (add-hook 'magit-mode-hook 'rinari-launch)

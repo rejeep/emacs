@@ -5,7 +5,6 @@
      (wrap-region-mode t)
 
      ;; Indention width is two spaces.
-     (setq css-indent-offset 2)
-     ))
+     (setq css-indent-offset 2)))
 
 (provide 'rejeep-css)
