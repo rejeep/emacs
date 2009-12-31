@@ -13,3 +13,6 @@
 [submodule "packages/wrap-region-mode"]
 	path = packages/wrap-region-mode
 	url = git://github.com/rejeep/wrap-region.git
+[submodule "packages/cucumber"]
+	path = packages/cucumber
+	url = git://github.com/michaelklishin/cucumber.el.git
