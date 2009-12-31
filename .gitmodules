@@ -7,3 +7,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git://github.com/rejeep/yasnippets.git
+[submodule "packages/keats-mode"]
+	path = packages/keats-mode
+	url = git://github.com/rejeep/keats.git
