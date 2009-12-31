@@ -9,7 +9,8 @@
                               'light-symbol
                               'sass-mode
                               'yaml-mode
-                              'css-mode)
+                              'css-mode
+                              'pastie)
   "Libraries that should be installed by default.")
 
 (defun rejeep-elpa-install ()
