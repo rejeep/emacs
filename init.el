@@ -2,6 +2,7 @@
 
 (require 'rejeep-loadpaths)
 
+(require 'rejeep-elpa)
 (require 'rejeep-flymake)
 (require 'rejeep-ido)
 (require 'rejeep-defuns)
@@ -15,4 +16,3 @@
 (require 'rejeep-javascript)
 (require 'rejeep-bash)
 (require 'rejeep-lisp)
-(require 'rejeep-elpa)
