@@ -9,6 +9,7 @@
                               'sass-mode
                               'yaml-mode
                               'css-mode
+                              'javascript
                               'pastie
                               'highline
                               'highlight-parentheses
