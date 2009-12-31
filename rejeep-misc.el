@@ -120,6 +120,7 @@
 (load-file "~/.emacs.d/packages/twilight/color-theme-twilight.el")
 (color-theme-twilight)
 
+;; Light Symbol mode.
 (light-symbol-mode t)
 
 ;; Associate modes with file extensions.
