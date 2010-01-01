@@ -13,3 +13,6 @@
 [submodule "packages/cucumber"]
 	path = packages/cucumber
 	url = git://github.com/michaelklishin/cucumber.el.git
+[submodule "packages/color-theme-twilight"]
+	path = packages/color-theme-twilight
+	url = git://github.com/rejeep/twilight-emacs.git

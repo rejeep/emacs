@@ -118,7 +118,7 @@
 ;; Use the Twilight theme.
 (require 'color-theme)
 (color-theme-initialize)
-(load-file "~/.emacs.d/packages/twilight/color-theme-twilight.el")
+(load-file "~/.emacs.d/packages/color-theme-twilight/color-theme-twilight.el")
 (color-theme-twilight)
 
 ;; Automatic and manual symbol highlighting.
