@@ -7,7 +7,7 @@ branch.
 ## Installation
 ### Source
 Fetch the emacs source files
-    $ git clone git@github.com:rejeep/emacs.git ~/.emacs.d
+    $ git clone git://github.com/rejeep/emacs.git ~/.emacs.d
 
 ### Submodules
 Fetch all packages that are Git submodules.
