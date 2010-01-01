@@ -11,7 +11,6 @@
                               'css-mode
                               'javascript
                               'pastie
-                              'highline
                               'highlight-parentheses
                               'highlight-symbol
                               "Libraries that should be installed by default."))

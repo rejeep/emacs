@@ -122,13 +122,8 @@
 (setq highlight-symbol-idle-delay 0.5)
 (add-hook 'find-file-hook 'highlight-symbol-mode)
 
-
 ;; Highlight surrounding parentheses.
 (add-hook 'find-file-hook 'highlight-parentheses-mode t)
-
-;; Highlight current line in buffer.
-(add-hook 'find-file-hook 'highline-mode-on)
-(add-hook 'magit-mode-hook 'highline-mode-off)
 
 ;; Set font size.
 (set-face-attribute 'default nil :height 110)
