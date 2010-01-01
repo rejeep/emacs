@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Creates a TAGS file for all .el files in the given path (none path
+# means ~/.emacs.d) and places it in the current folder.
+#
+# Usage:
+#   emacs-tags
+#   emacs-tags path
+
+# Some help information.
+getopts "h" option
+case $option in
+    h) echo "USAGE: emacs-tags [project-root-name]"; exit 0 ;;
+esac
+
+# Get the absolute path.
+pwd=$(cd ${1:-~/.emacs.d} && echo $PWD)
+
+# Tag the files.
+etags $(find -L $pwd -type f -name "*.el")

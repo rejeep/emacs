@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Byte compiles all .el files (recursive) in the given folder, or if
+# no argument is given in ~/.emacs.d.
+#
+# Usage:
+#   emacs-compile
+#   emacs-compile ~/.elisp_files
+#   emacs-compile /path/to/elisp/lib
+
+cd ${1:-~/.emacs.d} && emacs -q --no-site-file -batch -f batch-byte-compile $(find -L $PWD -type f -name "*.el")
