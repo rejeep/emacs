@@ -16,9 +16,8 @@ Fetch all packages that are Git submodules.
     $ git submodule update
 
 ### ELPA
-Install all ELPA packages. Just call the function
-**rejeep-elpa-install** in **rejeep-elpa.el** and the packages will be
-installed.
+Install all ELPA packages simply by running the function
+**rejeep-elpa-install** in **rejeep-elpa.el**.
 
 ### Manual installation
 Some packages have to be installed manually.
