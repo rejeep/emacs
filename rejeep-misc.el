@@ -5,19 +5,19 @@
 (load custom-file)
 
 ;; Hide menubar.
-(menu-bar-mode nil)
+(menu-bar-mode -1)
 
 ;; Hide toolbar.
-(tool-bar-mode nil)
+(tool-bar-mode -1)
 
 ;; Hide scrollbar.
-(scroll-bar-mode nil)
+(scroll-bar-mode -1)
 
 ;; Highlight the selected region.
-(transient-mark-mode t)
+(transient-mark-mode 1)
 
 ;; Show information in minibuffer instead of as a tooltip.
-(tooltip-mode nil)
+(tooltip-mode -1)
 
 ;; Hitting delete will delete region and selecting a region and then
 ;; press a character will replace region with that character.
