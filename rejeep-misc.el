@@ -100,7 +100,7 @@
 (setq uniquify-buffer-name-style 'forward)
 
 ;; Minimal finge.
-(fringe-mode 'minimal)
+(if (fboundp 'fringe-mode) (fringe-mode 'minimal))
 
 ;; Save place in files.
 (setq save-place-file "~/.emacs.d/saveplace")
