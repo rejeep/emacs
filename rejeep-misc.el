@@ -76,9 +76,6 @@
           '(lambda ()
              (indent-region wrap-region-beginning wrap-region-end)))
 
-;; Paste buffer/region or get pastie.
-(require 'pastie)
-
 ;; Prefer utf8.
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
