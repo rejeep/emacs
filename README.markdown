@@ -29,6 +29,13 @@ Some packages have to be installed manually.
     $ cd ~/.emacs.d/packages
     $ svn checkout http://yasnippet.googlecode.com/svn/trunk/ yasnippet
 
+#### Rinari
+Rinari is installed through submodules. Rinari however has submodules
+of it's own. To install them:
+    $ cd ~/.emacs.d/packages/rinari
+    $ git submodule init
+    $ git submodule update
+
 ### Binaries
 Some handy BASH-scripts are included in the **bin** folder. If you
 find them useful, add this to **~/.bashrc**.
