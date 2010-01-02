@@ -66,6 +66,6 @@
 ;; Fast go to .emacs.
 (global-set-key (kbd "<f12>") (lambda ()
                                 (interactive)
-                                (find-file "~/.emacs")))
+                                (find-file "~/.emacs.d/init.el")))
 
 (provide 'rejeep-bindings)
