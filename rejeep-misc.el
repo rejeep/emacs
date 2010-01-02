@@ -65,6 +65,9 @@
 (setq cua-toggle-set-mark nil)
 (cua-mode)
 
+;; Default spelling dictionary.
+(setq ispell-dictionary "english")
+
 ;; Wrap Region
 (require 'wrap-region)
 
