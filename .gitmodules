@@ -16,3 +16,6 @@
 [submodule "packages/color-theme-twilight"]
 	path = packages/color-theme-twilight
 	url = git://github.com/rejeep/twilight-emacs.git
+[submodule "packages/rhtml"]
+	path = packages/rhtml
+	url = git@github.com:rejeep/rhtml.git
