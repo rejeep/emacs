@@ -130,4 +130,7 @@
 ;; Associate file extensions with modes.
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
+;; Require a newline at the end.
+(setq require-final-newline t)
+
 (provide 'rejeep-misc)
