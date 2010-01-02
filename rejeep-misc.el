@@ -11,13 +11,13 @@
 (tool-bar-mode -1)
 
 ;; Hide scrollbar.
-(scroll-bar-mode -1)
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;; Show information in minibuffer instead of as a tooltip.
+(if (fboundp 'tooltip-mode) (tooltip-mode -1))
 
 ;; Highlight the selected region.
 (transient-mark-mode 1)
-
-;; Show information in minibuffer instead of as a tooltip.
-(tooltip-mode -1)
 
 ;; Hitting delete will delete region and selecting a region and then
 ;; press a character will replace region with that character.
