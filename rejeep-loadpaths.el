@@ -6,8 +6,8 @@
 (add-to-list 'load-path "~/.emacs.d/packages/keats-mode")
 (add-to-list 'load-path "~/.emacs.d/packages/markdown-mode")
 (add-to-list 'load-path "~/.emacs.d/packages/rhtml")
+(add-to-list 'load-path "~/.emacs.d/packages/rinari")
 (add-to-list 'load-path "~/.emacs.d/packages/wrap-region-mode")
 (add-to-list 'load-path "~/.emacs.d/packages/yasnippet")
-(add-to-list 'load-path "~/dev/rinari")
 
 (provide 'rejeep-loadpaths)
