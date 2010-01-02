@@ -5,10 +5,11 @@
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 
 ;; Ruby
+(add-hook 'ruby-mode-hook 'flyspell-prog-mode)
 (eval-after-load 'ruby-mode
   '(progn
      (wrap-region-mode t)
-
+     
      (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)))
 
 ;; Rinari

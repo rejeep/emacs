@@ -12,10 +12,11 @@
 
 ;; Magit
 (add-hook 'magit-mode-hook 'rinari-launch)
-(eval-after-load 'magit
-  '(progn
-     (set-face-foreground 'magit-diff-add "green3")
-     (set-face-foreground 'magit-diff-del "red3")))
+(add-hook 'magit-log-edit-mode-hook 'flyspell-mode)
+(add-hook 'magit-mode-hook
+          '(lambda()
+             (set-face-foreground 'magit-diff-add "green3")
+             (set-face-foreground 'magit-diff-del "red3")))
 
 ;; Snippets
 (require 'dropdown-list)
@@ -29,6 +30,7 @@
 
 ;; Yaml
 (require 'yaml-mode)
+(add-hook 'yaml-mode-hook 'flyspell-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 (provide 'rejeep-programming)
