@@ -19,3 +19,6 @@
 [submodule "packages/rhtml"]
 	path = packages/rhtml
 	url = git@github.com:rejeep/rhtml.git
+[submodule "packages/rinari"]
+	path = packages/rinari
+	url = git@github.com:rejeep/rinari.git
