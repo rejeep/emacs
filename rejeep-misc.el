@@ -87,7 +87,7 @@
 (setq-default c-basic-offset 2)
 
 ;; Use keats to handle keyboard shortcuts.
-(setq keats-file "~/emacs.d/keats")
+(setq keats-file "~/.emacs.d/keats")
 (require 'keats)
 (require 'keats-interactive)
 (keats-mode t)
