@@ -88,9 +88,9 @@
 (setq-default c-basic-offset 2)
 
 ;; Use keats to handle keyboard shortcuts.
-(setq keats-file "~/.emacs.d/keats")
 (require 'keats)
 (require 'keats-interactive)
+(setq keats-file "~/.emacs.d/keats")
 (keats-mode t)
 
 ;; delete-trailing-whitespace is to long.
