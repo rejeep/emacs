@@ -60,11 +60,6 @@ Otherwise point moves to beginning of line."
   (interactive)
   (append-to-buffer "*scratch*" (region-beginning) (region-end)))
 
-(defun backward-delete-word ()
-  "Delete work backwards without saving it to the kill ring."
-  (interactive)
-  (delete-region (point) (progn (backward-word) (point))))
-
 (defun copy-and-comment-line-or-region ()
   "Takes whole lines in region if any region is selected,
 otherwise current line, comments it out and pastes an uncomment copy below."

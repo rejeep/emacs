@@ -12,17 +12,8 @@
 ;; Open line above and go to that line.
 (global-set-key (kbd "M-p") 'open-line-above)
 
-;; Toggle ECB show and hide.
-(global-set-key (kbd "§") 'ecb-toggle-ecb-windows)
-
-;; Indent region or buffer.
-(global-set-key (kbd "C-S-f") 'indent-buffer-or-region)
-
 ;; Back to indentation or beginning of line.
 (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning-of-line)
-
-;; Delete work backwards without saving it to the kill ring.
-(global-set-key (kbd "<M-backspace>") 'backward-delete-word)
 
 ;; Google region.
 (global-set-key (kbd "C-c C-c g") 'google-region)
