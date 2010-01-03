@@ -6,11 +6,10 @@
 
 ;; Ruby
 (add-hook 'ruby-mode-hook 'flyspell-prog-mode)
-(eval-after-load 'ruby-mode
-  '(progn
-     (wrap-region-mode t)
-     
-     (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)))
+(add-hook 'ruby-mode-hook 'wrap-region-mode)
+(add-hook 'ruby-mode-hook
+          '(lambda()
+             (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)))
 
 ;; Rinari
 (require 'rinari)
