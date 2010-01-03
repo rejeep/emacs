@@ -12,7 +12,7 @@
 ;; Always create buffer if no buffer matches search string.
 (setq ido-create-new-buffer 'always)
 
-;; Look for filename at point.
+;; Don't look for filename at point.
 (setq ido-use-filename-at-point nil)
 
 ;; Show max 10 matches.
