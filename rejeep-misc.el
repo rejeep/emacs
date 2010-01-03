@@ -70,8 +70,6 @@
 
 ;; Wrap Region
 (require 'wrap-region)
-
-;; Don't insert twice when no region is selected.
 (setq wrap-region-insert-twice nil)
 
 ;; Run after wraping a region.
