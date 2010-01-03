@@ -12,6 +12,7 @@
 (require 'rejeep-programming)
 (require 'rejeep-java)
 (require 'rejeep-ruby)
+(require 'rejeep-rails)
 (require 'rejeep-css)
 (require 'rejeep-javascript)
 (require 'rejeep-bash)
