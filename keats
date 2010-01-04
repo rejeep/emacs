@@ -49,7 +49,7 @@
  (:key "C-h e" :description "Goto *Messages* buffer")
  (:key "C-M-v" :description "Scroll other window (other direction with negative argument)")
  (:key "C-x 4 b" :description "Open buffer in other window")
- (:key "C-x 4 f" :description "Open file in othe window")
+ (:key "C-x 4 f" :description "Open file in other window")
  (:key "C-x 4 ." :description "Find tag in other window")
  (:key "C-x ^" :description "Increase size of window vertically (descrease with negative argument)")
  (:key "C-x {" :description "Shrinks window horizontally")
