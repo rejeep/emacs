@@ -13,6 +13,7 @@
                               'pastie
                               'highlight-parentheses
                               'highlight-symbol
+                              'wrap-region
                               "Libraries that should be installed by default."))
 
 (defun rejeep-elpa-install ()
