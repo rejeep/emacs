@@ -69,10 +69,7 @@
 (setq ispell-dictionary "english")
 
 ;; Wrap Region
-(require 'wrap-region)
 (setq wrap-region-insert-twice nil)
-
-;; Run after wraping a region.
 (add-hook 'wrap-region-after-hook
           '(lambda ()
              (indent-region wrap-region-beginning wrap-region-end)))
