@@ -1,10 +1,9 @@
 ;;; rejeep-css.el --- CSS specific settings.
 
-(eval-after-load 'css-mode
-  '(progn
-     (wrap-region-mode t)
+(add-hook 'css-mode-hook
+          '(lambda ()
+             (wrap-region-mode t)
 
-     ;; Indention width is two spaces.
-     (setq css-indent-offset 2)))
+             (setq css-indent-level 2)))
 
 (provide 'rejeep-css)
