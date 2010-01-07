@@ -1,9 +1,9 @@
 ;;; rejeep-css.el --- CSS specific settings.
 
-(add-hook 'css-mode-hook
-          '(lambda ()
-             (wrap-region-mode t)
+(add-hook 'css-mode-hook 'wrap-region-mode)
 
-             (setq css-indent-level 2)))
+(eval-after-load 'css-mode
+  '(progn
+     (setq css-indent-level 2)))
 
 (provide 'rejeep-css)
