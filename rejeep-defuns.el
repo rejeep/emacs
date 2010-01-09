@@ -60,12 +60,6 @@ Otherwise point moves to beginning of line."
   (interactive)
   (append-to-buffer "*scratch*" (region-beginning) (region-end)))
 
-
-(defun google-region (beg end)
-  "Google the selected region."
-  (interactive "r")
-  (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
-
 (defun mark-current-line ()
   "Marks the current line. Mark is lower than point."
   (interactive)
@@ -116,5 +110,10 @@ current line is commented or uncommented."
   "googles a query"
   (interactive "sQuery: ")
   (browse-url (concat "http://www.google.com/search?q=" query)))
+
+(defun google-region (beg end)
+  "Google the selected region."
+  (interactive "r")
+  (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
 
 (provide 'rejeep-defuns)
