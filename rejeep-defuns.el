@@ -100,10 +100,8 @@ current line is commented or uncommented."
         ((looking-back "\\s\)") (backward-list 1))
         (t (self-insert-command arg))))
 
-
 (defun duplicate-current-line ()
-  "Duplicates the current line by placing it right under the
-current."
+  "Duplicates the current line by placing it right under the current."
   (interactive)
   (beginning-of-line nil)
   (let ((b (point)))
