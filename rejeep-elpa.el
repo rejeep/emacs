@@ -14,6 +14,7 @@
                               'highlight-parentheses
                               'highlight-symbol
                               'wrap-region
+                              'htmlize
                               "Libraries that should be installed by default."))
 
 (defun rejeep-elpa-install ()
