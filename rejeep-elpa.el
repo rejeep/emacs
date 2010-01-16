@@ -5,16 +5,16 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-(defvar rejeep-packages (list 'haml-mode
-                              'sass-mode
-                              'yaml-mode
-                              'css-mode
-                              'javascript
-                              'pastie
+(defvar rejeep-packages (list 'css-mode
+                              'haml-mode
                               'highlight-parentheses
                               'highlight-symbol
-                              'wrap-region
                               'htmlize
+                              'javascript
+                              'pastie
+                              'sass-mode
+                              'wrap-region
+                              'yaml-mode
                               "Libraries that should be installed by default."))
 
 (defun rejeep-elpa-install ()
