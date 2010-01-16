@@ -21,8 +21,8 @@
 ;; Snippets
 (require 'dropdown-list)
 (require 'yasnippet)
-(yas/load-directory "~/.emacs.d/snippets")
 (yas/initialize)
+(yas/load-directory "~/.emacs.d/snippets")
 
 ;; Cucumber
 (add-to-list 'load-path "~/.emacs.d/packages/cucumber")
