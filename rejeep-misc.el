@@ -131,4 +131,13 @@
 ;; Require a newline at the end.
 (setq require-final-newline t)
 
+;; Scroll smooth
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mosue t)
+(setq scroll-step 1)
+
+(require 'smooth-scrolling)
+
+
 (provide 'rejeep-misc)
