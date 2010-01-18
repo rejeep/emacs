@@ -12,10 +12,10 @@
 	url = git://github.com/rejeep/twilight-emacs.git
 [submodule "packages/rhtml"]
 	path = packages/rhtml
-	url = git@github.com:rejeep/rhtml.git
+	url = git://github.com/rejeep/rhtml.git
 [submodule "packages/rinari"]
 	path = packages/rinari
-	url = git@github.com:rejeep/rinari.git
+	url = git://github.com/rejeep/rinari.git
 [submodule "snippets"]
 	path = snippets
 	url = git://github.com/rejeep/yasnippets.git
