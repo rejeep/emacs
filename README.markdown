@@ -20,7 +20,7 @@ Install all ELPA packages simply by running the function
 **rejeep-elpa-install** in **rejeep-elpa.el** with **M-x
 rejeep-elpa-install**. Or install them from the command line:
     $ cd ~/.emacs.d
-    $ emacs -Q -l rejeep-elpa.el --eval "(rejeep-elpa-install)"
+    $ emacs -Q -l rejeep-elpa.el --eval "(package-refresh-contents) (rejeep-elpa-install)"
 
 ### Manual installation
 Some packages have to be installed manually.
