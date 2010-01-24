@@ -5,8 +5,7 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-(defvar rejeep-packages (list 'css-mode
-                              'haml-mode
+(defvar rejeep-packages (list 'haml-mode
                               'highlight-parentheses
                               'highlight-symbol
                               'htmlize
