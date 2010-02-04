@@ -10,6 +10,7 @@
                               'highlight-symbol
                               'htmlize
                               'javascript
+                              'magit
                               'pastie
                               'sass-mode
                               'wrap-region
