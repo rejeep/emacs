@@ -1,6 +1,6 @@
 # rejeep emacs
 This is my emacs configuration files. If you want to use them, the
-best thing is probably to for the project on Github
+best thing is probably to fork the project at Github
 (<http://github.com/rejeep/emacs>) and then make your changes to that
 branch.
 
