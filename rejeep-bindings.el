@@ -39,6 +39,10 @@
 ;; Duplicates the current line.
 (global-set-key (kbd "C-c d") 'duplicate-current-line)
 
+;; Increase and decrease font size.
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+
 ;; So that Emacs never is quit by mistake.
 (global-set-key (kbd "C-x C-c")
                 (lambda ()
