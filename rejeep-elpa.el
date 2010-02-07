@@ -14,8 +14,8 @@
                               'pastie
                               'sass-mode
                               'wrap-region
-                              'yaml-mode
-                              "Libraries that should be installed by default."))
+                              'yaml-mode)
+  "Libraries that should be installed by default.")
 
 (defun rejeep-elpa-install ()
   "Install all packages that aren't installed."
