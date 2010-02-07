@@ -5,6 +5,8 @@ best thing is probably to for the project on Github
 branch.
 
 ## Installation
+First of all make sure you have installed Emacs version 23 or higher.
+
 ### Source
 Fetch the emacs source files
     $ git clone git://github.com/rejeep/emacs.git ~/.emacs.d
@@ -17,11 +19,11 @@ Fetch all packages that are Git submodules.
 
 ### ELPA
 Install all [ELPA](http://tromey.com/elpa/install.html) packages
-simply by running the function **rejeep-elpa-install** in
-**rejeep-elpa.el** with **M-x rejeep-elpa-install**. Or install them
-from the command line:
+simply by running the function **package-refresh-contents** and then
+**rejeep-elpa-install** (in **rejeep-elpa.el**). This command does all
+that for you:
     $ cd ~/.emacs.d
-    $ emacs -Q -l rejeep-elpa.el --eval "(package-refresh-contents) (rejeep-elpa-install)"
+    $ emacs --batch -l rejeep-elpa.el -f package-refresh-contents -f rejeep-elpa-install
 
 ### Manual installation
 Some packages have to be installed manually.
