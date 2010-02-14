@@ -8,4 +8,8 @@
 (add-hook 'ruby-mode-hook 'flyspell-prog-mode)
 (add-hook 'ruby-mode-hook 'wrap-region-mode)
 
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (define-key ruby-mode-map (kbd "C-c d") 'duplicate-current-line)))
+
 (provide 'rejeep-ruby)
