@@ -25,10 +25,6 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/snippets")
 
-;; Cucumber
-(add-to-list 'load-path "~/.emacs.d/packages/cucumber")
-(require 'feature-mode)
-
 ;; Yaml
 (require 'yaml-mode)
 (add-hook 'yaml-mode-hook 'flyspell-mode)
