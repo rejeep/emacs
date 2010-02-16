@@ -18,3 +18,5 @@
 (require 'rejeep-bash)
 (require 'rejeep-lisp)
 (require 'rejeep-cucumber)
+(require 'rejeep-c)
+
