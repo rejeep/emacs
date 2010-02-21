@@ -19,3 +19,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git://github.com/rejeep/yasnippets.git
+[submodule "packages/yasnippet"]
+	path = packages/yasnippet
+	url = git://github.com/emacsmirror/yasnippet.git

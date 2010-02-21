@@ -25,14 +25,7 @@ that for you:
     $ cd ~/.emacs.d
     $ emacs --batch -l rejeep-elpa.el -f package-refresh-contents -f rejeep-elpa-install
 
-### Manual installation
-Some packages have to be installed manually.
-
-#### Yasnippet
-    $ cd ~/.emacs.d/packages
-    $ svn checkout http://yasnippet.googlecode.com/svn/trunk/ yasnippet
-
-#### Rinari
+### Rinari
 Rinari is installed through submodules. Rinari however has submodules
 of it's own. To install them:
     $ cd ~/.emacs.d/packages/rinari
