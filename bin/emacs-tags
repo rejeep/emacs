@@ -1,20 +1,17 @@
-#!/bin/bash
+#!/usr/bin/emacs --script
 
-# Creates a TAGS file for all .el files in the given path (none path
-# means ~/.emacs.d) and places it in the current folder.
-#
-# Usage:
-#   emacs-tags
-#   emacs-tags path
+;; Creates a TAGS file for all .el files in the given path (none path
+;; means ~/.emacs.d) and places it in the current folder.
+;;
+;; Usage:
+;;   emacs-tags
+;;   emacs-tags path
+;;   emacs-tags path1 path2 ...
 
-# Some help information.
-getopts "h" option
-case $option in
-    h) echo "USAGE: emacs-tags [project-root-name]"; exit 0 ;;
-esac
+(require 'find-lisp)
 
-# Get the absolute path.
-pwd=$(cd ${1:-~/.emacs.d} && echo $PWD)
-
-# Tag the files.
-etags $(find -L $pwd -type f -name "*.el")
+(let ((files) (paths (or argv (list "~/.emacs.d"))))
+  (dolist (path paths)
+    (setq files (append files (find-lisp-find-files path "\\.el$"))))
+  (shell-command (concat "etags " (mapconcat 'identity files " "))))
+(message "Successfully created TAGS file")
