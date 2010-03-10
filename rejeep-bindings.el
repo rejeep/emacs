@@ -36,8 +36,8 @@
 ;; Goto matching paren.
 (global-set-key (kbd "%") 'match-paren)
 
-;; Duplicates the current line.
-(global-set-key (kbd "C-c d") 'duplicate-current-line)
+;; Duplicates the current line or region.
+(global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
 
 ;; Increase and decrease font size.
 (global-set-key (kbd "C-+") 'text-scale-increase)
