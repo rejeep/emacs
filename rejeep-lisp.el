@@ -6,4 +6,6 @@
 
 (define-key lisp-mode-shared-map (kbd "C-\\") 'lisp-complete-symbol)
 
+(add-to-list 'interpreter-mode-alist '("emacs" . emacs-lisp-mode))
+
 (provide 'rejeep-lisp)
