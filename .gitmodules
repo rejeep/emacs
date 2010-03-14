@@ -22,3 +22,6 @@
 [submodule "packages/yasnippet"]
 	path = packages/yasnippet
 	url = git://github.com/emacsmirror/yasnippet.git
+[submodule "packages/drag-stuff"]
+	path = packages/drag-stuff
+	url = git://github.com/rejeep/drag-stuff.git

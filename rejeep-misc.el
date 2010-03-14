@@ -74,6 +74,11 @@
           '(lambda ()
              (indent-region wrap-region-beginning wrap-region-end)))
 
+;; Drag stuff
+(require 'drag-stuff)
+(drag-stuff-mode t)
+(add-hook 'find-file-hook 'drag-stuff-mode)
+
 ;; Prefer utf8.
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
