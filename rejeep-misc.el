@@ -76,8 +76,7 @@
 
 ;; Drag stuff
 (require 'drag-stuff)
-(drag-stuff-mode t)
-(add-hook 'find-file-hook 'drag-stuff-mode)
+(drag-stuff-global-mode t)
 
 ;; Prefer utf8.
 (setq locale-coding-system 'utf-8)
