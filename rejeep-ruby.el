@@ -9,6 +9,6 @@
 
 (add-hook 'ruby-mode-hook
           (lambda ()
-            (define-key ruby-mode-map (kbd "C-c d") 'duplicate-current-line)))
+            (define-key ruby-mode-map (kbd "C-c d") 'duplicate-current-line-or-region)))
 
 (provide 'rejeep-ruby)
