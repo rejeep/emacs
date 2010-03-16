@@ -13,7 +13,6 @@
                               'magit
                               'pastie
                               'sass-mode
-                              'wrap-region
                               'yaml-mode)
   "Libraries that should be installed by default.")
 

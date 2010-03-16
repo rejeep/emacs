@@ -3,7 +3,7 @@
 ;; Rinari
 (require 'rinari)
 (add-hook 'rinari-minor-mode-hook
-          '(lambda()
+          (lambda()
              ;; No # -*- coding: utf-8 -*- commets.
              (setq ruby-insert-encoding-magic-comment nil)
 
@@ -16,8 +16,7 @@
 (add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
 
 (add-hook 'rhtml-mode-hook
-          '(lambda()
-             (setq wrap-region-tag-active t)
-             (wrap-region-mode t)))
+          (lambda()
+            (setq wrap-region-tag-active t)))
 
 (provide 'rejeep-rails)

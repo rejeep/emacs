@@ -2,7 +2,6 @@
 
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'flyspell-prog-mode)
-(add-hook 'emacs-lisp-mode-hook 'wrap-region-mode)
 
 (define-key lisp-mode-shared-map (kbd "C-\\") 'lisp-complete-symbol)
 

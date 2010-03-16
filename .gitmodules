@@ -25,3 +25,6 @@
 [submodule "packages/drag-stuff"]
 	path = packages/drag-stuff
 	url = git://github.com/rejeep/drag-stuff.git
+[submodule "packages/wrap-region"]
+	path = packages/wrap-region
+	url = git://github.com/rejeep/wrap-region.git

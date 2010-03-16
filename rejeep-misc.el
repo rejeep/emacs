@@ -69,10 +69,9 @@
 (setq ispell-dictionary "english")
 
 ;; Wrap Region
-(setq wrap-region-insert-twice nil)
-(add-hook 'wrap-region-after-hook
-          '(lambda ()
-             (indent-region wrap-region-beginning wrap-region-end)))
+(require 'wrap-region)
+(setq wrap-region-insert-twice t)
+(wrap-region-global-mode t)
 
 ;; Drag stuff
 (require 'drag-stuff)

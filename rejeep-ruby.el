@@ -6,7 +6,6 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
 (add-hook 'ruby-mode-hook 'flyspell-prog-mode)
-(add-hook 'ruby-mode-hook 'wrap-region-mode)
 
 (add-hook 'ruby-mode-hook
           (lambda ()

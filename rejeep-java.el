@@ -1,7 +1,6 @@
 ;;; rejeep-java.el --- Java specific settings
 
 (add-hook 'java-mode-hook 'flyspell-prog-mode)
-(add-hook 'java-mode-hook 'wrap-region-mode)
 (add-hook 'java-mode-hook
           '(lambda()
              ;; Set code style
