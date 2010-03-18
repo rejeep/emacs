@@ -82,10 +82,11 @@ Otherwise point moves to beginning of line."
 current line is commented or uncommented."
   (interactive)
   (save-excursion
-    (if mark-active
-        (mark-whole-lines-region)
-      (mark-current-line))
-    (comment-or-uncomment-region (region-beginning) (region-end))))
+    (let ((deactivate-mark nil))
+      (if mark-active
+          (mark-whole-lines-region)
+        (mark-current-line))
+      (comment-or-uncomment-region (region-beginning) (region-end)))))
 
 (defun match-paren (arg)
   "Go to the matching paren if on a paren; otherwise insert %."
