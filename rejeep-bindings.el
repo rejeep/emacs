@@ -50,6 +50,9 @@
 ;; Swaps two windows.
 (global-set-key (kbd "C-c s") 'swap-windows)
 
+;; Renames current buffer and visiting file.
+(global-set-key (kbd "C-c r") 'rename-file-and-buffer)
+
 ;; So that Emacs never is quit by mistake.
 (global-set-key (kbd "C-x C-c")
                 (lambda ()
