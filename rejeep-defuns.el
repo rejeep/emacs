@@ -45,11 +45,6 @@ Otherwise point moves to beginning of line."
       (beginning-of-line)
     (back-to-indentation)))
 
-(defun copy-region-to-scratch-buffer ()
-  "Copies region to *scratch* buffer."
-  (interactive)
-  (append-to-buffer "*scratch*" (region-beginning) (region-end)))
-
 (defun match-paren (arg)
   "Go to the matching paren if on a paren; otherwise insert %."
   (interactive "p")
