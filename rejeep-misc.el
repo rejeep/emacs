@@ -139,8 +139,9 @@
 (setq mouse-wheel-progressive-speed nil)
 (setq mouse-wheel-follow-mosue t)
 (setq scroll-step 1)
-
 (require 'smooth-scrolling)
 
+;; Flymake
+(require 'flymake)
 
 (provide 'rejeep-misc)
