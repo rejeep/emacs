@@ -96,7 +96,7 @@ there's a region, all lines that region covers will be duplicated."
         (filename (buffer-file-name)))
     (if (not (and filename (file-exists-p filename)))
         (message "Buffer '%s' is not visiting a file!" name)
-      (let ((new-name (read-file-name "New names: " filename)))
+      (let ((new-name (read-file-name "New name: " filename)))
         (cond ((get-buffer new-name)
                (message "A buffer named '%s' already exists!" new-name))
               (t
