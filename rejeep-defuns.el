@@ -60,34 +60,6 @@ Otherwise point moves to beginning of line."
   (interactive)
   (append-to-buffer "*scratch*" (region-beginning) (region-end)))
 
-(defun mark-current-line ()
-  "Marks the current line. Mark is lower than point."
-  (interactive)
-  (set-mark (line-end-position))
-  (back-to-indentation))
-
-(defun mark-whole-lines-region ()
-  "Marks whole lines in the selected region."
-  (if (< (point) (mark))
-      (beginning-of-line)
-    (end-of-line))
-  (exchange-point-and-mark)
-  (if (< (point) (mark))
-      (beginning-of-line)
-    (end-of-line))
-  (exchange-point-and-mark))
-
-(defun comment-or-uncomment-whole-lines-or-region ()
-  "Comments or uncomments whole lines in region. If no region is selected,
-current line is commented or uncommented."
-  (interactive)
-  (save-excursion
-    (let ((deactivate-mark nil))
-      (if mark-active
-          (mark-whole-lines-region)
-        (mark-current-line))
-      (comment-or-uncomment-region (region-beginning) (region-end)))))
-
 (defun match-paren (arg)
   "Go to the matching paren if on a paren; otherwise insert %."
   (interactive "p")

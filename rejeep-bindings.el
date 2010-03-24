@@ -19,7 +19,7 @@
 (global-set-key (kbd "C-c C-c g") 'google-region)
 
 ;; Comments or uncomments a line or region
-(global-set-key (kbd "C-7") 'comment-or-uncomment-whole-lines-or-region)
+(global-set-key (kbd "C-7") 'comment-or-uncomment-current-line-or-region)
 
 ;; Moves region to *scratch* buffer.
 (global-set-key (kbd "C-c s") 'copy-region-to-scratch-buffer)
