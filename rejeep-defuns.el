@@ -87,7 +87,8 @@ there's a region, all lines that region covers will be duplicated."
            (set-window-buffer w1 b2)
            (set-window-buffer w2 b1)
            (set-window-start w1 s2)
-           (set-window-start w2 s1)))))
+           (set-window-start w2 s1))))
+  (other-window 1))
 
 (defun rename-file-and-buffer ()
   "Renames current buffer and file it is visiting."
