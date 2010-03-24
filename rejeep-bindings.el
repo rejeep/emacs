@@ -47,6 +47,9 @@
 ;; Perform general cleanup of buffer.
 (global-set-key (kbd "C-c n") 'clean-up-buffer-or-region)
 
+;; Swaps two windows.
+(global-set-key (kbd "C-c s") 'swap-windows)
+
 ;; So that Emacs never is quit by mistake.
 (global-set-key (kbd "C-x C-c")
                 (lambda ()
