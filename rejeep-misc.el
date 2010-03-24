@@ -49,7 +49,7 @@
 
 ;; Use firefox as default browser.
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "/usr/bin/firefox")
+      browse-url-generic-program "google-chrome")
 
 ;; Enable narrowing.
 (put 'narrow-to-region 'disabled nil)
