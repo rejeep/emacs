@@ -28,13 +28,11 @@ Then move to that line and indent accordning to mode"
   (save-excursion
     (unless mark-active
       (mark-whole-buffer))
-    (let ((beg (region-beginning))
-          (end (region-end)))
-      (untabify beg end)
-      (indent-region beg end)
-      (save-restriction
-        (narrow-to-region beg end)
-        (delete-trailing-whitespace)))))
+    (untabify (region-beginning) (region-end))
+    (indent-region (region-beginning) (region-end))
+    (save-restriction
+      (narrow-to-region (region-beginning) (region-end))
+      (delete-trailing-whitespace))))
 
 (defun back-to-indentation-or-beginning-of-line ()
   "Moves point back to indentation if there is any
