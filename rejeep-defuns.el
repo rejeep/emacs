@@ -5,30 +5,6 @@
   (interactive)
   (mapcar (lambda (x) (kill-buffer x)) (buffer-list)) (delete-other-windows))
 
-(defun untabify-buffer ()
-  "Replaces all tabs in the buffer with spaces."
-  (interactive)
-  (untabify (point-min) (point-max)))
-
-(defun untabify-buffer-or-region ()
-  "Replaces all tabs in the buffer with spaces."
-  (interactive)
-  (if mark-active
-      (untabify-buffer)
-    (untabify (point-min) (point-max))))
-
-(defun indent-buffer ()
-  "Indents whole buffer."
-  (interactive)
-  (indent-region (point-min) (point-max)))
-
-(defun indent-buffer-or-region ()
-  "Indents region if any. Otherwise whole buffer."
-  (interactive)
-  (if mark-active
-      (call-interactively 'indent-region)
-    (indent-buffer)))
-
 (defun open-line-below ()
   "Open a line below the line the point is at.
 Then move to that line and indent accordning to mode"
@@ -45,6 +21,20 @@ Then move to that line and indent accordning to mode"
   (newline)
   (previous-line)
   (indent-according-to-mode))
+
+(defun clean-up-buffer-or-region ()
+  "Untabifies, indents and deletes trailing whitespace from buffer or region."
+  (interactive)
+  (save-excursion
+    (unless mark-active
+      (mark-whole-buffer))
+    (let ((beg (region-beginning))
+          (end (region-end)))
+      (untabify beg end)
+      (indent-region beg end)
+      (save-restriction
+        (narrow-to-region beg end)
+        (delete-trailing-whitespace)))))
 
 (defun back-to-indentation-or-beginning-of-line ()
   "Moves point back to indentation if there is any

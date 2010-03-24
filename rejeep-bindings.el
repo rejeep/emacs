@@ -47,20 +47,15 @@
 (global-set-key (kbd "C-M-p") (lambda () (interactive) (scroll-down 5)))
 (global-set-key (kbd "C-M-n") (lambda () (interactive) (scroll-up 5)))
 
+;; Perform general cleanup of buffer.
+(global-set-key (kbd "C-c n") 'clean-up-buffer-or-region)
+
 ;; So that Emacs never is quit by mistake.
 (global-set-key (kbd "C-x C-c")
                 (lambda ()
                   (interactive)
                   (if (y-or-n-p "Quit Emacs? ")
                       (save-buffers-kill-emacs))))
-
-;; Perform general cleanup of buffer.
-(global-set-key (kbd "C-c n")
-                (lambda ()
-                  (interactive)
-                  (untabify-buffer)
-                  (delete-trailing-whitespace)
-                  (indent-buffer)))
 
 ;; Fast go to .emacs.
 (global-set-key (kbd "<f12>") (lambda ()
