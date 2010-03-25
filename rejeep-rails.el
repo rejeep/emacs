@@ -15,8 +15,4 @@
 (add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
 
-(add-hook 'rhtml-mode-hook
-          (lambda()
-            (setq wrap-region-tag-active t)))
-
 (provide 'rejeep-rails)
