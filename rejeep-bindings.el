@@ -15,8 +15,8 @@
 ;; Back to indentation or beginning of line.
 (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning-of-line)
 
-;; Google region.
-(global-set-key (kbd "C-c C-c g") 'google-region)
+;; Google region or query.
+(global-set-key (kbd "C-c g") 'google)
 
 ;; Comments or uncomments a line or region
 (global-set-key (kbd "C-7") 'comment-or-uncomment-current-line-or-region)
