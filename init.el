@@ -19,4 +19,4 @@
 (require 'rejeep-lisp)
 (require 'rejeep-cucumber)
 (require 'rejeep-c)
-
+(require 'rejeep-git)

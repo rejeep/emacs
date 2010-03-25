@@ -7,15 +7,6 @@
 (add-to-list 'auto-mode-alist '("\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
 
-;; Magit
-(require 'magit)
-(add-hook 'magit-mode-hook 'rinari-launch)
-(add-hook 'magit-log-edit-mode-hook 'flyspell-mode)
-(add-hook 'magit-mode-hook
-          '(lambda()
-             (set-face-foreground 'magit-diff-add "green3")
-             (set-face-foreground 'magit-diff-del "red3")))
-
 ;; Snippets
 (require 'dropdown-list)
 (require 'yasnippet)
