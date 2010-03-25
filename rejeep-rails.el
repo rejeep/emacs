@@ -2,6 +2,8 @@
 
 ;; Rinari
 (require 'rinari)
+
+(add-hook 'magit-mode-hook 'rinari-launch)
 (add-hook 'rinari-minor-mode-hook
           (lambda()
              ;; No # -*- coding: utf-8 -*- commets.
