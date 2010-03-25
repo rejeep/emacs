@@ -8,6 +8,7 @@
 (add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
 
 ;; Magit
+(require 'magit)
 (add-hook 'magit-mode-hook 'rinari-launch)
 (add-hook 'magit-log-edit-mode-hook 'flyspell-mode)
 (add-hook 'magit-mode-hook

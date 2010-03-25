@@ -10,7 +10,6 @@
                               'highlight-symbol
                               'htmlize
                               'javascript
-                              'magit
                               'pastie
                               'sass-mode
                               'yaml-mode)

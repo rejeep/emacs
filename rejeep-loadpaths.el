@@ -5,6 +5,7 @@
 (add-to-list 'load-path "~/.emacs.d/packages/cucumber")
 (add-to-list 'load-path "~/.emacs.d/packages/drag-stuff")
 (add-to-list 'load-path "~/.emacs.d/packages/keats-mode")
+(add-to-list 'load-path "~/.emacs.d/packages/magit")
 (add-to-list 'load-path "~/.emacs.d/packages/markdown-mode")
 (add-to-list 'load-path "~/.emacs.d/packages/rhtml")
 (add-to-list 'load-path "~/.emacs.d/packages/rinari")
