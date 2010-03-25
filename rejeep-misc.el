@@ -49,7 +49,7 @@
 
 ;; Use firefox as default browser.
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "/usr/bin/firefox")
+      browse-url-generic-program "google-chrome")
 
 ;; Enable narrowing.
 (put 'narrow-to-region 'disabled nil)
@@ -139,8 +139,9 @@
 (setq mouse-wheel-progressive-speed nil)
 (setq mouse-wheel-follow-mosue t)
 (setq scroll-step 1)
-
 (require 'smooth-scrolling)
 
+;; Flymake
+(require 'flymake)
 
 (provide 'rejeep-misc)

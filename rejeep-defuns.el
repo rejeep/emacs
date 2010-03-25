@@ -5,30 +5,6 @@
   (interactive)
   (mapcar (lambda (x) (kill-buffer x)) (buffer-list)) (delete-other-windows))
 
-(defun untabify-buffer ()
-  "Replaces all tabs in the buffer with spaces."
-  (interactive)
-  (untabify (point-min) (point-max)))
-
-(defun untabify-buffer-or-region ()
-  "Replaces all tabs in the buffer with spaces."
-  (interactive)
-  (if mark-active
-      (untabify-buffer)
-    (untabify (point-min) (point-max))))
-
-(defun indent-buffer ()
-  "Indents whole buffer."
-  (interactive)
-  (indent-region (point-min) (point-max)))
-
-(defun indent-buffer-or-region ()
-  "Indents region if any. Otherwise whole buffer."
-  (interactive)
-  (if mark-active
-      (call-interactively 'indent-region)
-    (indent-buffer)))
-
 (defun open-line-below ()
   "Open a line below the line the point is at.
 Then move to that line and indent accordning to mode"
@@ -46,6 +22,18 @@ Then move to that line and indent accordning to mode"
   (previous-line)
   (indent-according-to-mode))
 
+(defun clean-up-buffer-or-region ()
+  "Untabifies, indents and deletes trailing whitespace from buffer or region."
+  (interactive)
+  (save-excursion
+    (unless mark-active
+      (mark-whole-buffer))
+    (untabify (region-beginning) (region-end))
+    (indent-region (region-beginning) (region-end))
+    (save-restriction
+      (narrow-to-region (region-beginning) (region-end))
+      (delete-trailing-whitespace))))
+
 (defun back-to-indentation-or-beginning-of-line ()
   "Moves point back to indentation if there is any
 non blank characters to the left of the cursor.
@@ -54,39 +42,6 @@ Otherwise point moves to beginning of line."
   (if (= (point) (save-excursion (back-to-indentation) (point)))
       (beginning-of-line)
     (back-to-indentation)))
-
-(defun copy-region-to-scratch-buffer ()
-  "Copies region to *scratch* buffer."
-  (interactive)
-  (append-to-buffer "*scratch*" (region-beginning) (region-end)))
-
-(defun mark-current-line ()
-  "Marks the current line. Mark is lower than point."
-  (interactive)
-  (set-mark (line-end-position))
-  (back-to-indentation))
-
-(defun mark-whole-lines-region ()
-  "Marks whole lines in the selected region."
-  (if (< (point) (mark))
-      (beginning-of-line)
-    (end-of-line))
-  (exchange-point-and-mark)
-  (if (< (point) (mark))
-      (beginning-of-line)
-    (end-of-line))
-  (exchange-point-and-mark))
-
-(defun comment-or-uncomment-whole-lines-or-region ()
-  "Comments or uncomments whole lines in region. If no region is selected,
-current line is commented or uncommented."
-  (interactive)
-  (save-excursion
-    (let ((deactivate-mark nil))
-      (if mark-active
-          (mark-whole-lines-region)
-        (mark-current-line))
-      (comment-or-uncomment-region (region-beginning) (region-end)))))
 
 (defun match-paren (arg)
   "Go to the matching paren if on a paren; otherwise insert %."
@@ -114,6 +69,40 @@ there's a region, all lines that region covers will be duplicated."
         (insert region)
         (setq end (point)))
       (goto-char (+ origin (* (length region) arg) arg)))))
+
+(defun swap-windows ()
+  "If you have 2 windows, it swaps them."
+  (interactive)
+  (cond ((/= (count-windows) 2)
+         (message "You need exactly 2 windows to do this."))
+        (t
+         (let* ((w1 (first (window-list)))
+                (w2 (second (window-list)))
+                (b1 (window-buffer w1))
+                (b2 (window-buffer w2))
+                (s1 (window-start w1))
+                (s2 (window-start w2)))
+           (set-window-buffer w1 b2)
+           (set-window-buffer w2 b1)
+           (set-window-start w1 s2)
+           (set-window-start w2 s1))))
+  (other-window 1))
+
+(defun rename-file-and-buffer ()
+  "Renames current buffer and file it is visiting."
+  (interactive)
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (message "Buffer '%s' is not visiting a file!" name)
+      (let ((new-name (read-file-name "New name: " filename)))
+        (cond ((get-buffer new-name)
+               (message "A buffer named '%s' already exists!" new-name))
+              (t
+               (rename-file name new-name 1)
+               (rename-buffer new-name)
+               (set-visited-file-name new-name)
+               (set-buffer-modified-p nil)))))))
 
 (defun google (query)
   "googles a query"

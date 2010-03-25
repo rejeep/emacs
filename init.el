@@ -3,9 +3,9 @@
 (require 'rejeep-loadpaths)
 
 (require 'rejeep-elpa)
-(require 'rejeep-flymake)
 (require 'rejeep-ido)
 (require 'rejeep-defuns)
+(require 'rejeep-comment)
 (require 'rejeep-bindings)
 (require 'rejeep-misc)
 
