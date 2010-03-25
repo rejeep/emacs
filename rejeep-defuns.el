@@ -104,14 +104,14 @@ there's a region, all lines that region covers will be duplicated."
                (set-visited-file-name new-name)
                (set-buffer-modified-p nil)))))))
 
-(defun google (query)
-  "googles a query"
-  (interactive "sQuery: ")
-  (browse-url (concat "http://www.google.com/search?q=" query)))
-
-(defun google-region (beg end)
-  "Google the selected region."
-  (interactive "r")
-  (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
+(defun google ()
+  "Googles a query or region if any."
+  (interactive)
+  (browse-url
+   (concat
+    "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
+    (if mark-active
+        (buffer-substring (region-beginning) (region-end))
+      (read-string "Query: ")))))
 
 (provide 'rejeep-defuns)
