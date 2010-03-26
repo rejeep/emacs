@@ -18,4 +18,15 @@
 (add-hook 'yaml-mode-hook 'flyspell-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
+;; Curly bracket languages
+(add-hook 'wrap-region-after-insert-twice-hook
+          (lambda ()
+            (let ((modes '(c-mode java-mode javascript-mode css-mode)))
+              (if (and (string= (char-to-string (char-before)) "{") (member major-mode modes))
+                  (let ((origin (line-beginning-position)))
+                    (newline 2)
+                    (indent-region origin (line-end-position))
+                    (forward-line -1)
+                    (indent-according-to-mode))))))
+
 (provide 'rejeep-programming)
