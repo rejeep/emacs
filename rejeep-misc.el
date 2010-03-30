@@ -70,7 +70,6 @@
 
 ;; Wrap Region
 (require 'wrap-region)
-(setq wrap-region-insert-twice t)
 (wrap-region-global-mode t)
 
 ;; Drag stuff
