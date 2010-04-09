@@ -114,4 +114,20 @@ there's a region, all lines that region covers will be duplicated."
         (buffer-substring (region-beginning) (region-end))
       (read-string "Query: ")))))
 
+(defun comment-or-uncomment-current-line-or-region ()
+  "Comments or uncomments current current line or whole lines in region."
+  (interactive)
+  (save-excursion
+    (cond ((and transient-mark-mode mark-active)
+           (if (> (point) (mark))
+               (exchange-point-and-mark))
+           (beginning-of-line)
+           (exchange-point-and-mark)
+           (end-of-line))
+          (t
+           (set-mark (line-end-position))
+           (back-to-indentation)))
+    (comment-or-uncomment-region (region-beginning) (region-end))))
+
+
 (provide 'rejeep-defuns)
