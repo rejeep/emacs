@@ -4,6 +4,7 @@
 
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(add-hook 'markdown-mode-hook 'flyspell-mode)
 (add-to-list 'auto-mode-alist '("\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
 
