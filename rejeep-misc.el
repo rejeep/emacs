@@ -119,6 +119,8 @@
 
 ;; Automatic and manual symbol highlighting.
 (setq highlight-symbol-idle-delay 0.5)
+
+;; Highlight symbol.
 (add-hook 'find-file-hook 'highlight-symbol-mode)
 
 ;; Highlight surrounding parentheses.
