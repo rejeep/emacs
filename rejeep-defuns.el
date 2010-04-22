@@ -129,5 +129,15 @@ there's a region, all lines that region covers will be duplicated."
            (back-to-indentation)))
     (comment-or-uncomment-region (region-beginning) (region-end))))
 
+(defun join-line-or-lines-in-region ()
+  "Join this line or the lines in the selected region."
+  (interactive)
+  (cond ((and transient-mark-mode mark-active)
+         (let ((min (line-number-at-pos (region-beginning))))
+           (goto-char (region-end))
+           (while (> (line-number-at-pos) min)
+             (join-line))))
+        (t (call-interactively 'join-line))))
+
 
 (provide 'rejeep-defuns)

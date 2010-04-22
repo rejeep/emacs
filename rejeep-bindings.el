@@ -53,6 +53,9 @@
 ;; Renames current buffer and visiting file.
 (global-set-key (kbd "C-c r") 'rename-file-and-buffer)
 
+;; Join current line or lines in region.
+(global-set-key (kbd "C-0") 'join-line-or-lines-in-region)
+
 ;; So that Emacs never is quit by mistake.
 (global-set-key (kbd "C-x C-c")
                 (lambda ()
