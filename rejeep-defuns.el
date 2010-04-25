@@ -122,13 +122,13 @@ there's a region, all lines that region covers will be duplicated."
   "Comments or uncomments current current line or whole lines in region."
   (interactive)
   (save-excursion
-    (let (beg end)
+    (let (min max)
       (if (and transient-mark-mode mark-active)
-          (setq beg (region-beginning) end (region-end))
-        (setq beg (point) end (point)))
+          (setq min (region-beginning) max (region-end))
+        (setq min (point) max (point)))
       (comment-or-uncomment-region
-       (progn (goto-char beg) (line-beginning-position))
-       (progn (goto-char end) (line-end-position))))))
+       (progn (goto-char min) (line-beginning-position))
+       (progn (goto-char max) (line-end-position))))))
 
 (defun join-line-or-lines-in-region ()
   "Join this line or the lines in the selected region."
