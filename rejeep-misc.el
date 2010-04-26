@@ -111,11 +111,11 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; Use the Twilight theme.
+;; Color theme
 (require 'color-theme)
+(require 'color-theme-rejeep)
 (color-theme-initialize)
-(load-file "~/.emacs.d/packages/color-theme-twilight/color-theme-twilight.el")
-;; (color-theme-twilight)
+(color-theme-rejeep)
 
 ;; Automatic and manual symbol highlighting.
 (setq highlight-symbol-idle-delay 0.5)
