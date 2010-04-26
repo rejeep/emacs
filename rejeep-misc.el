@@ -115,7 +115,7 @@
 (require 'color-theme)
 (color-theme-initialize)
 (load-file "~/.emacs.d/packages/color-theme-twilight/color-theme-twilight.el")
-(color-theme-twilight)
+;; (color-theme-twilight)
 
 ;; Automatic and manual symbol highlighting.
 (setq highlight-symbol-idle-delay 0.5)
@@ -142,7 +142,5 @@
 (setq scroll-step 1)
 (require 'smooth-scrolling)
 
-;; Flymake
-(require 'flymake)
 
 (provide 'rejeep-misc)

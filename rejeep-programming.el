@@ -1,5 +1,7 @@
 ;;; rejeep-programming.el --- Programming stuff, not connected to any specific language.
 
+(require 'flymake)
+
 (add-hook 'c-mode-common-hook (lambda () (c-subword-mode 1)))
 
 ;; Markdown
