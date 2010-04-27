@@ -114,7 +114,7 @@ there's a region, all lines that region covers will be duplicated."
   (browse-url
    (concat
     "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
-    (if mark-active
+    (if (region-active-p)
         (buffer-substring (region-beginning) (region-end))
       (read-string "Query: ")))))
 
@@ -123,7 +123,7 @@ there's a region, all lines that region covers will be duplicated."
   (interactive)
   (save-excursion
     (let (min max)
-      (if (and transient-mark-mode mark-active)
+      (if (region-active-p)
           (setq min (region-beginning) max (region-end))
         (setq min (point) max (point)))
       (comment-or-uncomment-region
@@ -133,7 +133,7 @@ there's a region, all lines that region covers will be duplicated."
 (defun join-line-or-lines-in-region ()
   "Join this line or the lines in the selected region."
   (interactive)
-  (cond ((and transient-mark-mode mark-active)
+  (cond ((region-active-p)
          (let ((min (line-number-at-pos (region-beginning))))
            (goto-char (region-end))
            (while (> (line-number-at-pos) min)
