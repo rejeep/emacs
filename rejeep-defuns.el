@@ -30,7 +30,7 @@ Then move to that line and indent accordning to mode"
   "Untabifies, indents and deletes trailing whitespace from buffer or region."
   (interactive)
   (save-excursion
-    (unless mark-active
+    (unless (region-active-p)
       (mark-whole-buffer))
     (untabify (region-beginning) (region-end))
     (indent-region (region-beginning) (region-end))
@@ -60,10 +60,10 @@ If there's no region, the current line will be duplicated. However, if
 there's a region, all lines that region covers will be duplicated."
   (interactive "p")
   (let (beg end (origin (point)))
-    (if (and mark-active (> (point) (mark)))
+    (if (and (region-active-p) (> (point) (mark)))
         (exchange-point-and-mark))
     (setq beg (line-beginning-position))
-    (if mark-active
+    (if (region-active-p)
         (exchange-point-and-mark))
     (setq end (line-end-position))
     (let ((region (buffer-substring-no-properties beg end)))
