@@ -4,17 +4,10 @@
 (setq custom-file "~/.emacs.d/rejeep-custom.el")
 (load custom-file)
 
-;; Hide menubar.
-(menu-bar-mode -1)
-
-;; Hide toolbar.
-(tool-bar-mode -1)
-
-;; Hide scrollbar.
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-
-;; Show information in minibuffer instead of as a tooltip.
-(if (fboundp 'tooltip-mode) (tooltip-mode -1))
+;; Hide some graphical stuff.
+(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode tooltip-mode))
+  (if (fboundp mode)
+      (funcall mode 1)))
 
 ;; Highlight the selected region.
 (transient-mark-mode 1)
