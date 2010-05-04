@@ -76,9 +76,6 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;; Indentation level by default is 2.
-(setq-default c-basic-offset 2)
-
 ;; Use keats to handle keyboard shortcuts.
 (require 'keats)
 (require 'keats-interactive)
