@@ -7,7 +7,7 @@
 ;; Hide some graphical stuff.
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode tooltip-mode))
   (if (fboundp mode)
-      (funcall mode 1)))
+      (funcall mode -1)))
 
 ;; Highlight the selected region.
 (transient-mark-mode 1)
