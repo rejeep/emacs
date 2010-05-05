@@ -44,8 +44,9 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome")
 
-;; Enable narrowing.
-(put 'narrow-to-region 'disabled nil)
+;; Enable some commands that by default are off.
+(dolist (command '(narrow-to-region set-goal-column downcase-region upcase-region))
+  (put command 'disabled nil))
 
 ;; Highlight matching parenthesis.
 (show-paren-mode 1)
@@ -96,10 +97,6 @@
 (setq save-place-file "~/.emacs.d/saveplace")
 (setq-default save-place t)
 (require 'saveplace)
-
-;; Allow up and down case of region.
-(put 'downcase-region 'disabled nil)
-(put 'upcase-region 'disabled nil)
 
 ;; Color theme
 (require 'color-theme)
