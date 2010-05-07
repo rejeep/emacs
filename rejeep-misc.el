@@ -1,5 +1,8 @@
 ;;; rejeep-misc.el --- Stuff that don't fit anywhere else goes here
 
+
+(require 'misc)
+
 ;; Custom file.
 (setq custom-file "~/.emacs.d/rejeep-custom.el")
 (load custom-file)

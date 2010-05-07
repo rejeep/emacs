@@ -25,6 +25,7 @@
    ("C-c s" swap-windows)
    ("C-c r" rename-file-and-buffer)
    ("C-0" join-line-or-lines-in-region)
+   ("M-z" zap-up-to-char)
    ("C-M-p" (lambda () (interactive) (scroll-down 5)))
    ("C-M-n" (lambda () (interactive) (scroll-up 5)))
    ("C-x C-c" (lambda () (interactive) (if (y-or-n-p "Quit Emacs? ") (save-buffers-kill-emacs))))
