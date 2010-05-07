@@ -16,6 +16,9 @@
 ;; press a character will replace region with that character.
 (pending-delete-mode 1)
 
+;; Show current column.
+(column-number-mode 1)
+
 ;; Indent with spaces, instead of tabs.
 (setq-default indent-tabs-mode nil)
 
