@@ -129,5 +129,8 @@
 (setq scroll-step 1)
 (require 'smooth-scrolling)
 
+;; Set initial major mode.
+(setq initial-major-mode 'emacs-lisp-mode)
+
 
 (provide 'rejeep-misc)
