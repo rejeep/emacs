@@ -26,6 +26,8 @@ Then move to that line and indent accordning to mode"
   (previous-line)
   (indent-according-to-mode))
 
+;; NOTE: (region-beginning) and (region-end) are not saved in
+;; variables since they can change after each clean step.
 (defun clean-up-buffer-or-region ()
   "Untabifies, indents and deletes trailing whitespace from buffer or region."
   (interactive)
