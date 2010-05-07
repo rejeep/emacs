@@ -138,5 +138,8 @@
 ;; Set initial major mode.
 (setq initial-major-mode 'emacs-lisp-mode)
 
+;; Do not blink the cursor.
+(blink-cursor-mode -1)
+
 
 (provide 'rejeep-misc)
