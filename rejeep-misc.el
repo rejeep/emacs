@@ -3,6 +3,9 @@
 
 (require 'misc)
 
+;; Set default ispell program.
+(setq-default ispell-program-name "aspell")
+
 ;; Custom file.
 (setq custom-file "~/.emacs.d/rejeep-custom.el")
 (load custom-file)
