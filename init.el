@@ -1,6 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d")
 
-(require 'rejeep-loadpaths)
+(require 'rejeep-paths)
 
 (require 'rejeep-elpa)
 (require 'rejeep-ido)

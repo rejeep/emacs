@@ -1,4 +1,4 @@
-;;; loadpaths.el --- Load paths
+;;; paths.el --- Emacs paths
 
 (add-to-list 'load-path "~/.emacs.d/packages")
 (add-to-list 'load-path "~/.emacs.d/packages/color-theme")
@@ -13,4 +13,5 @@
 (add-to-list 'load-path "~/.emacs.d/packages/yasnippet")
 (add-to-list 'load-path "~/.emacs.d/packages/color-theme-rejeep")
 
-(provide 'rejeep-loadpaths)
+
+(provide 'rejeep-paths)
