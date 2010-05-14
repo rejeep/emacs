@@ -13,5 +13,6 @@
 (add-to-list 'load-path "~/.emacs.d/packages/yasnippet")
 (add-to-list 'load-path "~/.emacs.d/packages/color-theme-rejeep")
 
+(add-to-list 'exec-path "/usr/local/bin")
 
 (provide 'rejeep-paths)
