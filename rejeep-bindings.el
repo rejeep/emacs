@@ -15,7 +15,7 @@
    ("C-c g" google)
    ("C-7" comment-or-uncomment-current-line-or-region)
    ("C-o" occur)
-   ("<f6>" linum-mode)
+   ("C-6" linum-mode)
    ("C-x g" magit-status)
    ("%" match-paren)
    ("C-c d" duplicate-current-line-or-region)
@@ -29,6 +29,6 @@
    ("C-M-p" (lambda () (interactive) (scroll-down 5)))
    ("C-M-n" (lambda () (interactive) (scroll-up 5)))
    ("C-x C-c" (lambda () (interactive) (if (y-or-n-p "Quit Emacs? ") (save-buffers-kill-emacs))))
-   ("<f12>" (lambda () (interactive) (find-file "~/.emacs.d/init.el")))))
+   ("C-8" (lambda () (interactive) (find-file "~/.emacs.d/init.el")))))
 
 (provide 'rejeep-bindings)
