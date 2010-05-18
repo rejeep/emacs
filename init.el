@@ -7,6 +7,7 @@
 (require 'rejeep-defuns)
 (require 'rejeep-bindings)
 (require 'rejeep-misc)
+(require 'rejeep-osx)
 
 (require 'rejeep-programming)
 (require 'rejeep-java)
