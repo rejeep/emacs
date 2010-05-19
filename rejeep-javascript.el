@@ -1,8 +1,9 @@
 ;;; rejeep-javascript.el --- Javascript stuff
 
-(add-hook 'javascript-mode-hook 'flyspell-prog-mode)
-(add-hook 'javascript-mode-hook
+
+(add-hook 'js-mode-hook 'flyspell-prog-mode)
+(add-hook 'js-mode-hook
           '(lambda()
-             (setq javascript-indent-level 2)))
+             (setq js-indent-level 2)))
 
 (provide 'rejeep-javascript)
