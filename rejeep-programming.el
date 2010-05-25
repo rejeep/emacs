@@ -21,4 +21,8 @@
 (add-hook 'yaml-mode-hook 'flyspell-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
+;; HTML Script Src
+(add-to-list 'load-path "~/Code/html-script-src")
+(require 'html-script-src)
+
 (provide 'rejeep-programming)
