@@ -31,3 +31,6 @@
 [submodule "packages/color-theme-rejeep"]
 	path = packages/color-theme-rejeep
 	url = git://github.com/rejeep/color-theme-rejeep
+[submodule "packages/html-script-src"]
+	path = packages/html-script-src
+	url = git://github.com/rejeep/html-script-src.git

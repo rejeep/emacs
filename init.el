@@ -20,3 +20,6 @@
 (require 'rejeep-cucumber)
 (require 'rejeep-c)
 (require 'rejeep-git)
+
+(add-to-list 'load-path "~/Code/html-script-src")
+(require 'html-script-src)
