@@ -2,6 +2,6 @@
 
 (eval-after-load 'sh-script
   '(progn
-     (setq sh-indentation 2)))
+     (setq sh-basic-offset 2)))
 
 (provide 'rejeep-bash)
