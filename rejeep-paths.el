@@ -12,6 +12,7 @@
 (add-to-list 'load-path "~/.emacs.d/packages/wrap-region")
 (add-to-list 'load-path "~/.emacs.d/packages/yasnippet")
 (add-to-list 'load-path "~/.emacs.d/packages/color-theme-rejeep")
+(add-to-list 'load-path "~/.emacs.d/packages/html-script-src")
 
 (add-to-list 'exec-path "/usr/local/bin")
 
