@@ -31,3 +31,6 @@
 [submodule "packages/html-script-src"]
 	path = packages/html-script-src
 	url = git://github.com/rejeep/html-script-src.git
+[submodule "packages/magit"]
+	path = packages/magit
+	url = http://github.com/philjackson/magit.git
