@@ -25,9 +25,6 @@
 [submodule "packages/wrap-region"]
 	path = packages/wrap-region
 	url = git://github.com/rejeep/wrap-region.git
-[submodule "packages/magit"]
-	path = packages/magit
-	url = git://github.com/defunkt/magit.git
 [submodule "packages/color-theme-rejeep"]
 	path = packages/color-theme-rejeep
 	url = git://github.com/rejeep/color-theme-rejeep.git
