@@ -1,4 +1,4 @@
-#!/usr/bin/emacs --script
+#!/usr/bin/env emacs --script
 
 ;; Byte compiles all .el files (recursive) in the given folders, or if
 ;; no argument is given in ~/.emacs.d.
