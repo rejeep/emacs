@@ -86,12 +86,6 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;; Use keats to handle keyboard shortcuts.
-(require 'keats)
-(require 'keats-interactive)
-(setq keats-file "~/.emacs.d/keats")
-(keats-mode t)
-
 ;; delete-trailing-whitespace is to long.
 (defalias 'dtw 'delete-trailing-whitespace)
 
