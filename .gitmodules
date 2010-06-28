@@ -1,9 +1,6 @@
 [submodule "packages/markdown-mode"]
 	path = packages/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "packages/keats-mode"]
-	path = packages/keats-mode
-	url = git://github.com/rejeep/keats.git
 [submodule "packages/cucumber"]
 	path = packages/cucumber
 	url = git://github.com/michaelklishin/cucumber.el.git
