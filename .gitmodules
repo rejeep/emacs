@@ -16,18 +16,6 @@
 [submodule "packages/yasnippet"]
 	path = packages/yasnippet
 	url = git://github.com/emacsmirror/yasnippet.git
-[submodule "packages/drag-stuff"]
-	path = packages/drag-stuff
-	url = git://github.com/rejeep/drag-stuff.git
-[submodule "packages/wrap-region"]
-	path = packages/wrap-region
-	url = git://github.com/rejeep/wrap-region.git
 [submodule "packages/color-theme-rejeep"]
 	path = packages/color-theme-rejeep
 	url = git://github.com/rejeep/color-theme-rejeep.git
-[submodule "packages/html-script-src"]
-	path = packages/html-script-src
-	url = git://github.com/rejeep/html-script-src.git
-[submodule "packages/magit"]
-	path = packages/magit
-	url = http://github.com/philjackson/magit.git
