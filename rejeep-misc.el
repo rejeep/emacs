@@ -78,6 +78,7 @@
 ;; Drag stuff
 (require 'drag-stuff)
 (drag-stuff-global-mode t)
+(add-to-list 'drag-stuff-except-modes 'org-mode)
 
 ;; Prefer utf8.
 (setq locale-coding-system 'utf-8)
