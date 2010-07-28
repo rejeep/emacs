@@ -13,6 +13,13 @@
 (add-hook 'ruby-mode-hook 'flyspell-prog-mode)
 
 
+;; Don't mess with my bindings.
+(add-hook 'ruby-mode-hook
+          (lambda()
+            (define-key ruby-mode-map (kbd "C-M-n") 'scroll-up-five)
+            (define-key ruby-mode-map (kbd "C-M-p") 'scroll-down-five)))
+
+
 ;;; Flymake
 
 (defun flymake-ruby-init ()
