@@ -142,5 +142,15 @@ there's a region, all lines that region covers will be duplicated."
              (join-line))))
         (t (call-interactively 'join-line))))
 
+(defun scroll-down-five ()
+  "Scrolls down five rows."
+  (interactive)
+  (scroll-down 5))
+
+(defun scroll-up-five ()
+  "Scrolls up five rows."
+  (interactive)
+  (scroll-up 5))
+
 
 (provide 'rejeep-defuns)
