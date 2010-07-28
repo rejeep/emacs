@@ -3,7 +3,7 @@
 (defun nuke-all-buffers ()
   "Kill all buffers, leaving *scratch* only."
   (interactive)
-  (mapcar
+  (mapc
    (lambda (x)
      (kill-buffer x))
    (buffer-list))
