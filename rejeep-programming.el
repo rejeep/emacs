@@ -2,8 +2,6 @@
 
 (require 'flymake)
 
-(add-hook 'c-mode-common-hook (lambda () (c-subword-mode 1)))
-
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (add-hook 'markdown-mode-hook 'flyspell-mode)
