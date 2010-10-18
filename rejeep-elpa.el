@@ -16,7 +16,7 @@
                           sass-mode
                           wrap-region
                           yaml-mode)
-  "Libraries that should be installed by default.")
+  "Libraries that should be installed from ELPA.")
 
 (defun rejeep-elpa-install ()
   "Install all packages that aren't installed."
