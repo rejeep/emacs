@@ -2,7 +2,7 @@
 
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 
-(define-key lisp-mode-shared-map (kbd "C-9") 'lisp-complete-symbol)
+(define-key lisp-mode-shared-map (kbd "M-&") 'lisp-complete-symbol)
 
 (add-to-list 'interpreter-mode-alist '("emacs" . emacs-lisp-mode))
 
