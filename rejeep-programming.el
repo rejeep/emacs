@@ -16,7 +16,6 @@
 
 ;; Yaml
 (require 'yaml-mode)
-(add-hook 'yaml-mode-hook 'flyspell-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 ;; HTML Script Src

@@ -9,10 +9,6 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 
-;; Spell check code
-(add-hook 'ruby-mode-hook 'flyspell-prog-mode)
-
-
 ;; Don't mess with my bindings.
 (add-hook 'ruby-mode-hook
           (lambda()
