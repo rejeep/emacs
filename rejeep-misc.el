@@ -1,6 +1,7 @@
 ;;; rejeep-misc.el --- Stuff that don't fit anywhere else goes here
 
 
+(require 'flymake)
 (require 'misc)
 
 ;; Set default ispell program.

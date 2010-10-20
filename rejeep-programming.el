@@ -1,6 +1,5 @@
 ;;; rejeep-programming.el --- Programming stuff, not connected to any specific language.
 
-(require 'flymake)
 
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
