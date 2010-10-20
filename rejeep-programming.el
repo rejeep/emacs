@@ -1,5 +1,6 @@
 ;;; rejeep-programming.el --- Programming stuff, not connected to any specific language.
 
+(add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
