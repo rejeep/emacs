@@ -6,4 +6,6 @@
 
 (add-to-list 'interpreter-mode-alist '("emacs" . emacs-lisp-mode))
 
+(put 'ert-deftest 'lisp-indent-function 'defun)
+
 (provide 'rejeep-lisp)
