@@ -13,12 +13,22 @@
 
   ;; Make Ido ignore freaking .DS_Store files.
   (add-to-list 'ido-ignore-files "\\.DS_Store")
-  
+
   ;; Make the browser the OS X default.
   (setq browse-url-browser-function 'browse-url-default-macosx-browser)
-  
+
   ;; In dired, move deletions to trash.
   (setq delete-by-moving-to-trash t)
+
+
+  (defun finder ()
+    "Opens finder for file directory."
+    (interactive)
+    (let ((file (buffer-file-name)))
+      (if file
+          (shell-command
+           (concat "open " (file-name-directory file)))
+        (error "Buffer is not attached to any file."))))
   )
 
 (provide 'rejeep-osx)
