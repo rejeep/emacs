@@ -2,7 +2,7 @@
 
 
 (defun ruby-interpolate ()
-  "In in a double quoted string, interpolate."
+  "In a double quoted string, interpolate."
   (interactive)
   (insert "#")
   (let ((properties (text-properties-at (point))))
