@@ -1,13 +1,6 @@
 ;;; rejeep-ruby.el --- Ruby specific settings
 
 
-;; Associate files
-(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 
 ;; Don't mess with my bindings.
 (add-hook 'ruby-mode-hook
@@ -47,6 +40,8 @@
      (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3)
            flymake-err-line-patterns)
      (add-hook 'ruby-mode-hook 'flymake-ruby-enable)))
+(dolist (regex '("\\.rake$" "\\.gemspec$" "\\.ru$" "Rakefile$" "Gemfile$" "Capfile$"))
+  (add-to-list 'auto-mode-alist `(,regex . ruby-mode)))
 
 
 (provide 'rejeep-ruby)
