@@ -90,6 +90,10 @@
 (require 'drag-stuff)
 (drag-stuff-global-mode 1)
 
+;; Enclose
+(require 'enclose)
+(enclose-global-mode 1)
+
 (defalias 'dtw 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
