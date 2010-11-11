@@ -17,14 +17,15 @@
             (define-key haskell-mode-map (kbd "M-n")
               (lambda ()
                 (interactive)
-                (let ((open-line-no-indent t))
-                  (open-line-below))))
+                (move-end-of-line 1)
+                (newline)))
 
             (define-key haskell-mode-map (kbd "M-p")
               (lambda ()
                 (interactive)
-                (let ((open-line-no-indent t))
-                  (open-line-above))))
+                (move-beginning-of-line 1)
+                (newline)
+                (forward-line -1)))
             ))
 
 
