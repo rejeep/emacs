@@ -11,24 +11,9 @@ First of all make sure you have installed Emacs version 23 or higher.
 Fetch the emacs source files
     $ git clone git://github.com/rejeep/emacs.git ~/.emacs.d
 
-### Submodules
-Fetch all packages that are Git submodules.
-    $ cd ~/.emacs.d
-    $ git submodule init
-    $ git submodule update
-
-### ELPA
-Install all [ELPA](http://tromey.com/elpa/install.html) packages
-simply by running the function **package-refresh-contents** and then
-**rejeep-elpa-install** (in **rejeep-elpa.el**). This command does all
-that for you:
-    $ cd ~/.emacs.d
-    $ emacs --batch -l rejeep-elpa.el -f package-refresh-contents -f rejeep-elpa-install
-
 ### Rinari
-Rinari is installed through submodules. Rinari however has submodules
-of it's own. To install them:
-    $ cd ~/.emacs.d/packages/rinari
+Rinari requires some submodules:
+    $ cd ~/.emacs.d/vendor/rinari
     $ git submodule init
     $ git submodule update
 
