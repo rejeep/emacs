@@ -1,107 +1,72 @@
-;;; rejeep-misc.el --- Stuff that don't fit anywhere else goes here
+;;; rejeep-misc.el --- Miscellaneous settings
 
 
-(require 'flymake)
-(require 'misc)
-
-;; Set default ispell program.
-(setq-default ispell-program-name "aspell")
-
-;; Custom file.
-(setq custom-file "~/.emacs.d/rejeep-custom.el")
-(load custom-file)
-
-;; Hide some graphical stuff.
-(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode tooltip-mode))
-  (if (fboundp mode)
-      (funcall mode -1)))
-
-;; Highlight the selected region.
-(transient-mark-mode 1)
-
-;; Hitting delete will delete region and selecting a region and then
-;; press a character will replace region with that character.
-(pending-delete-mode 1)
-
-;; Show current column.
-(column-number-mode 1)
-
-;; Indent with spaces, instead of tabs.
-(setq-default indent-tabs-mode nil)
-
-;; No backup files
+;; Do not make any backup files
 (setq make-backup-files nil)
 
-;; kill-line will kill whole line (including empty line).
+;; Kill whole line
 (setq kill-whole-line t)
 
-;; Skip startup message.
+;; Do not show startup message
 (setq inhibit-startup-message t)
 
-;; So that you only have to type y / n instead of yes / no.
-(fset 'yes-or-no-p 'y-or-n-p)
-
-;; Easy buffer switching by holding down shift and press any arrow key.
-(windmove-default-keybindings 'shift)
-
-;; Show unfinished keystrokes early.
+;; Show keystrokes in minibuffer early
 (setq echo-keystrokes 0.1)
 
-;; Maximum decoration
-(setq font-lock-maximum-decoration t)
+;; Set default browser
+(setq browse-url-browser-function 'browse-url-generic)
+(setq browse-url-generic-program "google-chrome")
 
-;; Use firefox as default browser.
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "google-chrome")
+;; Initial major mode is Emacs Lisp mode
+(setq initial-major-mode 'emacs-lisp-mode)
 
-;; Enable some commands that by default are off.
+;; Indent with spaces instead of tabs
+(setq-default indent-tabs-mode nil)
+
+;; Truncate lines
+(set-default 'truncate-lines t)
+
+;; Show matching parenthesis
+(show-paren-mode 1)
+
+;; Do not blink cursor
+(blink-cursor-mode -1)
+
+;; Do not show any tooltips
+(tooltip-mode -1)
+
+;; Remove selected region if typing
+(pending-delete-mode 1)
+
+;; Shift + arrow key move cursor to buffer in arrow direction
+(windmove-default-keybindings 'shift)
+
+;; Allow some commands
 (dolist (command '(narrow-to-region set-goal-column downcase-region upcase-region))
   (put command 'disabled nil))
 
-;; Highlight matching parenthesis.
-(show-paren-mode 1)
-
-;; Show empty lines at end of buffer.
-(set-default 'indicate-empty-lines t)
-
-;; For it's awesome rectangle mode.
+;; CUA rectangle mode
 (setq cua-enable-cua-keys nil)
 (setq cua-toggle-set-mark nil)
 (cua-mode)
 
-;; Default spelling dictionary.
-(setq ispell-dictionary "english")
-
-;; Wrap Region
-(require 'wrap-region)
-(wrap-region-global-mode t)
-
-;; Drag stuff
-(require 'drag-stuff)
-(drag-stuff-global-mode t)
-(add-to-list 'drag-stuff-except-modes 'org-mode)
-
-;; Prefer utf8.
+;; Prefer utf8
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;; delete-trailing-whitespace is to long.
-(defalias 'dtw 'delete-trailing-whitespace)
+;; Set font size
+(set-face-attribute 'default nil :height 110)
 
-;; Add parts of each file's directory to the buffer name if not unique.
+;; Add parts of each file's directory to the buffer name if not unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
-;; Minimal finge.
-(if (fboundp 'fringe-mode) (fringe-mode 'minimal))
-
-;; Save place in files.
-(setq save-place-file "~/.emacs.d/saveplace")
-(setq-default save-place t)
+;; Save cursor position
 (require 'saveplace)
+(setq-default save-place t)
 
 ;; Color theme
 (require 'color-theme)
@@ -109,36 +74,13 @@
 (color-theme-initialize)
 (color-theme-rejeep)
 
-;; Automatic and manual symbol highlighting.
+;; Highlight symbol at point
+(require 'highlight-symbol)
 (setq highlight-symbol-idle-delay 0.5)
-
-;; Highlight symbol.
 (add-hook 'find-file-hook 'highlight-symbol-mode)
 
-;; Highlight surrounding parentheses.
-(add-hook 'find-file-hook 'highlight-parentheses-mode t)
-
-;; Set font size.
-(set-face-attribute 'default nil :height 110)
-
-;; Associate file extensions with modes.
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-
-;; Require a newline at the end.
-(setq require-final-newline t)
-
-;; Scroll smooth
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
-(setq mouse-wheel-progressive-speed nil)
-(setq mouse-wheel-follow-mosue t)
-(setq scroll-step 1)
-(require 'smooth-scrolling)
-
-;; Set initial major mode.
-(setq initial-major-mode 'emacs-lisp-mode)
-
-;; Do not blink the cursor.
-(blink-cursor-mode -1)
+(defalias 'dtw 'delete-trailing-whitespace)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 
 (provide 'rejeep-misc)
