@@ -1,21 +1,17 @@
-;;; rejeep-ido.el --- Eveything ido related
+;;; rejeep-ido - Interactively do
 
-;; Interactively do, or ido
+
 (ido-mode t)
 
-;; Prefix matching enabled.
-(setq ido-enable-prefix nil)
+(setq
+ ido-everywhere t
+ ido-enable-prefix nil
+ ido-enable-flex-matching t
+ ido-create-new-buffer 'always
+ ido-use-filename-at-point 'guess
+ ido-max-prospects 10
+ ido-create-new-buffer 'always
+ ido-file-extensions-order '(".rb" ".el"))
 
-;; Flexible string matching (pacu will match package.use).
-(setq ido-enable-flex-matching t)
-
-;; Always create buffer if no buffer matches search string.
-(setq ido-create-new-buffer 'always)
-
-;; Don't look for filename at point.
-(setq ido-use-filename-at-point nil)
-
-;; Show max 10 matches.
-(setq ido-max-prospects 10)
 
 (provide 'rejeep-ido)

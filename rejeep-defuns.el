@@ -1,5 +1,6 @@
 ;;; rejeep-defuns.el --- Custom functions
 
+
 (defun nuke-all-buffers ()
   "Kill all buffers, leaving *scratch* only."
   (interactive)
@@ -15,7 +16,8 @@ Then move to that line and indent accordning to mode"
   (interactive)
   (move-end-of-line 1)
   (newline)
-  (indent-according-to-mode))
+  (unless open-line-no-indent
+    (indent-according-to-mode)))
 
 (defun open-line-above ()
   "Open a line above the line the point is at.
@@ -24,7 +26,8 @@ Then move to that line and indent accordning to mode"
   (move-beginning-of-line 1)
   (newline)
   (forward-line -1)
-  (indent-according-to-mode))
+  (unless open-line-no-indent
+    (indent-according-to-mode)))
 
 ;; NOTE: (region-beginning) and (region-end) are not saved in
 ;; variables since they can change after each clean step.

@@ -28,7 +28,15 @@
    ("M-z" zap-up-to-char)
    ("C-M-p" scroll-down-five)
    ("C-M-n" scroll-up-five)
-   ("C-x C-c" (lambda () (interactive) (if (y-or-n-p "Quit Emacs? ") (save-buffers-kill-emacs))))
-   ("C-8" (lambda () (interactive) (find-file "~/.emacs.d/init.el")))))
+   ("C-x C-c"
+    (lambda ()
+      (interactive)
+      (if (y-or-n-p "Quit Emacs? ")
+          (save-buffers-kill-emacs))))
+   ("C-8"
+    (lambda ()
+      (interactive)
+      (find-file
+       (expand-file-name emacs-dir "init.el"))))))
 
 (provide 'rejeep-bindings)

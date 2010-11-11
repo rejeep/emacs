@@ -1,26 +1,23 @@
-(add-to-list 'load-path "~/.emacs.d")
+;;; init.el - Where it all begins
 
-;; Misc
-(require 'rejeep-paths)
-(require 'rejeep-elpa)
+
+(setq emacs-dir (file-name-directory
+                 (or (buffer-file-name) load-file-name)))
+(setq vendor-dir (expand-file-name "vendor" emacs-dir))
+
+;; Turn off early to avoid momentary display
+(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+  (if (fboundp mode) (funcall mode -1)))
+
+(load (expand-file-name "rejeep-paths.el" emacs-dir))
+
+(require 'cl)
+(require 'misc)
 (require 'rejeep-ido)
 (require 'rejeep-defuns)
-(require 'rejeep-bindings)
 (require 'rejeep-misc)
-
-;; Programming
+(require 'rejeep-bindings)
 (require 'rejeep-programming)
-(require 'rejeep-java)
-(require 'rejeep-ruby)
-(require 'rejeep-rails)
-(require 'rejeep-css)
-(require 'rejeep-javascript)
-(require 'rejeep-bash)
-(require 'rejeep-lisp)
-(require 'rejeep-cucumber)
-(require 'rejeep-c)
-(require 'rejeep-git)
 
-;; Others
-(require 'rejeep-osx)
-
+(cond ((eq system-type 'darwin)
+       (require 'rejeep-osx)))

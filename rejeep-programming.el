@@ -1,4 +1,5 @@
-;;; rejeep-programming.el --- Programming stuff, not connected to any specific language.
+;;; rejeep-programming.el --- Programming stuff
+
 
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 
@@ -11,13 +12,29 @@
 (require 'dropdown-list)
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/snippets")
+(yas/load-directory (expand-file-name emacs-dir "snippets"))
 
 ;; Yaml
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
-;; HTML Script Src
+;; Cucumber
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
 (require 'html-script-src)
+(require 'haml-mode)
+(require 'sass-mode)
+(require 'rejeep-java)
+(require 'rejeep-ruby)
+(require 'rejeep-rails)
+(require 'rejeep-css)
+(require 'rejeep-javascript)
+(require 'rejeep-bash)
+(require 'rejeep-lisp)
+(require 'rejeep-c)
+(require 'rejeep-git)
+(require 'rejeep-haskell)
+
 
 (provide 'rejeep-programming)

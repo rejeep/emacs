@@ -1,6 +1,8 @@
 ;;; rejeep-ruby.el --- Ruby specific settings
 
 
+(require 'ruby-end)
+
 (defun ruby-interpolate ()
   "In a double quoted string, interpolate."
   (interactive)

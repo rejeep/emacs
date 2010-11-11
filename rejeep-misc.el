@@ -26,6 +26,9 @@
 ;; Truncate lines
 (set-default 'truncate-lines t)
 
+;; Make cursor a simple bar
+(setq-default cursor-type 'bar)
+
 ;; Show matching parenthesis
 (show-paren-mode 1)
 
@@ -78,6 +81,14 @@
 (require 'highlight-symbol)
 (setq highlight-symbol-idle-delay 0.5)
 (add-hook 'find-file-hook 'highlight-symbol-mode)
+
+;; Wrap Region
+(require 'wrap-region)
+(wrap-region-global-mode 1)
+
+;; Drag Stuff
+(require 'drag-stuff)
+(drag-stuff-global-mode 1)
 
 (defalias 'dtw 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)

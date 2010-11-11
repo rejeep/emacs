@@ -1,14 +1,13 @@
-;;; paths.el --- Emacs paths
+;;; rejeep-paths.el --- All sorts of paths
 
-(add-to-list 'load-path "~/.emacs.d/packages")
-(add-to-list 'load-path "~/.emacs.d/packages/color-theme")
-(add-to-list 'load-path "~/.emacs.d/packages/cucumber")
-(add-to-list 'load-path "~/.emacs.d/packages/markdown-mode")
-(add-to-list 'load-path "~/.emacs.d/packages/rhtml")
-(add-to-list 'load-path "~/.emacs.d/packages/rinari")
-(add-to-list 'load-path "~/.emacs.d/packages/yasnippet")
-(add-to-list 'load-path "~/.emacs.d/packages/color-theme-rejeep")
+(add-to-list 'load-path emacs-dir)
+(add-to-list 'load-path vendor-dir)
+
+(dolist (file (directory-files vendor-dir t))
+  (unless
+      (or
+       (string-match-p "\\(?:\\.\\|\\.\\.\\)$" file)
+       (not (file-directory-p file)))
+    (add-to-list 'load-path file)))
 
 (add-to-list 'exec-path "/usr/local/bin")
-
-(provide 'rejeep-paths)

@@ -1,9 +1,11 @@
-;;; rejeep-c.el --- c programming stuff
+;;; rejeep-c.el --- C programming stuff
+
 
 (add-hook 'c-mode-hook
-          (lambda()
+          (lambda ()
             (c-set-style "K&R")
             (setq tab-width 2)
             (setq c-basic-offset 2)))
+
 
 (provide 'rejeep-c)
