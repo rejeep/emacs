@@ -1,3 +1,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git://github.com/rejeep/yasnippets.git
+[submodule "vendor/rinari"]
+	path = vendor/rinari
+	url = git://github.com/eschulte/rinari.git
