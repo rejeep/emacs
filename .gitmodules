@@ -1,21 +1,3 @@
-[submodule "packages/markdown-mode"]
-	path = packages/markdown-mode
-	url = git://jblevins.org/git/markdown-mode.git
-[submodule "packages/cucumber"]
-	path = packages/cucumber
-	url = git://github.com/michaelklishin/cucumber.el.git
-[submodule "packages/rhtml"]
-	path = packages/rhtml
-	url = git://github.com/rejeep/rhtml.git
-[submodule "packages/rinari"]
-	path = packages/rinari
-	url = git://github.com/rejeep/rinari.git
 [submodule "snippets"]
 	path = snippets
 	url = git://github.com/rejeep/yasnippets.git
-[submodule "packages/yasnippet"]
-	path = packages/yasnippet
-	url = git://github.com/emacsmirror/yasnippet.git
-[submodule "packages/color-theme-rejeep"]
-	path = packages/color-theme-rejeep
-	url = git://github.com/rejeep/color-theme-rejeep.git
