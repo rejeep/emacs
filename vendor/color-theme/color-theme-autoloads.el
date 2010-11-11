@@ -14,11 +14,6 @@
 (provide 'color-theme-autoloads)
 ;;; Generated autoloads follow (made by autoload.el).
 
-;;;### (autoloads nil nil ("themes/color-theme-example.el" "themes/color-theme-library.el")
-;;;;;;  (19262 16293 647559))
-
-;;;***
-
 ;;;### (autoloads (color-theme-initialize color-theme-submit color-theme-install
 ;;;;;;  color-theme-compare color-theme-make-snapshot color-theme-analyze-defun
 ;;;;;;  color-theme-print color-theme-install-at-point-for-current-frame
@@ -26,38 +21,30 @@
 ;;;;;;  "color-theme" "color-theme.el" (17529 41105))
 ;;; Generated autoloads from color-theme.el
 
-(autoload 'color-theme-select "color-theme" "\
+(autoload (quote color-theme-select) "color-theme" "\
 Displays a special buffer for selecting and installing a color theme.
 With optional prefix ARG, this buffer will include color theme libraries
 as well.  A color theme library is in itself not complete, it must be
 used as part of another color theme to be useful.  Thus, color theme
-libraries are mainly useful for color theme authors.
+libraries are mainly useful for color theme authors." t nil)
 
-\(fn &optional ARG)" t nil)
-
-(autoload 'color-theme-describe "color-theme" "\
+(autoload (quote color-theme-describe) "color-theme" "\
 Describe color theme listed at point.
 This shows the documentation of the value of text-property color-theme
 at point.  The text-property color-theme should be a color theme
-function.  See `color-themes'.
+function.  See `color-themes'." t nil)
 
-\(fn)" t nil)
-
-(autoload 'color-theme-install-at-mouse "color-theme" "\
+(autoload (quote color-theme-install-at-mouse) "color-theme" "\
 Install color theme clicked upon using the mouse.
 First argument EVENT is used to set point.  Then
-`color-theme-install-at-point' is called.
+`color-theme-install-at-point' is called." t nil)
 
-\(fn EVENT)" t nil)
-
-(autoload 'color-theme-install-at-point-for-current-frame "color-theme" "\
+(autoload (quote color-theme-install-at-point-for-current-frame) "color-theme" "\
 Install color theme at point for current frame only.
 Binds `color-theme-is-global' to nil and calls
-`color-theme-install-at-point'.
+`color-theme-install-at-point'." t nil)
 
-\(fn)" t nil)
-
-(autoload 'color-theme-print "color-theme" "\
+(autoload (quote color-theme-print) "color-theme" "\
 Print the current color theme function.
 
 You can contribute this function to <URL:news:gnu.emacs.sources> or
@@ -82,36 +69,28 @@ color theme function in your .emacs directly.
 Example:
 
     (require 'color-theme)
-    (color-theme-gnome2)
+    (color-theme-gnome2)" t nil)
 
-\(fn &optional BUF)" t nil)
-
-(autoload 'color-theme-analyze-defun "color-theme" "\
+(autoload (quote color-theme-analyze-defun) "color-theme" "\
 Once you have a color-theme printed, check for missing faces.
 This is used by maintainers who receive a color-theme submission
 and want to make sure it follows the guidelines by the color-theme
-author.
+author." t nil)
 
-\(fn)" t nil)
-
-(autoload 'color-theme-make-snapshot "color-theme" "\
+(autoload (quote color-theme-make-snapshot) "color-theme" "\
 Return the definition of the current color-theme.
-The function returned will recreate the color-theme in use at the moment.
+The function returned will recreate the color-theme in use at the moment." nil nil)
 
-\(fn)" nil nil)
-
-(autoload 'color-theme-compare "color-theme" "\
+(autoload (quote color-theme-compare) "color-theme" "\
 Compare two color themes.
 This will print the differences between installing THEME-A and
 installing THEME-B.  Note that the order is important: If a face is
 defined in THEME-A and not in THEME-B, then this will not show up as a
 difference, because there is no reset before installing THEME-B.  If a
 face is defined in THEME-B and not in THEME-A, then this will show up as
-a difference.
+a difference." t nil)
 
-\(fn THEME-A THEME-B)" t nil)
-
-(autoload 'color-theme-install "color-theme" "\
+(autoload (quote color-theme-install) "color-theme" "\
 Install a color theme defined by frame parameters, variables and faces.
 
 The theme is installed for all present and future frames; any missing
@@ -142,18 +121,12 @@ FACE-DEFINITIONS is an alist of face definitions.  These are installed
 with `color-theme-install-faces'.
 
 If `color-theme-is-cumulative' is nil, a color theme will undo face and
-frame-parameter settings of previous color themes.
+frame-parameter settings of previous color themes." nil nil)
 
-\(fn THEME)" nil nil)
+(autoload (quote color-theme-submit) "color-theme" "\
+Submit your color-theme to the maintainer." t nil)
 
-(autoload 'color-theme-submit "color-theme" "\
-Submit your color-theme to the maintainer.
-
-\(fn)" t nil)
-
-(autoload 'color-theme-initialize "color-theme" "\
-Initialize the color theme package by loading color-theme-libraries.
-
-\(fn)" t nil)
+(autoload (quote color-theme-initialize) "color-theme" "\
+Initialize the color theme package by loading color-theme-libraries." t nil)
 
 ;;;***
