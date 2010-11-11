@@ -37,6 +37,6 @@
     (lambda ()
       (interactive)
       (find-file
-       (expand-file-name emacs-dir "init.el"))))))
+       (expand-file-name "init.el" emacs-dir))))))
 
 (provide 'rejeep-bindings)
