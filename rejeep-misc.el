@@ -88,6 +88,7 @@
 
 ;; Drag Stuff
 (require 'drag-stuff)
+(add-to-list 'drag-stuff-except-modes 'org-mode)
 (drag-stuff-global-mode 1)
 
 ;; Enclose
