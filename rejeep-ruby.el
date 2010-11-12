@@ -7,13 +7,11 @@
   "In a double quoted string, interpolate."
   (interactive)
   (insert "#")
-  (let ((properties (text-properties-at (point))))
-    (when (and
-           (memq 'font-lock-string-face properties)
-           (save-excursion
-             (ruby-forward-string "\"" (line-end-position) t)))
-      (insert "{}")
-      (backward-char 1))))
+  (when (and
+         (looking-back "\".*")
+         (looking-at ".*\""))
+    (insert "{}")
+    (backward-char 1)))
 
 (add-hook 'ruby-mode-hook
           (lambda()
