@@ -8,9 +8,15 @@ branch.
 First of all make sure you have installed Emacs version 23 or higher.
 
 ### Source
-Fetch the emacs source files
+Fetch the emacs source files:
     $ git clone git://github.com/rejeep/emacs.git ~/.emacs.d
 
+### Submodules
+Fetch all submodules:
+    $ cd ~/.emacs.d
+    $ git submodule init
+    $ git submodule update
+    
 ### Rinari
 Rinari requires some submodules:
     $ cd ~/.emacs.d/vendor/rinari
