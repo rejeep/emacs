@@ -14,6 +14,10 @@
 (yas/initialize)
 (yas/load-directory (expand-file-name emacs-dir "snippets"))
 
+(setq-default
+ yas/prompt-functions
+ '(yas/ido-prompt yas/dropdown-prompt yas/x-prompt yas/completing-prompt yas/no-prompt))
+
 ;; Yaml
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
