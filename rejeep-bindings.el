@@ -23,7 +23,7 @@
    ("C--" text-scale-decrease)
    ("C-c n" clean-up-buffer-or-region)
    ("C-c s" swap-windows)
-   ("C-c r" rename-file-and-buffer)
+   ("C-c r" rename-this-buffer-and-file)
    ("C-0" join-line-or-lines-in-region)
    ("M-z" zap-up-to-char)
    ("C-M-p" scroll-down-five)

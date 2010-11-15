@@ -95,7 +95,7 @@ there's a region, all lines that region covers will be duplicated."
            (set-window-start w2 s1))))
   (other-window 1))
 
-(defun rename-file-and-buffer ()
+(defun rename-this-buffer-and-file ()
   "Renames current buffer and file it is visiting."
   (interactive)
   (let ((name (buffer-name))
