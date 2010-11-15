@@ -109,7 +109,8 @@ there's a region, all lines that region covers will be duplicated."
                (rename-file filename new-name 1)
                (rename-buffer new-name)
                (set-visited-file-name new-name)
-               (set-buffer-modified-p nil)))))))
+               (set-buffer-modified-p nil)
+               (message "File %s successfully renamed to %s" name (file-name-nondirectory new-name))))))))
 
 (defun google ()
   "Googles a query or region if any."
