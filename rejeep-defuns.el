@@ -110,7 +110,7 @@ there's a region, all lines that region covers will be duplicated."
                (rename-buffer new-name)
                (set-visited-file-name new-name)
                (set-buffer-modified-p nil)
-               (message "File %s successfully renamed to %s" name (file-name-nondirectory new-name))))))))
+               (message "File '%s' successfully renamed to '%s'" name (file-name-nondirectory new-name))))))))
 
 (defun delete-this-buffer-and-file ()
   "Removes file connected to current buffer."
@@ -123,7 +123,7 @@ there's a region, all lines that region covers will be duplicated."
       (when (yes-or-no-p "Are you sure you want to remove this file? ")
         (delete-file filename)
         (kill-buffer buffer)
-        (message "File %s successfully removed" filename)))))
+        (message "File '%s' successfully removed" filename)))))
 
 (defun google ()
   "Googles a query or region if any."
