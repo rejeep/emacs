@@ -91,10 +91,6 @@
 (add-to-list 'drag-stuff-except-modes 'org-mode)
 (drag-stuff-global-mode 1)
 
-;; Enclose
-(require 'enclose)
-(enclose-global-mode 1)
-
 (defalias 'dtw 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
