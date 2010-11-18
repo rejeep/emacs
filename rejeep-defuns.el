@@ -113,7 +113,7 @@ there's a region, all lines that region covers will be duplicated."
                (message "File '%s' successfully renamed to '%s'" name (file-name-nondirectory new-name))))))))
 
 (defun delete-this-buffer-and-file ()
-  "Removes file connected to current buffer."
+  "Removes file connected to current buffer and kills buffer."
   (interactive)
   (let ((filename (buffer-file-name))
         (buffer (current-buffer))
