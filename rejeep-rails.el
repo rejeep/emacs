@@ -12,7 +12,7 @@
 ;; Rhtml
 (autoload 'rhtml-mode "rhtml-mode" "" t)
 (add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
-(add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\(\\.html\\)?\\.erb$" . rhtml-mode))
 
 
 (provide 'rejeep-rails)
