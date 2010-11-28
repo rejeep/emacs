@@ -26,9 +26,6 @@
 ;; Truncate lines
 (set-default 'truncate-lines t)
 
-;; Make cursor a simple bar
-(setq-default cursor-type 'bar)
-
 ;; Show matching parenthesis
 (show-paren-mode 1)
 
