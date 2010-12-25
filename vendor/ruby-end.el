@@ -4,7 +4,7 @@
 
 ;; Author: Johan Andersson <johan.rejeep@gmail.com>
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Keywords: speed, convenience
 ;; URL: http://github.com/rejeep/ruby-end
 
@@ -41,31 +41,48 @@
 ;; Then require ruby-end:
 ;;   (require 'ruby-end)
 ;;
-;; ruby-end-mode start automatically when ruby-mode is activated.
+;; ruby-end-mode is automatically started in ruby-mode.
 
 
 ;;; Code:
 
+(defvar ruby-end-expand-key "SPC"
+  "Space key name.")
+
 (defvar ruby-end-mode-map
-  (let ((map (make-sparse-keymap)))
-    (define-key map (kbd "SPC") 'ruby-end-space)
+  (let ((map (make-sparse-keymap))
+        (key (read-kbd-macro ruby-end-expand-key)))
+    (define-key map key 'ruby-end-space)
     map)
   "Keymap for `ruby-end-mode'.")
 
-(defvar ruby-end-keywords-re
+(defconst ruby-end-expand-before-re
   "\\(?:^\\|\\s-+\\)\\(?:def\\|if\\|class\\|module\\|unless\\|case\\|while\\|do\\|until\\|for\\|begin\\)"
-  "Regular expression matching from point and backwards a valid keyword.")
+  "Regular expression matching before point.")
+
+(defconst ruby-end-expand-after-re
+  "\\s-*$"
+  "Regular expression matching after point.")
 
 (defun ruby-end-space ()
   "Called when SPC-key is pressed."
   (interactive)
-  (when (ruby-end-expand-p)
-    (ruby-end-insert-end))
-  (insert " "))
+  (cond
+   ((ruby-end-expand-p)
+    (ruby-end-insert-end)
+    (insert " "))
+   (t
+    (let ((ruby-end-mode nil))
+      (call-interactively
+       (key-binding
+        (read-kbd-macro ruby-end-expand-key)))))))
 
 (defun ruby-end-insert-end ()
   "Closes block by inserting end."
-  (let ((whites (save-excursion (back-to-indentation) (current-column))))
+  (let ((whites
+         (save-excursion
+           (back-to-indentation)
+           (current-column))))
     (save-excursion
       (newline)
       (indent-line-to (+ whites ruby-indent-level))
@@ -77,7 +94,8 @@
   "Checks if expansion (insertion of end) should be done."
   (and
    (ruby-end-code-at-point-p)
-   (looking-back ruby-end-keywords-re)))
+   (looking-back ruby-end-expand-before-re)
+   (looking-at ruby-end-expand-after-re)))
 
 (defun ruby-end-code-at-point-p ()
   "Checks if point is code, or comment or string."
