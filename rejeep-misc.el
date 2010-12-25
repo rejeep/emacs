@@ -67,6 +67,13 @@
 (setq mouse-wheel-follow-mouse 't)
 (setq scroll-step 1)
 
+;; Do not ask for confirmation
+(setq confirm-nonexistent-file-or-buffer nil)
+
+(setq kill-buffer-query-functions
+      (remq 'process-kill-buffer-query-function
+            kill-buffer-query-functions))
+
 ;; Add parts of each file's directory to the buffer name if not unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
