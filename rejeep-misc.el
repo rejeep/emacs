@@ -60,6 +60,13 @@
 ;; Set font size
 (set-face-attribute 'default nil :height 110)
 
+;; Smooth scrolling
+(require 'smooth-scrolling)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mouse 't)
+(setq scroll-step 1)
+
 ;; Add parts of each file's directory to the buffer name if not unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
