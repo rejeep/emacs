@@ -29,6 +29,8 @@
    ("M-z" zap-up-to-char)
    ("C-M-p" scroll-down-five)
    ("C-M-n" scroll-up-five)
+   ("M-k" kill-this-buffer)
+   ("M-o" other-window)
    ("C-x C-c"
     (lambda ()
       (interactive)
