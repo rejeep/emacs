@@ -6,3 +6,5 @@
 (package "wrap-region")
 (package "ruby-end")
 (package "html-script-src")
+(package "sass-mode")
+(package "haml-mode")
