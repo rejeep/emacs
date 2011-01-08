@@ -11,6 +11,7 @@
 
 (load (expand-file-name "rejeep-paths.el" emacs-dir))
 
+(require 'package-spec)
 (require 'cl)
 (require 'misc)
 (require 'rejeep-ido)
