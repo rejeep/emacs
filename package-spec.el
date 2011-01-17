@@ -8,3 +8,4 @@
 (package "html-script-src")
 (package "sass-mode")
 (package "haml-mode")
+(package "htmlize")
