@@ -24,5 +24,5 @@
 (require 'rejeep-bindings)
 (require 'rejeep-programming)
 
-(cond ((eq system-type 'darwin)
-       (require 'rejeep-osx)))
+(if (eq system-type 'darwin)
+    (require 'rejeep-osx))
