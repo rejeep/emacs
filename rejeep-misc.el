@@ -1,6 +1,9 @@
 ;;; rejeep-misc.el --- Miscellaneous settings
 
 
+;; Do not pause on redisplay
+(setq redisplay-dont-pause t)
+
 ;; Do not make any backup files
 (setq make-backup-files nil)
 
