@@ -1,6 +1,6 @@
 ;;; rejeep-ruby.el --- Ruby specific settings
 
-
+(require 'rvm)
 (require 'ruby-end)
 
 (defun ruby-interpolate ()
