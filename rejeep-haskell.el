@@ -1,7 +1,7 @@
 ;;; rejeep-haskell.el --- Haskell stuff
 
 
-(load (expand-file-name "haskell-site-file" (expand-file-name "haskell-mode" vendor-dir)))
+;; (load (expand-file-name "haskell-site-file" (expand-file-name "haskell-mode" vendor-dir)))
 
 (defun haskell-insert-module-definition ()
   "Insert module definition if file is empty."
@@ -25,8 +25,6 @@
                 (interactive)
                 (move-beginning-of-line 1)
                 (newline)
-                (forward-line -1)))
-            ))
-
+                (forward-line -1)))))
 
 (provide 'rejeep-haskell)
