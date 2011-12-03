@@ -86,6 +86,7 @@
 (setq-default save-place t)
 
 ;; Color theme
+(require 'color-theme)
 (color-theme-solarized-dark)
 
 ;; Highlight symbol at point
