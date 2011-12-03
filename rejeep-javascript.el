@@ -5,5 +5,9 @@
           (lambda()
             (setq js-indent-level 2)))
 
+(add-hook 'coffee-mode-hook
+          (lambda ()
+            (setq coffee-tab-width 2)))
+
 
 (provide 'rejeep-javascript)
