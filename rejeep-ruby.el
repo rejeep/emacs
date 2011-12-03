@@ -3,6 +3,8 @@
 (require 'rvm)
 (require 'ruby-end)
 
+(setq ruby-end-check-statement-modifiers t)
+
 (defun ruby-interpolate ()
   "In a double quoted string, interpolate."
   (interactive)
@@ -23,6 +25,5 @@
 
 (dolist (regex '("\\.rake$" "\\.gemspec$" "\\.ru$" "Rakefile$" "Gemfile$" "Capfile$"))
   (add-to-list 'auto-mode-alist `(,regex . ruby-mode)))
-
 
 (provide 'rejeep-ruby)
