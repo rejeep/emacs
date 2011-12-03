@@ -5,7 +5,7 @@
 
 ;; Set diff colors.
 (add-hook 'magit-mode-hook
-          (lambda()
+          (lambda ()
             (set-face-foreground 'magit-diff-add "green3")
             (set-face-foreground 'magit-diff-del "red3")))
 
