@@ -86,10 +86,7 @@
 (setq-default save-place t)
 
 ;; Color theme
-(require 'color-theme)
-(require 'color-theme-rejeep)
-(color-theme-initialize)
-(color-theme-rejeep)
+(color-theme-solarized-dark)
 
 ;; Highlight symbol at point
 (require 'highlight-symbol)
