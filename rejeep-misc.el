@@ -45,7 +45,7 @@
 (windmove-default-keybindings 'shift)
 
 ;; Allow some commands
-(dolist (command '(narrow-to-region set-goal-column downcase-region upcase-region))
+(dolist (command '(narrow-to-region downcase-region upcase-region))
   (put command 'disabled nil))
 
 ;; CUA rectangle mode
