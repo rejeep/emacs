@@ -64,6 +64,17 @@
         (load package-spec)
       (error "Missing package spec file."))))
 
+(defun package-spec-reload ()
+  "Reloads spec file and runs installer."
+  (interactive)
+  (package-spec-clear)
+  (package-spec-load)
+  (package-spec-install))
+
+(defun package-spec-clear ()
+  "Clear current list of packages."
+  (setq package-spec-packages ()))
+
 (defun source (name url)
   "Add package source with NAME and URL."
   (add-to-list 'package-archives `(,name . ,url) t))
