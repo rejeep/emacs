@@ -3,7 +3,9 @@
 
 (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 
-(setq css-indent-offset 2)
+(add-hook 'css-mode-hook
+          (lambda ()
+            (setq css-indent-offset 2)))
 
 (font-lock-add-keywords
  'css-mode
