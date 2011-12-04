@@ -24,7 +24,7 @@
 
 
 (defun finder ()
-  "Opens finder for file directory."
+  "Opens file directory in Finder."
   (interactive)
   (let ((file (buffer-file-name)))
     (if file
