@@ -3,13 +3,12 @@
 
 (ido-mode t)
 
-(setq
- ido-everywhere t
- ido-enable-prefix nil
- ido-enable-flex-matching t
- ido-create-new-buffer 'always
- ido-max-prospects 10
- ido-create-new-buffer 'always
- ido-file-extensions-order '(".rb" ".el"))
+(setq ido-everywhere t)
+(setq ido-enable-prefix nil)
+(setq ido-enable-flex-matching t)
+(setq ido-create-new-buffer 'always)
+(setq ido-max-prospects 10)
+(setq ido-create-new-buffer 'always)
+(setq ido-file-extensions-order '(".rb" ".el"))
 
 (provide 'rejeep-ido)
