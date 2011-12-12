@@ -7,7 +7,8 @@
 
 (add-hook 'coffee-mode-hook
           (lambda ()
-            (setq coffee-tab-width 2)))
+            (setq coffee-tab-width 2)
+            (setq coffee-cleanup-whitespace nil)))
 
 
 (provide 'rejeep-javascript)
