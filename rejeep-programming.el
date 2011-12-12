@@ -11,6 +11,11 @@
  yas/prompt-functions
  '(yas/ido-prompt yas/dropdown-prompt yas/x-prompt yas/completing-prompt yas/no-prompt))
 
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (define-key markdown-mode-map (kbd "M-n") nil)
+            (define-key markdown-mode-map (kbd "M-p") nil)))
+
 (require 'markdown-mode)
 (require 'yaml-mode)
 (require 'feature-mode)
