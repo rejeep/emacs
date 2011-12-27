@@ -5,7 +5,7 @@
 (require 'dropdown-list)
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory (expand-file-name emacs-dir "snippets"))
+(yas/load-directory (expand-file-name "snippets" emacs-dir))
 
 (setq-default
  yas/prompt-functions
