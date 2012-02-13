@@ -97,6 +97,13 @@
 ;; Wrap Region
 (require 'wrap-region)
 (wrap-region-global-mode 1)
+(wrap-region-add-wrappers
+ '(("$" "$" nil 'latex-mode)
+   ("{-" "-}" "#" 'haskell-mode)
+   ("/" "/" nil 'ruby-mode)
+   ("/* " " */" "#" '(java-mode javascript-mode css-mode))
+   ("`" "`" nil '(markdown-mode ruby-mode))
+   ("``" "''" "\"" 'latex-mode)))
 
 ;; Drag Stuff
 (require 'drag-stuff)
