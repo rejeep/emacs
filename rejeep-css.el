@@ -3,6 +3,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 
+(add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'css-mode-hook
           (lambda ()
             (setq css-indent-offset 2)))

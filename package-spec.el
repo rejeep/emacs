@@ -21,3 +21,4 @@
 (package "wrap-region")
 (package "yaml-mode")
 (package "yasnippet")
+(package "rainbow-mode")
