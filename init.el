@@ -9,9 +9,12 @@
   (expand-file-name "vendor" emacs-dir)
   "Path to vendor directory.")
 
-;; Turn off early to avoid momentary display
-(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
-  (if (fboundp mode) (funcall mode -1)))
+;; Turn off early to avoid momentary display.
+(mapc
+ (lambda (mode)
+   (if (fboundp mode)
+       (funcall mode -1)))
+ '(menu-bar-mode tool-bar-mode scroll-bar-mode))
 
 (load (expand-file-name "rejeep-paths.el" emacs-dir))
 
