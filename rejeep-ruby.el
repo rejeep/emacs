@@ -5,6 +5,12 @@
 
 (setq ruby-end-check-statement-modifiers t)
 
+(defadvice rspec-compile (around rspec-compile-around)
+  "Use BASH shell for running the specs because of ZSH issues."
+  (let ((shell-file-name "/bin/bash"))
+    ad-do-it))
+(ad-activate 'rspec-compile)
+
 (defun ruby-interpolate ()
   "In a double quoted string, interpolate."
   (interactive)

@@ -23,3 +23,4 @@
 (package "yaml-mode")
 (package "yasnippet")
 (package "rainbow-mode")
+(package "rspec-mode")
