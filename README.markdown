@@ -20,7 +20,7 @@ Fetch all submodules:
     $ git submodule update
 
 ### Binaries
-Some handy BASH-scripts are included in the **bin** folder. If you
-find them useful, add this to **~/.bashrc**.
+Some handy BASH-scripts are included in the `bin` folder. If you
+find them useful, add this to `~/.bashrc`.
 
     export PATH="$PATH:~/.emacs.d/bin"
