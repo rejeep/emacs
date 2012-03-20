@@ -3,6 +3,7 @@
 (require 'rvm)
 (require 'ruby-end)
 
+(setq ruby-deep-indent-paren nil)
 (setq ruby-end-check-statement-modifiers t)
 
 (defadvice rspec-compile (around rspec-compile-around)
