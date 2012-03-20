@@ -18,13 +18,6 @@ Fetch all submodules:
     $ cd ~/.emacs.d
     $ git submodule init
     $ git submodule update
-    
-### Rinari
-Rinari requires some submodules:
-
-    $ cd ~/.emacs.d/vendor/rinari
-    $ git submodule init
-    $ git submodule update
 
 ### Binaries
 Some handy BASH-scripts are included in the **bin** folder. If you
