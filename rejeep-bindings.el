@@ -11,6 +11,8 @@
    ("C-x M-w" clipboard-kill-ring-save)
    ("M-n" open-line-below)
    ("M-p" open-line-above)
+   ("M-N" drag-stuff-down)
+   ("M-P" drag-stuff-up)
    ("C-a" back-to-indentation-or-beginning-of-line)
    ("C-c g" google)
    ("C-7" comment-or-uncomment-current-line-or-region)
