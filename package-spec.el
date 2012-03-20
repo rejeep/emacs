@@ -24,3 +24,4 @@
 (package "yasnippet")
 (package "rainbow-mode")
 (package "rspec-mode")
+(package "jade-mode")
