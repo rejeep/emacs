@@ -51,7 +51,7 @@
 ;; CUA rectangle mode
 (setq cua-enable-cua-keys nil)
 (setq cua-toggle-set-mark nil)
-(cua-mode)
+(cua-mode 1)
 
 ;; Prefer utf8
 (setq locale-coding-system 'utf-8)
