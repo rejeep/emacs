@@ -12,6 +12,7 @@
 (package "rinari")
 (package "rspec-mode")
 (package "ruby-end")
+(package "ruby-block")
 (package "rvm")
 (package "sass-mode")
 (package "scss-mode")

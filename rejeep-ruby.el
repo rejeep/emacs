@@ -2,6 +2,7 @@
 
 (require 'rvm)
 (require 'ruby-end)
+(require 'ruby-block)
 (require 'rspec-mode)
 
 (setq ruby-deep-indent-paren nil)
