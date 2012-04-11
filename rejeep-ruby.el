@@ -22,6 +22,7 @@
     (insert "{}")
     (backward-char 1)))
 
+(add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
 (add-hook 'ruby-mode-hook
           (lambda()
             (define-key ruby-mode-map (kbd "C-M-n") 'scroll-up-five)
