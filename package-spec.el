@@ -19,6 +19,7 @@
 (package "wrap-region")
 (package "yaml-mode")
 (package "yasnippet")
+(package "ace-jump-mode")
 
 ;; TODO: Not in MELPA yet
 (package "color-theme")

@@ -33,6 +33,7 @@
    ("C-M-n" scroll-up-five)
    ("M-k" kill-this-buffer)
    ("M-o" other-window)
+   ("C-c SPC" ace-jump-mode)
    ("C-x C-c"
     (lambda ()
       (interactive)
