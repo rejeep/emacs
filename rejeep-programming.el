@@ -38,6 +38,8 @@
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 (add-to-list 'auto-mode-alist '("\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
+;; Use `js-mode' for ActionScript.
+(add-to-list 'auto-mode-alist '("\\.as$" . js-mode))
 
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 
