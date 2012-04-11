@@ -26,9 +26,9 @@
 (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
 (add-hook 'ruby-mode-hook
           (lambda()
+            (define-key ruby-mode-map (kbd "#") 'ruby-interpolate)
             (define-key ruby-mode-map (kbd "C-M-n") 'scroll-up-five)
-            (define-key ruby-mode-map (kbd "C-M-p") 'scroll-down-five)
-            (define-key ruby-mode-map (kbd "#") 'ruby-interpolate)))
+            (define-key ruby-mode-map (kbd "C-M-p") 'scroll-down-five)))
 
 
 (dolist (regex '("\\.rake$" "\\.gemspec$" "\\.ru$" "Rakefile$" "Gemfile$" "Capfile$"))
