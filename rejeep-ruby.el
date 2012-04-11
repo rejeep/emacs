@@ -22,6 +22,7 @@
     (insert "{}")
     (backward-char 1)))
 
+(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
 (add-hook 'ruby-mode-hook
           (lambda()
@@ -29,7 +30,6 @@
             (define-key ruby-mode-map (kbd "C-M-p") 'scroll-down-five)
             (define-key ruby-mode-map (kbd "#") 'ruby-interpolate)))
 
-(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
 (dolist (regex '("\\.rake$" "\\.gemspec$" "\\.ru$" "Rakefile$" "Gemfile$" "Capfile$"))
   (add-to-list 'auto-mode-alist `(,regex . ruby-mode)))
