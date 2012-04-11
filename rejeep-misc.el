@@ -87,7 +87,8 @@
 
 ;; Color theme
 (require 'color-theme)
-(color-theme-solarized-dark)
+(require 'color-theme-subdued)
+(color-theme-subdued)
 
 ;; Highlight symbol at point
 (require 'highlight-symbol)

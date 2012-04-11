@@ -4,7 +4,6 @@
 
 (package "coffee-mode")
 (package "color-theme")
-(package "color-theme-solarized")
 (package "drag-stuff")
 (package "flymake-ruby")
 (package "haml-mode")
