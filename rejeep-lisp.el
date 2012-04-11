@@ -13,6 +13,7 @@
                 (2 font-lock-function-name-face nil t))))))
 
 (define-key lisp-mode-shared-map (kbd "M-&") 'lisp-complete-symbol)
+(define-key emacs-lisp-mode-map (kbd "M-.") 'find-function-at-point)
 
 (add-to-list 'interpreter-mode-alist '("emacs" . emacs-lisp-mode))
 
