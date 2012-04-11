@@ -98,7 +98,8 @@
 (require 'wrap-region)
 (wrap-region-global-mode 1)
 (wrap-region-add-wrappers
- '(("$" "$" nil 'latex-mode)
+ '(("`" "'" nil 'emacs-lisp-mode)
+   ("$" "$" nil 'latex-mode)
    ("{-" "-}" "#" 'haskell-mode)
    ("/" "/" nil 'ruby-mode)
    ("/* " " */" "#" '(java-mode javascript-mode css-mode))
