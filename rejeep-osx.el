@@ -20,8 +20,7 @@
 (setq delete-by-moving-to-trash t)
 
 ;; Set font
-(set-default-font "-apple-Inconsolata-dz-medium-normal-normal-*-*-*-*-*-m-0-iso10646-1")
-
+(set-default-font "-apple-Inconsolata-medium-normal-normal-*-*-*-*-*-m-0-iso10646-1")
 
 (defun finder ()
   "Opens file directory in Finder."
