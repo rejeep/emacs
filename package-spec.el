@@ -21,10 +21,10 @@
 (package "yaml-mode")
 (package "yasnippet")
 (package "ace-jump-mode")
+(package "highlight-parentheses")
 
 ;; TODO: Not in MELPA yet
 (package "color-theme")
-(package "highlight-parentheses")
 (package "highlight-symbol")
 (package "htmlize")
 (package "jade-mode")
