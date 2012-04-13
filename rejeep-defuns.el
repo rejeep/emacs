@@ -167,5 +167,11 @@ there's a region, all lines that region covers will be duplicated."
   (interactive)
   (scroll-up 5))
 
+(defun re-builder-large ()
+  "Just like `re-builder', only make the font and window larger."
+  (interactive)
+  (re-builder)
+  (text-scale-increase 5)
+  (set-window-text-height (selected-window) 7))
 
 (provide 'rejeep-defuns)
