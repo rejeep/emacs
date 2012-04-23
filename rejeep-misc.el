@@ -116,7 +116,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Screensaver
-(run-with-idle-timer 60 t 'zone)
+(run-with-idle-timer 300 t 'zone)
 
 
 (provide 'rejeep-misc)
