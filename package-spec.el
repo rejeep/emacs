@@ -25,6 +25,7 @@
 (package "ruby-tools")
 (package "projectile")
 (package "helm")
+(package "helm-projectile")
 
 ;; TODO: Not in MELPA yet
 (package "color-theme")
