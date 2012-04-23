@@ -26,6 +26,7 @@
 (package "projectile")
 (package "helm")
 (package "helm-projectile")
+(package "expand-region")
 
 ;; TODO: Not in MELPA yet
 (package "color-theme")
