@@ -24,6 +24,7 @@
 (package "highlight-parentheses")
 (package "ruby-tools")
 (package "projectile")
+(package "helm")
 
 ;; TODO: Not in MELPA yet
 (package "color-theme")
