@@ -118,5 +118,8 @@
 ;; Screensaver
 (run-with-idle-timer 300 t 'zone)
 
+;; Projectile
+(projectile-global-mode)
+(setq projectile-enable-caching t)
 
 (provide 'rejeep-misc)

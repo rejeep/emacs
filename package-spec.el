@@ -23,6 +23,7 @@
 (package "ace-jump-mode")
 (package "highlight-parentheses")
 (package "ruby-tools")
+(package "projectile")
 
 ;; TODO: Not in MELPA yet
 (package "color-theme")
