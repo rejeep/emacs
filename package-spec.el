@@ -33,5 +33,4 @@
 (package "color-theme")
 (package "highlight-symbol")
 (package "htmlize")
-(package "jade-mode")
 (package "rainbow-mode")
