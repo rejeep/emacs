@@ -10,5 +10,6 @@
 (setq ido-max-prospects 10)
 (setq ido-create-new-buffer 'always)
 (setq ido-file-extensions-order '(".rb" ".el"))
+(setq ido-case-fold t)
 
 (provide 'rejeep-ido)
