@@ -31,5 +31,10 @@
          (format "%s %s" (executable-find "open") (file-name-directory file)))
       (error "Buffer is not attached to any file."))))
 
+;; Use GNU ls - install with:
+;;    brew install xz
+;;    brew install coreutils
+(setq insert-directory-program "gls")
+
 
 (provide 'rejeep-osx)
