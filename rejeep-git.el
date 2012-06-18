@@ -1,6 +1,7 @@
 ;;; rejeep-git.el --- Git from Emacs
 
 (require 'magit)
+(require 'magit-blame)
 
 (setq magit-default-tracking-name-function 'magit-default-tracking-name-branch-only)
 (setq magit-set-upstream-on-push t)
