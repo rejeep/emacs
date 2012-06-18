@@ -35,6 +35,10 @@
    ("M-o" other-window)
    ("C-c SPC" ace-jump-mode)
    ("C-=" er/expand-region)
+   ("M-1" delete-other-windows)
+   ("M-2" split-window-below)
+   ("M-3" split-window-right)
+   ("M-0" delete-window)
    ("C-x C-c"
     (lambda ()
       (interactive)
