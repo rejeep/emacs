@@ -1,7 +1,13 @@
 ;;; rejeep-javascript.el --- Javascript stuff
 
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-(add-to-list 'interpreter-mode-alist '("node" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+
+(add-hook 'js2-mode-hook
+          (lambda()
+            (define-key js2-mode-map (kbd "C-a") nil)
+            (setq js2-basic-offset 2)))
 
 (add-hook 'js-mode-hook
           (lambda()
