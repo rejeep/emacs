@@ -113,9 +113,6 @@
 (defalias 'dtw 'delete-trailing-whitespace)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Screensaver
-(run-with-idle-timer 300 t 'zone)
-
 ;; Projectile
 (projectile-global-mode)
 (setq projectile-enable-caching t)
