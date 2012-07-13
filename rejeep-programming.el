@@ -18,6 +18,8 @@
             (define-key markdown-mode-map (kbd "M-n") nil)
             (define-key markdown-mode-map (kbd "M-p") nil)))
 
+(subword-mode 1)
+
 (require 'markdown-mode)
 (require 'yaml-mode)
 (require 'feature-mode)
