@@ -13,6 +13,7 @@
 (package "html-script-src")
 (package "htmlize")
 (package "idle-highlight")
+(package "js2-mode")
 (package "magit")
 (package "magithub")
 (package "markdown-mode")
