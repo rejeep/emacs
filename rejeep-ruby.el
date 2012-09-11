@@ -5,9 +5,6 @@
 (require 'ruby-block)
 (require 'rspec-mode)
 
-(setq ruby-deep-indent-paren nil)
-(setq ruby-end-check-statement-modifiers t)
-
 (defadvice rspec-compile (around rspec-compile-around)
   "Use BASH shell for running the specs because of ZSH issues."
   (let ((shell-file-name "/bin/bash"))
@@ -22,7 +19,9 @@
 (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
 (add-hook 'ruby-mode-hook
           (lambda()
-            (define-key ruby-mode-map (kbd "#") 'ruby-interpolate)
+            (setq ruby-deep-indent-paren nil)
+            (setq ruby-end-check-statement-modifiers t)
+            
             (define-key ruby-mode-map (kbd "C-M-n") 'scroll-up-five)
             (define-key ruby-mode-map (kbd "C-M-p") 'scroll-down-five)))
 
