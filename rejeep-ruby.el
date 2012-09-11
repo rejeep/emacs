@@ -14,16 +14,6 @@
     ad-do-it))
 (ad-activate 'rspec-compile)
 
-(defun ruby-interpolate ()
-  "In a double quoted string, interpolate."
-  (interactive)
-  (insert "#")
-  (when (and
-         (looking-back "\".*")
-         (looking-at ".*\""))
-    (insert "{}")
-    (backward-char 1)))
-
 (setq rspec-use-rvm t)
 (setq rspec-use-rake-flag nil)
 
