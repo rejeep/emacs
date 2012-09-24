@@ -31,3 +31,4 @@
 (package "wrap-region")
 (package "yaml-mode")
 (package "yasnippet")
+(package "powerline")
