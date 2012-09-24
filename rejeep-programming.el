@@ -26,6 +26,7 @@
 (require 'html-script-src)
 (require 'haml-mode)
 (require 'sass-mode)
+(require 'paredit)
 
 (require 'rejeep-java)
 (require 'rejeep-ruby)
