@@ -39,6 +39,9 @@
    ("M-2" split-window-below)
    ("M-3" split-window-right)
    ("M-0" delete-window)
+   ("C-M-h" backward-kill-word)
+   ("M-/" hippie-expand)
+   ("M-x" smex)
    ("C-x C-c"
     (lambda ()
       (interactive)
