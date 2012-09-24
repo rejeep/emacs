@@ -32,3 +32,4 @@
 (package "yaml-mode")
 (package "yasnippet")
 (package "powerline")
+(package "smex")

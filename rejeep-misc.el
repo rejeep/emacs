@@ -134,4 +134,9 @@
 ;; Powerline
 (require 'powerline)
 (powerline-default)
+
+;; Smex
+(require 'smex)
+(smex-initialize)
+
 (provide 'rejeep-misc)
