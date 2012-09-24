@@ -18,8 +18,8 @@
 
 (load (expand-file-name "rejeep-paths.el" emacs-dir))
 
-(require 'package-spec)
 (require 'cl)
+(require 'package-spec)
 (require 'misc)
 (require 'rejeep-ido)
 (require 'rejeep-defuns)
