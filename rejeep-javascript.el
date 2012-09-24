@@ -16,7 +16,9 @@
 (add-hook 'coffee-mode-hook
           (lambda ()
             (setq coffee-tab-width 2)
-            (setq coffee-cleanup-whitespace nil)))
+            (setq coffee-cleanup-whitespace nil)
+            
+            (define-key coffee-mode-map (kbd "C-j") 'coffee-newline-and-indent)))
 
 
 (provide 'rejeep-javascript)
