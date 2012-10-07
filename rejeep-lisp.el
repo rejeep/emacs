@@ -4,7 +4,6 @@
 (add-hook 'find-file-hook 'highlight-parentheses-mode)
 
 
-(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
