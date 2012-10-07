@@ -22,6 +22,8 @@
             (setq ruby-deep-indent-paren nil)
             (setq ruby-end-check-statement-modifiers t)
             
+            (define-key ruby-mode-map (kbd "C-M-h") nil)
+            
             (define-key ruby-mode-map (kbd "C-M-n") 'scroll-up-five)
             (define-key ruby-mode-map (kbd "C-M-p") 'scroll-down-five)))
 
