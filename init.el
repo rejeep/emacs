@@ -20,7 +20,11 @@
 
 (load (expand-file-name "rejeep-paths.el" emacs-dir))
 
-(require 'package-spec)
+(let ((cartons-path (expand-file-name ".cartons" emacs-dir)))
+  (add-to-list 'load-path cartons-path)
+  (setq package-user-dir cartons-path)
+  (package-initialize))
+
 (require 'misc)
 (require 'rejeep-ido)
 (require 'rejeep-defuns)
