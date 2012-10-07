@@ -1,5 +1,7 @@
 ;;; init.el - Where it all begins
 
+(require 'cl)
+
 
 (defconst emacs-dir
   (file-name-directory (or (buffer-file-name) load-file-name))
@@ -18,7 +20,6 @@
 
 (load (expand-file-name "rejeep-paths.el" emacs-dir))
 
-(require 'cl)
 (require 'package-spec)
 (require 'misc)
 (require 'rejeep-ido)
