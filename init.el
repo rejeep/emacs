@@ -20,10 +20,10 @@
 
 (load (expand-file-name "rejeep-paths.el" emacs-dir))
 
-(let ((cartons-path (expand-file-name ".cartons" emacs-dir)))
-  (add-to-list 'load-path cartons-path)
-  (setq package-user-dir cartons-path)
-  (package-initialize))
+(add-to-list 'load-path (car (file-expand-wildcards "~/.emacs.d/.cartons/carton-*")))
+(require 'carton)
+(carton-setup emacs-dir)
+(package-initialize)
 
 (require 'misc)
 (require 'rejeep-ido)
