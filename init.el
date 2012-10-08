@@ -20,9 +20,6 @@
 
 (load (expand-file-name "rejeep-paths.el" emacs-dir))
 
-(add-to-list 'load-path (car (file-expand-wildcards "~/.emacs.d/.cartons/carton-*")))
-(require 'carton)
-(carton-setup emacs-dir)
 (package-initialize)
 
 (require 'misc)
