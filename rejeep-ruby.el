@@ -2,6 +2,7 @@
 
 (require 'rvm)
 (require 'ruby-end)
+(require 'ruby-tools)
 (require 'ruby-block)
 (require 'rspec-mode)
 
