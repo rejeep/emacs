@@ -174,4 +174,18 @@ there's a region, all lines that region covers will be duplicated."
   (text-scale-increase 5)
   (set-window-text-height (selected-window) 7))
 
+(defun url-decode-region (beg end)
+  (interactive "r")
+  (let ((content (url-unhex-string (buffer-substring beg end))))
+    (goto-char end)
+    (newline)
+    (insert content)))
+
+(defun url-encode-region (beg end)
+  (interactive "r")
+  (let ((content (url-hexify-string (buffer-substring beg end))))
+    (goto-char end)
+    (newline)
+    (insert content)))
+
 (provide 'rejeep-defuns)
