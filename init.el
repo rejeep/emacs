@@ -2,13 +2,8 @@
 
 (require 'cl)
 
-
-(defconst emacs-dir
-  (file-name-directory (or (buffer-file-name) load-file-name))
-  "Path to config directory.")
-
 (defconst vendor-dir
-  (expand-file-name "vendor" emacs-dir)
+  (expand-file-name "vendor" user-emacs-directory)
   "Path to vendor directory.")
 
 ;; Turn off early to avoid momentary display.
@@ -18,7 +13,7 @@
        (funcall mode -1)))
  '(menu-bar-mode tool-bar-mode scroll-bar-mode))
 
-(load (expand-file-name "rejeep-paths.el" emacs-dir))
+(load (expand-file-name "rejeep-paths.el" user-emacs-directory))
 
 (package-initialize)
 

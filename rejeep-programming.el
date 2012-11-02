@@ -5,7 +5,7 @@
 (require 'dropdown-list)
 (require 'yasnippet)
 (yas-global-mode 1)
-(let ((snippets-dir (expand-file-name "snippets" emacs-dir)))
+(let ((snippets-dir (expand-file-name "snippets" user-emacs-directory)))
   (yas/load-directory snippets-dir)
   (setq yas/snippet-dirs snippets-dir))
 

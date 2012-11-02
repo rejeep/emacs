@@ -1,6 +1,6 @@
 ;;; rejeep-paths.el --- All sorts of paths
 
-(add-to-list 'load-path emacs-dir)
+(add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path vendor-dir)
 
 (dolist (file (directory-files vendor-dir t))
