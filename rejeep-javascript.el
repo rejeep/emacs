@@ -21,5 +21,8 @@
             
             (define-key coffee-mode-map (kbd "C-j") 'coffee-newline-and-indent)))
 
+(dolist (regex '("Jakefile$"))
+  (add-to-list 'auto-mode-alist `(,regex . js2-mode)))
+
 
 (provide 'rejeep-javascript)
