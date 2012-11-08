@@ -35,3 +35,4 @@
 (depends-on "yasnippet")
 (depends-on "powerline")
 (depends-on "smex")
+(depends-on "smooth-scrolling")
