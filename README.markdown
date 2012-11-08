@@ -7,17 +7,20 @@ branch.
 ## Installation
 First of all make sure you have installed Emacs version 23 or higher.
 
-### Source
 Fetch the emacs source files:
 
     $ git clone git://github.com/rejeep/emacs.git ~/.emacs.d
 
-### Submodules
-Fetch all submodules:
+Fetch my snippets submodule:
 
     $ cd ~/.emacs.d
     $ git submodule init
     $ git submodule update
+    
+Install all ELPA packages (make sure you have [Carton](https://github.com/rejeep/carton) installed):
+
+    $ cd ~/.emacs.d
+    $ carton
 
 ### Binaries
 Some handy BASH-scripts are included in the `bin` folder. If you
