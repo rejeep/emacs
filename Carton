@@ -36,3 +36,5 @@
 (depends-on "powerline")
 (depends-on "smex")
 (depends-on "smooth-scrolling")
+(depends-on "s")
+(depends-on "dash")
