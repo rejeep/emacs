@@ -45,6 +45,8 @@
 ;; Use `js-mode' for ActionScript.
 (add-to-list 'auto-mode-alist '("\\.as$" . js-mode))
 
+(setq magit-completing-read-function 'magit-ido-completing-read)
+
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 
 
