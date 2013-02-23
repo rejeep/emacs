@@ -116,6 +116,7 @@
 ;; Projectile
 (projectile-global-mode)
 (setq projectile-enable-caching t)
+(add-to-list 'projectile-globally-ignored-files ".DS_Store")
 
 ;; Popwin
 (require 'popwin)
