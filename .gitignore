@@ -4,4 +4,5 @@
 /elpa
 /tramp
 /projectile.cache
+/var
 /.mc-lists.el
