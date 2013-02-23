@@ -35,4 +35,6 @@
 (dolist (regex '("\\.rake$" "\\.gemspec$" "\\.ru$" "Rakefile$" "Gemfile$" "Capfile$"))
   (add-to-list 'auto-mode-alist `(,regex . ruby-mode)))
 
+(global-rinari-mode 1)
+
 (provide 'rejeep-ruby)
