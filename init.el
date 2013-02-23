@@ -17,6 +17,8 @@
 
 (package-initialize)
 
+(require 's)
+(require 'dash)
 (require 'misc)
 (require 'rejeep-ido)
 (require 'rejeep-defuns)
