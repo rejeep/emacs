@@ -188,4 +188,12 @@ there's a region, all lines that region covers will be duplicated."
     (newline)
     (insert content)))
 
+(defun dired-open-marked-files ()
+  "Open marked files."
+  (interactive)
+  (let ((distinguish-one-marked nil))
+    (mapc 'find-file
+          (dired-map-over-marks (dired-get-file-for-visit)
+                                current-prefix-arg))))
+
 (provide 'rejeep-defuns)
