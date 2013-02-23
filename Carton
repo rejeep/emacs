@@ -39,3 +39,4 @@
 (depends-on "s")
 (depends-on "dash")
 (depends-on "ecukes")
+(depends-on "jade-mode")
