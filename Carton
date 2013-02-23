@@ -41,3 +41,4 @@
 (depends-on "ecukes")
 (depends-on "jade-mode")
 (depends-on "multiple-cursors")
+(depends-on "carton")

@@ -28,3 +28,6 @@
 
 (if (eq system-type 'darwin)
     (require 'rejeep-osx))
+
+(require 'carton)
+(carton-setup user-emacs-directory)
