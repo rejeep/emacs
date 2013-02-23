@@ -40,3 +40,4 @@
 (depends-on "dash")
 (depends-on "ecukes")
 (depends-on "jade-mode")
+(depends-on "multiple-cursors")
