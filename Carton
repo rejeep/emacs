@@ -42,3 +42,4 @@
 (depends-on "jade-mode")
 (depends-on "multiple-cursors")
 (depends-on "carton")
+(depends-on "auto-async-byte-compile")
