@@ -14,18 +14,37 @@
   "Open a line below the line the point is at.
 Then move to that line and indent accordning to mode"
   (interactive)
-  (move-end-of-line 1)
-  (newline)
-  (indent-according-to-mode))
+  (cond ((eq major-mode 'coffee-mode)
+         (let ((column
+                (save-excursion
+                  (back-to-indentation)
+                  (current-column))))
+           (move-end-of-line 1)
+           (newline)
+           (move-to-column column t)))
+        (t
+         (move-end-of-line 1)
+         (newline)
+         (indent-according-to-mode))))
 
 (defun open-line-above ()
   "Open a line above the line the point is at.
 Then move to that line and indent accordning to mode"
   (interactive)
-  (move-beginning-of-line 1)
-  (newline)
-  (forward-line -1)
-  (indent-according-to-mode))
+  (cond ((eq major-mode 'coffee-mode)
+         (let ((column
+                (save-excursion
+                  (back-to-indentation)
+                  (current-column))))
+           (move-beginning-of-line 1)
+           (newline)
+           (forward-line -1)
+           (move-to-column column t)))
+        (t
+         (move-beginning-of-line 1)
+         (newline)
+         (forward-line -1)
+         (indent-according-to-mode))))
 
 ;; NOTE: (region-beginning) and (region-end) are not saved in
 ;; variables since they can change after each clean step.
