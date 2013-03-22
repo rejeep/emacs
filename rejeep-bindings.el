@@ -41,6 +41,8 @@
    ("M-0" delete-window)
    ("C-M-h" backward-kill-word)
    ("M-x" smex)
+   ("M-}" next-buffer)
+   ("M-{" previous-buffer)
    ("C-x C-c"
     (lambda ()
       (interactive)
