@@ -26,4 +26,17 @@
 
 (setq magit-completing-read-function 'magit-ido-completing-read)
 
+(defun magit-toggle-process-window ()
+  "Toogle magit process window."
+  (interactive)
+  (let ((magit-process-window
+         (some-window
+          (lambda (window)
+            (equal (window-buffer window) (get-buffer magit-process-buffer-name))))))
+    (if magit-process-window
+        (delete-window magit-process-window)
+      (magit-display-process))))
+
+(define-key magit-status-mode-map (kbd "$") 'magit-toggle-process-window)
+
 (provide 'rejeep-git)
