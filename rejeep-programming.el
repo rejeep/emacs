@@ -2,16 +2,13 @@
 
 
 ;; Snippets
-(require 'dropdown-list)
 (require 'yasnippet)
 (yas-global-mode 1)
 (let ((snippets-dir (expand-file-name "snippets" user-emacs-directory)))
   (yas/load-directory snippets-dir)
   (setq yas/snippet-dirs snippets-dir))
 
-(setq-default
- yas/prompt-functions
- '(yas/ido-prompt yas/dropdown-prompt yas/x-prompt yas/completing-prompt yas/no-prompt))
+(setq-default yas/prompt-functions '(yas/ido-prompt))
 
 (add-hook 'markdown-mode-hook
           (lambda ()
