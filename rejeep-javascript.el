@@ -8,6 +8,7 @@
           (lambda()
             (define-key js2-mode-map (kbd "C-a") nil)
             (define-key js2-mode-map (kbd "C-M-h") nil)
+            (define-key js2-mode-map (kbd "M-j") nil)
             (setq js2-basic-offset 2)))
 
 (add-hook 'js-mode-hook
