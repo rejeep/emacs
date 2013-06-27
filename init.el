@@ -1,7 +1,5 @@
 ;;; init.el - Where it all begins
 
-(require 'cl)
-
 (defconst vendor-dir
   (expand-file-name "vendor" user-emacs-directory)
   "Path to vendor directory.")
