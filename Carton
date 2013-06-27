@@ -42,3 +42,4 @@
 (depends-on "jade-mode")
 (depends-on "multiple-cursors")
 (depends-on "carton")
+(depends-on "diff-hl")
