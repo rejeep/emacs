@@ -32,5 +32,4 @@
 (require 'carton)
 (carton-setup user-emacs-directory)
 
-(server-start)
 
