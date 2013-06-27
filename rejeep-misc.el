@@ -122,7 +122,6 @@
 (setq projectile-enable-caching t)
 (add-to-list 'projectile-globally-ignored-files ".DS_Store")
 (setq projectile-require-project-root nil)
-(setq projectile-show-paths-function 'projectile-hashify-with-uniquify)
 
 ;; Popwin
 (require 'popwin)
