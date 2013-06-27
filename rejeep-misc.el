@@ -139,7 +139,7 @@
 
 ;; Powerline
 (require 'powerline)
-(powerline-default)
+(powerline-default-theme)
 
 ;; Smex
 (require 'smex)
