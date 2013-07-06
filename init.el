@@ -13,6 +13,9 @@
 
 (load (expand-file-name "rejeep-paths.el" user-emacs-directory))
 
+(require 'package)
+(setq package-user-dir
+      (locate-user-emacs-file (format ".carton/%s/elpa/" emacs-version)))
 (package-initialize)
 
 (require 's)
@@ -27,7 +30,5 @@
 (if (eq system-type 'darwin)
     (require 'rejeep-osx))
 
-(require 'carton)
-(carton-setup user-emacs-directory)
 
 
