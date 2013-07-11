@@ -36,5 +36,6 @@
 ;;    brew install coreutils
 (setq insert-directory-program "gls")
 
+(exec-path-from-shell-initialize)
 
 (provide 'rejeep-osx)

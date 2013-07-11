@@ -9,5 +9,3 @@
        (string-match-p "\\(?:\\.\\|\\.\\.\\)$" file)
        (not (file-directory-p file)))
     (add-to-list 'load-path file)))
-
-(add-to-list 'exec-path "/usr/local/bin")
