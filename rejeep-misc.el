@@ -63,17 +63,6 @@
 ;; Set font size
 (set-face-attribute 'default nil :height 140)
 
-;; Smooth scrolling
-(require 'smooth-scrolling)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
-(setq mouse-wheel-progressive-speed nil)
-(setq mouse-wheel-follow-mouse 't)
-(setq scroll-step 1)
-(setq scroll-margin 1)
-(setq scroll-conservatively 0)
-(setq scroll-up-aggressively 0.01)
-(setq scroll-down-aggressively 0.01)
-
 ;; Do not ask for confirmation
 (setq confirm-nonexistent-file-or-buffer nil)
 
