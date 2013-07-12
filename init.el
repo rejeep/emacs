@@ -20,6 +20,7 @@
 
 (require 's)
 (require 'dash)
+(require 'f)
 (require 'misc)
 (require 'rejeep-ido)
 (require 'rejeep-defuns)

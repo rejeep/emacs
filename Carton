@@ -42,3 +42,4 @@
 (depends-on "carton")
 (depends-on "diff-hl")
 (depends-on "exec-path-from-shell")
+(depends-on "f")
