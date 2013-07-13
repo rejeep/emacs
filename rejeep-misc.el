@@ -152,4 +152,7 @@
 (add-hook 'vc-checkin-hook 'diff-hl-update)
 (global-diff-hl-mode)
 
+;; Make projectile search usable
+(setq projectile-completion-system 'projectile-completion-fn)
+
 (provide 'rejeep-misc)
