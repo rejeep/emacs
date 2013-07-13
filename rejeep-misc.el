@@ -80,8 +80,7 @@
 
 ;; Color theme
 (require 'color-theme)
-(require 'color-theme-subdued)
-(color-theme-subdued)
+(require 'molokai-theme)
 
 ;; Highlight symbol at point
 (add-hook 'find-file-hook 'idle-highlight)
