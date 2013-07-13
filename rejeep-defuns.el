@@ -215,4 +215,13 @@ there's a region, all lines that region covers will be duplicated."
           (dired-map-over-marks (dired-get-file-for-visit)
                                 current-prefix-arg))))
 
+(defun find-project-root (&optional dir)
+  (interactive)
+  (unless dir (setq dir (f-dirname (buffer-file-name))))
+  (let ((parent (f-parent dir)))
+    (unless (f-root? parent)
+      (if (f-exists? (f-expand ".git" dir))
+          dir
+        (find-project-root parent)))))
+
 (provide 'rejeep-defuns)
