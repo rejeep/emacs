@@ -1,8 +1,10 @@
 ;;; rejeep-lisp.el --- All things Lisp
 
 (require 'highlight-parentheses)
-(add-hook 'find-file-hook 'highlight-parentheses-mode)
-
+(add-hook 'find-file-hook
+          (lambda ()
+            (interactive)
+            (highlight-parentheses-mode +1)))
 
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook
