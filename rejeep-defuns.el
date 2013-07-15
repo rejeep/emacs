@@ -231,20 +231,20 @@ If two files have same name, new completion appears to select between
 them. These include the path relative to the project root."
   (interactive)
   (let* ((choises
-          (-uniq (--map (file-name-nondirectory it) choises)))
+          (-uniq (-map 'f-filename choises)))
          (choise
           (ido-completing-read prompt choises))
          (matching-files
           (-filter
            (lambda (file)
-             (equal (file-name-nondirectory file) choise))
+             (equal (f-filename file) choise))
            (gethash (projectile-project-root) projectile-projects-cache))))
     (if (> (length matching-files) 1)
         (ido-completing-read
          prompt
          (-map
           (lambda (matching-file)
-            (file-relative-name matching-file (projectile-project-root)))
+            (f-relative matching-file (projectile-project-root)))
           matching-files))
       (car matching-files))))
 
