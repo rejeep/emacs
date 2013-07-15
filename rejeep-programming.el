@@ -1,6 +1,5 @@
 ;;; rejeep-programming.el --- Programming stuff
 
-
 ;; Snippets
 (require 'yasnippet)
 (yas-global-mode 1)
