@@ -12,3 +12,5 @@
     (if root (cd root))))
 
 ;; (defalias 'r 'eshell/go-to-root)
+
+(provide 'rejeep-eshell)
