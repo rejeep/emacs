@@ -8,7 +8,6 @@
 (depends-on "drag-stuff")
 (depends-on "expand-region")
 (depends-on "feature-mode")
-(depends-on "flymake-ruby")
 (depends-on "haml-mode")
 (depends-on "haskell-mode")
 (depends-on "highlight-parentheses")
@@ -44,3 +43,4 @@
 (depends-on "exec-path-from-shell")
 (depends-on "f")
 (depends-on "molokai-theme")
+(depends-on "flycheck")

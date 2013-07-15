@@ -19,7 +19,6 @@
 (setq rspec-use-rake-flag nil)
 
 (add-hook 'ruby-mode-hook 'rspec-mode)
-(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
 (add-hook 'ruby-mode-hook
           (lambda()
