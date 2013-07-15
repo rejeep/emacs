@@ -14,7 +14,6 @@
             (define-key markdown-mode-map (kbd "M-n") nil)
             (define-key markdown-mode-map (kbd "M-p") nil)))
 
-(subword-mode 1)
 ;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq flycheck-display-errors-function nil)
