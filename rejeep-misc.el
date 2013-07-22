@@ -154,4 +154,7 @@
 ;; Make projectile search usable
 (setq projectile-completion-system 'projectile-completion-fn)
 
+;; Nyan
+(nyan-mode 1)
+
 (provide 'rejeep-misc)
