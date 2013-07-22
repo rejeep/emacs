@@ -1,6 +1,5 @@
 (global-set-key (kbd "M-e") 'eshell)
 
-(add-hook 'eshell-load-hook 'nyan-prompt-enable)
 (add-hook 'eshell-first-time-mode-hook
           (lambda ()
             (add-to-list 'eshell-visual-commands "htop")))

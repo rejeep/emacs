@@ -46,4 +46,3 @@
 (depends-on "flycheck")
 (depends-on "paredit")
 (depends-on "nyan-mode")
-(depends-on "nyan-prompt")
