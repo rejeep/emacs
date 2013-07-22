@@ -27,7 +27,6 @@
 (require 'rejeep-misc)
 (require 'rejeep-bindings)
 (require 'rejeep-programming)
-(require 'rejeep-eshell)
 
 (if (eq system-type 'darwin)
     (require 'rejeep-osx))

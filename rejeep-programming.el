@@ -45,5 +45,6 @@
 
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 
+(require 'rejeep-eshell)
 
 (provide 'rejeep-programming)
