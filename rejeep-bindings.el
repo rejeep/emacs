@@ -43,6 +43,7 @@
    ("M-x" smex)
    ("M-}" next-buffer)
    ("M-{" previous-buffer)
+   ("C-9" paredit-cheat)
    ("C-x C-c"
     (lambda ()
       (interactive)
