@@ -31,7 +31,6 @@
 (depends-on "wrap-region")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
-(depends-on "powerline")
 (depends-on "smex")
 (depends-on "s")
 (depends-on "dash")

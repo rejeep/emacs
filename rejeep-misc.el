@@ -125,10 +125,6 @@
 (defalias 'ack-find-file 'ack-and-a-half-find-file)
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
-;; Powerline
-(require 'powerline)
-(powerline-default-theme)
-
 ;; Smex
 (require 'smex)
 (smex-initialize)
