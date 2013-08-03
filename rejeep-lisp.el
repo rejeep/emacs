@@ -5,7 +5,7 @@
           (lambda ()
             (interactive)
             (highlight-parentheses-mode +1)))
-
+(require 'eldoc)
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
