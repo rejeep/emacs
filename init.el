@@ -13,7 +13,7 @@
 
 (load (expand-file-name "rejeep-paths.el" user-emacs-directory))
 
-(require 'cask "~/Code/carton/cask.el")
+(require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
 (require 's)
