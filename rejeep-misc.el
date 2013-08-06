@@ -79,7 +79,8 @@
 (setq-default save-place t)
 
 ;; Color theme
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
+(color-theme-solarized-dark)
 
 ;; Highlight symbol at point
 (add-hook 'find-file-hook 'idle-highlight-mode)
