@@ -15,6 +15,8 @@
                 (1 font-lock-keyword-face nil t)
                 (2 font-lock-function-name-face nil t))))))
 
+(eldoc-add-command 'paredit-backward-delete 'paredit-close-round)
+
 (define-key lisp-mode-shared-map (kbd "M-&") 'lisp-complete-symbol)
 (define-key emacs-lisp-mode-map (kbd "M-.") 'find-function-at-point)
 
