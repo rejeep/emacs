@@ -83,7 +83,7 @@
 (require 'molokai-theme)
 
 ;; Highlight symbol at point
-(add-hook 'find-file-hook 'idle-highlight)
+(add-hook 'find-file-hook 'idle-highlight-mode)
 
 ;; Wrap Region
 (require 'wrap-region)
