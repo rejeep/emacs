@@ -79,8 +79,7 @@
 (setq-default save-place t)
 
 ;; Color theme
-(require 'color-theme)
-(require 'molokai-theme)
+(load-theme 'zenburn t)
 
 ;; Highlight symbol at point
 (add-hook 'find-file-hook 'idle-highlight-mode)
