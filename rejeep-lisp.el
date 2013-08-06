@@ -20,7 +20,7 @@
 
 (add-to-list 'interpreter-mode-alist '("emacs" . emacs-lisp-mode))
 
-(add-to-list 'auto-mode-alist '("Carton" . emacs-lisp-mode))
+(add-to-list 'auto-mode-alist '("Cask" . emacs-lisp-mode))
 
 (put 'ert-deftest 'lisp-indent-function 'defun)
 

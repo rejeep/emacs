@@ -2,7 +2,7 @@
 *.elc
 *~
 /elpa
-/.carton
+/.cask
 /tramp
 /projectile.cache
 /var

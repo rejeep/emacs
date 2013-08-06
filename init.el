@@ -13,10 +13,8 @@
 
 (load (expand-file-name "rejeep-paths.el" user-emacs-directory))
 
-(require 'package)
-(setq package-user-dir
-      (locate-user-emacs-file (format ".carton/%s/elpa/" emacs-version)))
-(package-initialize)
+(require 'cask "~/Code/carton/cask.el")
+(cask-initialize)
 
 (require 's)
 (require 'dash)
