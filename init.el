@@ -1,9 +1,5 @@
 ;;; init.el - Where it all begins
 
-(defconst vendor-dir
-  (expand-file-name "vendor" user-emacs-directory)
-  "Path to vendor directory.")
-
 ;; Turn off early to avoid momentary display.
 (mapc
  (lambda (mode)
@@ -11,7 +7,7 @@
        (funcall mode -1)))
  '(menu-bar-mode tool-bar-mode scroll-bar-mode))
 
-(load (expand-file-name "rejeep-paths.el" user-emacs-directory))
+(add-to-list 'load-path user-emacs-directory)
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
