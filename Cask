@@ -36,7 +36,6 @@
 (depends-on "ecukes")
 (depends-on "jade-mode")
 (depends-on "multiple-cursors")
-(depends-on "carton")
 (depends-on "diff-hl")
 (depends-on "exec-path-from-shell")
 (depends-on "f")
@@ -45,3 +44,4 @@
 (depends-on "paredit")
 (depends-on "nyan-mode")
 (depends-on "commander")
+(depends-on "pallet")
