@@ -12,5 +12,7 @@
 (setq ido-file-extensions-order '(".rb" ".el" ".js"))
 (setq ido-case-fold t)
 
+(autoload 'ido-at-point-mode "ido-at-point")
+(ido-at-point-mode)
 
 (provide 'rejeep-ido)
