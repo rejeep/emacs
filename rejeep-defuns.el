@@ -14,7 +14,7 @@
   "Open a line below the line the point is at.
 Then move to that line and indent accordning to mode"
   (interactive)
-  (cond ((eq major-mode 'coffee-mode)
+  (cond ((or (eq major-mode 'coffee-mode) (eq major-mode 'feature-mode))
          (let ((column
                 (save-excursion
                   (back-to-indentation)
@@ -31,7 +31,7 @@ Then move to that line and indent accordning to mode"
   "Open a line above the line the point is at.
 Then move to that line and indent accordning to mode"
   (interactive)
-  (cond ((eq major-mode 'coffee-mode)
+  (cond ((or (eq major-mode 'coffee-mode) (eq major-mode 'feature-mode))
          (let ((column
                 (save-excursion
                   (back-to-indentation)
