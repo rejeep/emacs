@@ -18,6 +18,7 @@
 (require 'f)
 (require 'misc)
 (require 'rejeep-ido)
+(require 'rejeep-org)
 (require 'rejeep-defuns)
 (require 'rejeep-misc)
 (require 'rejeep-bindings)
