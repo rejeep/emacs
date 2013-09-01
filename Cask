@@ -23,7 +23,6 @@
 (depends-on "jade-mode")
 (depends-on "js2-mode")
 (depends-on "magit")
-(depends-on "magithub")
 (depends-on "markdown-mode")
 (depends-on "multiple-cursors")
 (depends-on "nyan-mode")
