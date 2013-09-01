@@ -48,4 +48,7 @@
 (require 'rejeep-eshell)
 (require 'rejeep-paredit)
 
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-cask-setup))
+
 (provide 'rejeep-programming)
