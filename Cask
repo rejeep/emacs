@@ -45,3 +45,4 @@
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
 (depends-on "flycheck-cask")
+(depends-on "page-break-lines")

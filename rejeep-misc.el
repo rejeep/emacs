@@ -152,4 +152,13 @@
 ;; Nyan
 (nyan-mode 1)
 
+;; Page break lines
+(global-page-break-lines-mode)
+
+(defadvice backward-page (after backward-page-mbol activate)
+  (move-beginning-of-line 1))
+
+(defadvice forward-page (after forward-page-mbol activate)
+  (move-beginning-of-line 1))
+
 (provide 'rejeep-misc)
