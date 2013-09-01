@@ -14,3 +14,5 @@
 
         ("e" "Ecukes" checkitem (file+headline org-default-notes-file "Ecukes"))
         ("c" "Cask" checkitem (file+headline org-default-notes-file "Cask"))))
+
+(provide 'rejeep-org)
