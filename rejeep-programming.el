@@ -46,7 +46,7 @@
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 
 (require 'rejeep-eshell)
-(require 'rejeep-paredit)
+(require 'rejeep-smartparens)
 
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-cask-setup))

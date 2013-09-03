@@ -29,9 +29,6 @@
 ;; Truncate lines
 (set-default 'truncate-lines t)
 
-;; Show matching parenthesis
-(show-paren-mode 1)
-
 ;; Do not blink cursor
 (blink-cursor-mode -1)
 
@@ -83,18 +80,6 @@
 
 ;; Highlight symbol at point
 (add-hook 'find-file-hook 'idle-highlight-mode)
-
-;; Wrap Region
-(require 'wrap-region)
-(wrap-region-global-mode 1)
-(wrap-region-add-wrappers
- '(("`" "'" nil 'emacs-lisp-mode)
-   ("$" "$" nil 'latex-mode)
-   ("{-" "-}" "#" 'haskell-mode)
-   ("/" "/" nil 'ruby-mode)
-   ("/* " " */" "#" '(java-mode javascript-mode css-mode))
-   ("`" "`" nil '(markdown-mode ruby-mode))
-   ("``" "''" "\"" 'latex-mode)))
 
 ;; Drag Stuff
 (require 'drag-stuff)
