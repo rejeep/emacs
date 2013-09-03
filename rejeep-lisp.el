@@ -2,6 +2,17 @@
 
 (require 'eldoc)
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (define-key emacs-lisp-mode-map (kbd "M-q")
+              (lambda ()
+                (interactive)
+                (save-excursion
+                  (end-of-defun)
+                  (beginning-of-defun)
+                  (indent-sexp))))))
+
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (font-lock-add-keywords
