@@ -39,4 +39,6 @@
 
 (define-key magit-status-mode-map (kbd "$") 'magit-toggle-process-window)
 
+(setq magit-emacsclient-executable (evm-find "emacsclient"))
+
 (provide 'rejeep-git)

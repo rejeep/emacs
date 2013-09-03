@@ -47,3 +47,4 @@
 (depends-on "flycheck-cask")
 (depends-on "ido-at-point")
 (depends-on "page-break-lines")
+(depends-on "evm")

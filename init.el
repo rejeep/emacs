@@ -16,6 +16,7 @@
 (require 's)
 (require 'dash)
 (require 'f)
+(require 'evm)
 (require 'misc)
 (require 'rejeep-ido)
 (require 'rejeep-org)
