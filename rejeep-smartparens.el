@@ -1,6 +1,7 @@
 ;;; rejeep-smartparens.el --- Smartparens configuration
 
 (require 'smartparens-config)
+(require 'smartparens-ruby)
 
 (setq smartparens-strict-mode t)
 (smartparens-global-mode t)
