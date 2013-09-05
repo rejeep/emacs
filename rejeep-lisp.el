@@ -8,10 +8,12 @@
             (define-key emacs-lisp-mode-map (kbd "M-q")
               (lambda ()
                 (interactive)
-                (save-excursion
-                  (end-of-defun)
-                  (beginning-of-defun)
-                  (indent-sexp))))))
+                (if (or (sp-point-in-string) (sp-point-in-comment))
+                    (fill-paragraph)
+                  (save-excursion
+                    (end-of-defun)
+                    (beginning-of-defun)
+                    (indent-sexp)))))))
 
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
