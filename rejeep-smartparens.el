@@ -8,7 +8,7 @@
 (show-smartparens-global-mode t)
 (setq sp-autoinsert-if-followed-by-word t)
 
-(define-key sp-keymap (kbd "C-k") 'sp-kill-sexp-with-a-twist-of-lime)
+(define-key sp-keymap (kbd "C-M-k") 'sp-kill-sexp-with-a-twist-of-lime)
 
 (defun sp-kill-sexp-with-a-twist-of-lime ()
   (interactive)
