@@ -32,4 +32,6 @@
 
 (put 'ert-deftest 'lisp-indent-function 'defun)
 
+(define-key emacs-lisp-mode-map (kbd "C-c e") 'macrostep-expand)
+
 (provide 'rejeep-lisp)

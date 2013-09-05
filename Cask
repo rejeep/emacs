@@ -47,3 +47,4 @@
 (depends-on "page-break-lines")
 (depends-on "evm")
 (depends-on "smartparens")
+(depends-on "macrostep")
