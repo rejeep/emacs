@@ -230,22 +230,17 @@ there's a region, all lines that region covers will be duplicated."
 If two files have same name, new completion appears to select between
 them. These include the path relative to the project root."
   (interactive)
-  (let* ((choises
-          (-uniq (-map 'f-filename choises)))
+  (let* ((stripped-choises
+          (-uniq (--map (file-name-nondirectory it) choises)))
          (choise
-          (ido-completing-read prompt choises))
+          (ido-completing-read prompt stripped-choises))
          (matching-files
           (-filter
            (lambda (file)
-             (equal (f-filename file) choise))
-           (gethash (projectile-project-root) projectile-projects-cache))))
+             (equal (file-name-nondirectory file) choise))
+           choises)))
     (if (> (length matching-files) 1)
-        (ido-completing-read
-         prompt
-         (-map
-          (lambda (matching-file)
-            (f-relative matching-file (projectile-project-root)))
-          matching-files))
+        (ido-completing-read prompt matching-files)
       (car matching-files))))
 
 (defun paredit-cheat ()
