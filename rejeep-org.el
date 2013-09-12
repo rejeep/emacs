@@ -1,6 +1,6 @@
 (setq org-default-notes-file "~/Dropbox/notes.org")
 (global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "C-c v") (lambda ()
+(global-set-key (kbd "C-c C-n") (lambda ()
                                 (interactive)
                                 (find-file org-default-notes-file)))
 
