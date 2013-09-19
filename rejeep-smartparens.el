@@ -48,6 +48,6 @@
 
 (sp-local-pair 'emacs-lisp-mode "`" nil :when '(sp-in-string-p))
 
-(sp-local-tag '(sgml-mode html-mode) "<" "<_>" "</_>" :transform 'sp-match-sgml-tags)
+(sp-local-tag '(sgml-mode html-mode rhtml-mode) "<" "<_>" "</_>" :transform 'sp-match-sgml-tags)
 
 (provide 'rejeep-smartparens)
