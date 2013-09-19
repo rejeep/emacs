@@ -49,3 +49,4 @@
 (depends-on "smartparens")
 (depends-on "macrostep")
 (depends-on "rhtml-mode")
+(depends-on "git")
