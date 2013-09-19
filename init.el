@@ -16,6 +16,7 @@
 (require 's)
 (require 'dash)
 (require 'f)
+(require 'git)
 (require 'evm)
 (require 'ert)
 (require 'misc)
