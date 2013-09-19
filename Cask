@@ -48,3 +48,4 @@
 (depends-on "evm")
 (depends-on "smartparens")
 (depends-on "macrostep")
+(depends-on "rhtml-mode")
