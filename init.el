@@ -21,7 +21,7 @@
 (require 'ert)
 (require 'misc)
 (require 'rejeep-ido)
-(require 'rejeep-org)
+(require 'rejeep-todo)
 (require 'rejeep-defuns)
 (require 'rejeep-misc)
 (require 'rejeep-bindings)
