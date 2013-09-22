@@ -242,9 +242,4 @@ them. These include the path relative to the project root."
         (ido-completing-read prompt matching-files)
       (car matching-files))))
 
-(defun paredit-cheat ()
-  "Open paredit cheat."
-  (interactive)
-  (find-file (f-expand "paredit.png" user-emacs-directory)))
-
 (provide 'rejeep-defuns)
