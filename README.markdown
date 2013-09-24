@@ -24,10 +24,3 @@ Install all ELPA packages (make sure you have
 
     $ cd ~/.emacs.d
     $ cask
-
-### Binaries
-
-Some handy BASH-scripts are included in the `bin` folder. If you
-find them useful, add this to `~/.bashrc`.
-
-    export PATH="$PATH:~/.emacs.d/bin"
