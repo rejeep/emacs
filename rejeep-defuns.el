@@ -216,12 +216,7 @@ there's a region, all lines that region covers will be duplicated."
                                 current-prefix-arg))))
 
 (defun find-project-root (dir)
-  (interactive)
-  (let ((parent (f-parent dir)))
-    (unless (f-root? parent)
-      (if (f-exists? (f-expand ".git" dir))
-          dir
-        (find-project-root parent)))))
+  (f--up (f-dir? (f-expand ".git" it)) dir))
 
 (defun projectile-completion-fn (prompt choises)
   "Projectile completion function that only shows file name.
