@@ -1,6 +1,3 @@
-;;; rejeep-defuns.el --- Custom functions
-
-
 (defun nuke-all-buffers ()
   "Kill all buffers, leaving *scratch* only."
   (interactive)
@@ -237,4 +234,46 @@ them. These include the path relative to the project root."
         (ido-completing-read prompt matching-files)
       (car matching-files))))
 
-(provide 'rejeep-defuns)
+(defun magit-just-amend ()
+  (interactive)
+  (save-window-excursion
+    (magit-with-refresh
+      (shell-command "git --no-pager commit --amend --reuse-message=HEAD"))))
+
+(defun sp-kill-sexp-with-a-twist-of-lime ()
+  (interactive)
+  (if (sp-point-in-string)
+      (let ((end (plist-get (sp-get-string) :end)))
+        (kill-region (point) (1- end)))
+    (let ((beg (line-beginning-position))
+          (end (line-end-position)))
+      (if (or (comment-only-p beg end)
+              (s-matches? "\\s+" (buffer-substring-no-properties beg end)))
+          (kill-line)
+        (sp-kill-sexp)))))
+
+(defun magit-toggle-process-window ()
+  "Toogle magit process window."
+  (interactive)
+  (let ((magit-process-window
+         (some-window
+          (lambda (window)
+            (equal (window-buffer window) (get-buffer magit-process-buffer-name))))))
+    (if magit-process-window
+        (delete-window magit-process-window)
+      (magit-display-process))))
+
+(defun todo (arg)
+  "TODO stuff..."
+  (interactive "P")
+  (let* ((project-root
+          (when (and (buffer-file-name) (not arg))
+            (find-project-root (buffer-file-name))))
+         (project-name
+          (when project-root (f-no-ext (f-filename (f-canonical project-root)))))
+         (todo-file
+          (f-expand (concat (or project-name "global") ".org")
+                    (f-join "~" "Dropbox" "todo"))))
+    (unless (f-file? todo-file)
+      (f-touch todo-file))
+    (find-file todo-file)))

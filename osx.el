@@ -1,5 +1,4 @@
-;;; rejeep-osx.el --- OSX specific settings
-
+(require 'use-package)
 
 ;; Switch the Cmd and Meta keys
 (setq mac-option-key-is-meta nil)
@@ -9,9 +8,6 @@
 
 ;; Menu bar is not annoying in OSX
 (menu-bar-mode 1)
-
-;; Make Ido ignore freaking .DS_Store files
-(add-to-list 'ido-ignore-files "\\.DS_Store")
 
 ;; Make the browser the OS X default
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
@@ -36,6 +32,5 @@
 ;;    brew install coreutils
 (setq insert-directory-program "gls")
 
-(exec-path-from-shell-initialize)
-
-(provide 'rejeep-osx)
+(use-package exec-path-from-shell
+  :init (exec-path-from-shell-initialize))
