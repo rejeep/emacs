@@ -216,9 +216,9 @@
   :init (add-hook 'flycheck-mode-hook 'flycheck-cask-setup))
 
 (use-package yasnippet
-  :init (yas-global-mode 1)
-  :config
+  :init
   (progn
+  (yas-global-mode 1)
     (let ((snippets-dir (f-expand "snippets" user-emacs-directory)))
       (yas/load-directory snippets-dir)
       (setq yas/snippet-dirs snippets-dir))
