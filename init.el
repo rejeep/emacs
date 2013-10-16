@@ -215,10 +215,10 @@
 (use-package yasnippet
   :init
   (progn
-  (yas-global-mode 1)
     (let ((snippets-dir (f-expand "snippets" user-emacs-directory)))
       (yas/load-directory snippets-dir)
       (setq yas/snippet-dirs snippets-dir))
+    (yas-global-mode 1)
     (setq-default yas/prompt-functions '(yas/ido-prompt))))
 
 (use-package yaml-mode
