@@ -25,8 +25,9 @@
   (when (eq system-type 'darwin)
     (load-x "osx")))
 
-(when (f-dir? "sandbox")
-  (-each (f--files "sandbox" (equal (f-ext it) "el")) 'load))
+(let ((sandbox-path (f-expand "sandbox" user-emacs-directory)))
+  (when (f-dir? sandbox-path)
+    (-each (f--files sandbox-path (equal (f-ext it) "el")) 'load)))
 
 
 ;;;; Packages
