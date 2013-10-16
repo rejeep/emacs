@@ -25,10 +25,6 @@
   (when (eq system-type 'darwin)
     (load-x "osx")))
 
-(let ((sandbox-path (f-expand "sandbox" user-emacs-directory)))
-  (when (f-dir? sandbox-path)
-    (-each (f--files sandbox-path (equal (f-ext it) "el")) 'load)))
-
 
 ;;;; Packages
 
@@ -360,3 +356,10 @@
  (lambda ()
    (interactive)
    (find-file (f-expand "init.el" user-emacs-directory))))
+
+
+;;;; Sandbox
+
+(let ((sandbox-path (f-expand "sandbox" user-emacs-directory)))
+  (when (f-dir? sandbox-path)
+    (-each (f--files sandbox-path (equal (f-ext it) "el")) 'load)))
