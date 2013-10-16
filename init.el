@@ -86,6 +86,8 @@
     (setq magit-default-tracking-name-function 'magit-default-tracking-name-branch-only)
     (setq magit-set-upstream-on-push t)
     (setq magit-completing-read-function 'magit-ido-completing-read)
+    (setq magit-stage-all-confirm nil)
+    (setq magit-unstage-all-confirm nil)
     (add-hook 'magit-mode-hook 'rinari-launch))
   :bind ("C-x g" . magit-status))
 
