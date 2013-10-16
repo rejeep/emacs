@@ -40,7 +40,6 @@
 (depends-on "rhtml-mode")
 (depends-on "rinari")
 (depends-on "rspec-mode")
-(depends-on "ruby-end")
 (depends-on "ruby-tools")
 (depends-on "rvm")
 (depends-on "s")
