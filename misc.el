@@ -71,3 +71,6 @@
 
 ;; Show trailing whitespace
 (setq-default show-trailing-whitespace t)
+
+;; Do not show annying menu-bar tips
+(setq suggest-key-bindings nil)
