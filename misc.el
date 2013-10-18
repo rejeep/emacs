@@ -69,4 +69,5 @@
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
 
+;; Show trailing whitespace
 (setq-default show-trailing-whitespace t)
