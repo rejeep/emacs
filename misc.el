@@ -74,3 +74,7 @@
 
 ;; Do not show annying menu-bar tips
 (setq suggest-key-bindings nil)
+
+;; I have tons of memory, stop the GC-madness.
+(setq gc-cons-threshold 50000000)
+(setq gc-cons-percentage 0.5)
