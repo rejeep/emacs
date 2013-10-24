@@ -252,17 +252,6 @@ them. These include the path relative to the project root."
           (kill-line)
         (sp-kill-sexp)))))
 
-(defun magit-toggle-process-window ()
-  "Toogle magit process window."
-  (interactive)
-  (let ((magit-process-window
-         (some-window
-          (lambda (window)
-            (equal (window-buffer window) (get-buffer magit-process-buffer-name))))))
-    (if magit-process-window
-        (delete-window magit-process-window)
-      (magit-display-process))))
-
 (defun todo (arg)
   "TODO stuff..."
   (interactive "P")

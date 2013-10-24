@@ -78,8 +78,7 @@
   :init
   (progn
     (use-package magit-blame)
-    (bind-key "C-c C-a" 'magit-just-amend magit-mode-map)
-    (bind-key "$" 'magit-toggle-process-window magit-mode-map))
+    (bind-key "C-c C-a" 'magit-just-amend magit-mode-map))
   :config
   (progn
     (setq magit-emacsclient-executable (evm-find "emacsclient"))
