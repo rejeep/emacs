@@ -266,3 +266,13 @@ them. These include the path relative to the project root."
     (unless (f-file? todo-file)
       (f-touch todo-file))
     (find-file todo-file)))
+
+(defun eval-and-replace ()
+  "Replace the preceding sexp with its value."
+  (interactive)
+  (backward-kill-sexp)
+  (condition-case nil
+      (prin1 (eval (read (current-kill 0)))
+             (current-buffer))
+    (error (message "Invalid expression")
+           (insert (current-kill 0)))))
