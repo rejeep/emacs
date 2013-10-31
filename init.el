@@ -341,7 +341,6 @@
 (bind-key "C-c r" 'rename-this-buffer-and-file)
 (bind-key "C-c k" 'delete-this-buffer-and-file)
 
-(bind-key "%" 'match-paren)
 (bind-key "C-M-h" 'backward-kill-word)
 (bind-key "C-c C-n" 'todo)
 
