@@ -13,7 +13,6 @@
 (require 'git)
 (require 'ert)
 (require 'evm)
-(require 'dash)
 (require 'use-package)
 
 (defun load-x (file)
@@ -27,6 +26,9 @@
 
 
 ;;;; Packages
+
+(use-package dash
+ :config (dash-enable-font-lock))
 
 (use-package dired-x)
 
