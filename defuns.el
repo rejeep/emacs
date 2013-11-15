@@ -51,8 +51,9 @@ Then move to that line and indent accordning to mode"
   (save-excursion
     (unless (region-active-p)
       (mark-whole-buffer))
-    (untabify (region-beginning) (region-end))
-    (indent-region (region-beginning) (region-end))
+    (unless (eq major-mode 'coffee-mode)
+      (untabify (region-beginning) (region-end))
+      (indent-region (region-beginning) (region-end)))
     (save-restriction
       (narrow-to-region (region-beginning) (region-end))
       (delete-trailing-whitespace))))
