@@ -310,6 +310,13 @@
 
 (use-package twilight-theme)
 
+(use-package flx-ido
+  :init (flx-ido-mode 1)
+  :config (setq ido-use-face nil))
+
+(use-package ido-vertical-mode
+  :init (ido-vertical-mode 1))
+
 
 ;;;; Bindings
 
