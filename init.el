@@ -28,7 +28,7 @@
 ;;;; Packages
 
 (use-package dash
- :config (dash-enable-font-lock))
+  :config (dash-enable-font-lock))
 
 (use-package dired-x)
 
