@@ -342,6 +342,7 @@
 (bind-key "M-}" 'next-buffer)
 (bind-key "M-{" 'previous-buffer)
 (bind-key "M-`" 'other-frame)
+(bind-key "M-w" 'kill-region-or-thing-at-point)
 
 (bind-key "C-c g" 'google)
 (bind-key "C-c d" 'duplicate-current-line-or-region)

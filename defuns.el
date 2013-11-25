@@ -270,3 +270,12 @@ them. These include the path relative to the project root."
              (current-buffer))
     (error (message "Invalid expression")
            (insert (current-kill 0)))))
+
+(defun kill-region-or-thing-at-point (beg end)
+  "Kill region or word at point."
+  (interactive "r")
+  (unless (region-active-p)
+    (save-excursion
+      (setq beg (re-search-backward "\\_<" nil t))
+      (setq end (re-search-forward "\\_>" nil t))))
+  (kill-ring-save beg end))
