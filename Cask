@@ -51,5 +51,6 @@
 (depends-on "smex")
 (depends-on "twilight-theme")
 (depends-on "use-package")
+(depends-on "web-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")

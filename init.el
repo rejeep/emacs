@@ -317,6 +317,16 @@
 (use-package ido-vertical-mode
   :init (ido-vertical-mode 1))
 
+(use-package web-mode
+  :init (progn
+          (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+          (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+  :config (progn
+            (add-hook 'web-mode-hook
+                      (lambda ()
+                        (setq web-mode-style-padding 2)
+                        (setq web-mode-script-padding 2)))))
+
 
 ;;;; Bindings
 
