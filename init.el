@@ -14,14 +14,14 @@
 (require 'evm)
 (require 'use-package)
 
-(defun load-x (file)
+(defun load-local (file)
   (load (f-expand file user-emacs-directory)))
 
 (let ((default-directory user-emacs-directory))
-  (load-x "defuns")
-  (load-x "misc")
+  (load-local "defuns")
+  (load-local "misc")
   (when (eq system-type 'darwin)
-    (load-x "osx")))
+    (load-local "osx")))
 
 
 ;;;; Packages
