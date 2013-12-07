@@ -88,6 +88,7 @@
     (setq magit-completing-read-function 'magit-ido-completing-read)
     (setq magit-stage-all-confirm nil)
     (setq magit-unstage-all-confirm nil)
+    (setq magit-restore-window-configuration t)
     (add-hook 'magit-mode-hook 'rinari-launch))
   :bind ("C-x g" . magit-status))
 
