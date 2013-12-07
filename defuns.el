@@ -279,3 +279,19 @@ them. These include the path relative to the project root."
       (setq beg (re-search-backward "\\_<" nil t))
       (setq end (re-search-forward "\\_>" nil t))))
   (kill-ring-save beg end))
+
+(defun done ()
+  "Add/remove async done callback for Mocha spec."
+  (interactive)
+  (save-excursion
+    (when (re-search-backward "^\s*it\s+\\(['\"]\\).+\\1" nil t)
+      (let ((line (buffer-substring-no-properties (line-beginning-position)
+                                                  (line-end-position))))
+        (goto-char (line-end-position))
+        (if (s-ends-with? "(done) ->" line)
+            (progn
+              (forward-char -3)
+              (delete-backward-char 7))
+          (progn
+            (forward-char -2)
+            (insert "(done) ")))))))
