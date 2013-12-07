@@ -4,7 +4,6 @@
   (when (fboundp mode) (funcall mode -1)))
 
 (require 'cask "~/.cask/cask.el")
-;; (require 'cask "~/Code/cask/cask.el")
 (cask-initialize)
 (require 'pallet)
 
