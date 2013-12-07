@@ -1,4 +1,4 @@
-# rejeep emacs
+# rejeep emacs [![Build Status](https://api.travis-ci.org/rejeep/emacs.png?branch=master)](http://travis-ci.org/rejeep/emacs)
 
 This is my emacs configuration files. If you want to use them, the
 best thing is probably to fork the project at Github
