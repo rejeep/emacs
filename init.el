@@ -260,12 +260,14 @@
     (add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))))
 
 (use-package coffee-mode
-  :init
-  (bind-key "C-j" 'coffee-newline-and-indent coffee-mode-map)
   :config
   (progn
-    (setq coffee-tab-width 2)
-    (setq coffee-cleanup-whitespace nil)))
+    (add-hook 'coffee-mode-hook
+              (lambda ()
+                (bind-key "C-j" 'coffee-newline-and-indent coffee-mode-map)
+                (bind-key "C-M-h" 'backward-kill-word coffee-mode-map)
+                (setq coffee-tab-width 2)
+                (setq coffee-cleanup-whitespace nil)))))
 
 (use-package nvm)
 
