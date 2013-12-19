@@ -9,6 +9,7 @@
 
 (require 's)
 (require 'f)
+(require 'ht)
 (require 'git)
 (require 'ert)
 (require 'evm)
