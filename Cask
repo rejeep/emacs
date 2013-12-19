@@ -44,6 +44,7 @@
 (depends-on "rspec-mode")
 (depends-on "ruby-tools")
 (depends-on "rvm")
+(depends-on "prodigy")
 (depends-on "s")
 (depends-on "sass-mode")
 (depends-on "scss-mode")

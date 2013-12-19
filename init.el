@@ -327,6 +327,14 @@
                         (setq web-mode-style-padding 2)
                         (setq web-mode-script-padding 2)))))
 
+(use-package prodigy
+  :init (progn
+          (add-hook 'prodigy-mode-hook
+                    (lambda ()
+                      (setq-local show-trailing-whitespace nil))))
+  :demand t
+  :bind ("C-x p" . prodigy))
+
 
 ;;;; Bindings
 
