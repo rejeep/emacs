@@ -2,8 +2,8 @@
   "Kill all buffers, leaving *scratch* only."
   (interactive)
   (mapc
-   (lambda (x)
-     (kill-buffer x))
+   (lambda (buffer)
+     (kill-buffer buffer))
    (buffer-list))
   (delete-other-windows))
 
