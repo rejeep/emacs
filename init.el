@@ -266,6 +266,8 @@
     (setq coffee-tab-width 2)
     (setq coffee-cleanup-whitespace nil)))
 
+(use-package nvm)
+
 (use-package sh-script
   :config (setq sh-basic-offset 2))
 
