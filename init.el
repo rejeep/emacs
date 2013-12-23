@@ -154,7 +154,6 @@
     (setenv "JRUBY_OPTS" "--1.9")
     (setenv "JAVA_OPTS" "-d32")
     (add-hook 'ruby-mode-hook 'rspec-mode)
-    (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
     (setq ruby-deep-indent-paren nil))
   :bind (("C-M-h" . backward-kill-word)
          ("C-M-n" . scroll-up-five)
