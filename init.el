@@ -128,10 +128,11 @@
 (use-package windmove
   :config (windmove-default-keybindings 'shift))
 
+(use-package rvm)
+
 (use-package ruby-mode
   :init
   (progn
-    (use-package rvm)
     (use-package ruby-tools)
     (use-package rhtml-mode
       :mode (("\\.rhtml$" . rhtml-mode)
