@@ -9,6 +9,7 @@
 (depends-on "commander")
 (depends-on "dash")
 (depends-on "diff-hl")
+(depends-on "discover")
 (depends-on "drag-stuff")
 (depends-on "ecukes")
 (depends-on "epl")

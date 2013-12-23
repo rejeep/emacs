@@ -341,6 +341,9 @@
   :demand t
   :bind ("C-x p" . prodigy))
 
+(use-package discover
+  :init (global-discover-mode 1))
+
 
 ;;;; Bindings
 
