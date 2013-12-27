@@ -338,6 +338,8 @@
           (add-hook 'prodigy-mode-hook
                     (lambda ()
                       (setq-local show-trailing-whitespace nil))))
+  :config (progn
+            (setq prodigy-kill-process-buffer-on-stop t))
   :demand t
   :bind ("C-x p" . prodigy))
 
