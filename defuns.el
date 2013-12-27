@@ -232,8 +232,8 @@ them. These include the path relative to the project root."
 (defun magit-just-amend ()
   (interactive)
   (save-window-excursion
-    (magit-with-refresh
-      (shell-command "git --no-pager commit --amend --reuse-message=HEAD"))))
+    (shell-command "git --no-pager commit --amend --reuse-message=HEAD")
+    (magit-refresh)))
 
 (defun sp-kill-sexp-with-a-twist-of-lime ()
   (interactive)
