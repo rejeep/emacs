@@ -74,3 +74,6 @@
 
 ;; Do not show annying menu-bar tips
 (setq suggest-key-bindings nil)
+
+;; Make default mode Emacs lisp mode
+(setq default-major-mode 'emacs-lisp-mode)
