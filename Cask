@@ -13,6 +13,7 @@
 (depends-on "drag-stuff")
 (depends-on "ecukes")
 (depends-on "epl")
+(depends-on "ert-async")
 (depends-on "evm")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")

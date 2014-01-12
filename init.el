@@ -343,6 +343,9 @@
 (use-package discover
   :init (global-discover-mode 1))
 
+(use-package ert-async
+  :config (add-to-list 'emacs-lisp-mode-hook 'ert-async-activate-font-lock-keywords))
+
 
 ;;;; Bindings
 
