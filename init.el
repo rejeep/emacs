@@ -115,17 +115,8 @@
   :config (setq-default save-place t))
 
 (use-package diff-hl
-  :init (global-diff-hl-mode)
-  :config (add-hook 'vc-checkin-hook 'diff-hl-update))
-
-(use-package page-break-lines
-  :init (global-page-break-lines-mode 1)
-  :config
-  (progn
-    (defadvice backward-page (after backward-page-mbol activate)
-      (move-beginning-of-line 1))
-    (defadvice forward-page (after forward-page-mbol activate)
-      (move-beginning-of-line 1))))
+ :init (global-diff-hl-mode)
+ :config (add-hook 'vc-checkin-hook 'diff-hl-update))
 
 (use-package windmove
   :config (windmove-default-keybindings 'shift))
