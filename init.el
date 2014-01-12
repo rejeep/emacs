@@ -124,7 +124,8 @@
 (use-package windmove
   :config (windmove-default-keybindings 'shift))
 
-(use-package rvm)
+(use-package rvm
+  :config (setq rvm-verbose nil))
 
 (use-package ruby-mode
   :init
