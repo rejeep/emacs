@@ -85,7 +85,7 @@
     (bind-key "C-c C-a" 'magit-just-amend magit-mode-map))
   :config
   (progn
-    (setq magit-emacsclient-executable (evm-find "emacsclient"))
+    (setq magit-emacsclient-executable (evm-emacsclient))
     (setq magit-default-tracking-name-function 'magit-default-tracking-name-branch-only)
     (setq magit-set-upstream-on-push t)
     (setq magit-completing-read-function 'magit-ido-completing-read)
