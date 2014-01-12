@@ -398,4 +398,4 @@
 
 (let ((sandbox-path (f-expand "sandbox" user-emacs-directory)))
   (when (f-dir? sandbox-path)
-    (-each (f--files sandbox-path (equal (f-ext it) "el")) 'load)))
+    (-each (f--files sandbox-path (f-ext? it "el")) 'load)))
