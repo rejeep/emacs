@@ -344,6 +344,10 @@
 (use-package ert-async
   :config (add-to-list 'emacs-lisp-mode-hook 'ert-async-activate-font-lock-keywords))
 
+(use-package ibuffer
+  :config (setq ibuffer-expert t)
+  :bind ("C-x C-b" . ibuffer))
+
 
 ;;;; Bindings
 
@@ -380,7 +384,6 @@
 
 (bind-key "C-M-h" 'backward-kill-word)
 (bind-key "C-c C-n" 'todo)
-(bind-key "C-x C-b" 'ibuffer)
 
 (bind-key
  "C-x C-c"
