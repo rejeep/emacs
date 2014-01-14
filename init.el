@@ -380,6 +380,7 @@
 
 (bind-key "C-M-h" 'backward-kill-word)
 (bind-key "C-c C-n" 'todo)
+(bind-key "C-x C-b" 'ibuffer)
 
 (bind-key
  "C-x C-c"
