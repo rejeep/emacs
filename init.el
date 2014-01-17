@@ -28,6 +28,7 @@
 
 (use-package hl-line
   :config (set-face-background 'hl-line "#073642"))
+(load-theme 'zenburn :no-confirm)
 
 
 ;;;; Packages
@@ -310,8 +311,6 @@
   (progn
     (setq eshell-history-size 5000)
     (setq eshell-save-history-on-exit t)))
-
-(use-package twilight-theme)
 
 (use-package flx-ido
   :init (flx-ido-mode 1)
