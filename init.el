@@ -1,7 +1,10 @@
 ;;; init.el - Fragor Maximus
 
-(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
-  (when (fboundp mode) (funcall mode -1)))
+(mapc
+ (lambda (mode)
+   (when (fboundp mode)
+     (funcall mode -1)))
+ '(menu-bar-mode tool-bar-mode scroll-bar-mode))
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
