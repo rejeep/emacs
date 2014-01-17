@@ -23,11 +23,10 @@
 (defun load-local (file)
   (load (f-expand file user-emacs-directory)))
 
-(let ((default-directory user-emacs-directory))
-  (load-local "defuns")
-  (load-local "misc")
-  (when (eq system-type 'darwin)
-    (load-local "osx")))
+(load-local "defuns")
+(load-local "misc")
+(when (eq system-type 'darwin)
+  (load-local "osx"))
 
 (load-theme 'zenburn :no-confirm)
 
