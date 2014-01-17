@@ -26,12 +26,13 @@
   (when (eq system-type 'darwin)
     (load-local "osx")))
 
-(use-package hl-line
-  :config (set-face-background 'hl-line "#073642"))
 (load-theme 'zenburn :no-confirm)
 
 
 ;;;; Packages
+
+(use-package hl-line
+  :config (set-face-background 'hl-line "#073642"))
 
 (use-package dash
   :config (dash-enable-font-lock))
