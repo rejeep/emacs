@@ -404,3 +404,5 @@
 (let ((sandbox-path (f-expand "sandbox" user-emacs-directory)))
   (when (f-dir? sandbox-path)
     (-each (f--files sandbox-path (f-ext? it "el")) 'load)))
+
+(animate-string "Yo moma is a dirty skank!" (/ (frame-height) 2))
