@@ -32,7 +32,7 @@
 
 (add-hook 'emacs-startup-hook
           (lambda ()
-            (animate-string "Yo moma is a dirty skank!" (/ (frame-height) 2))))
+            (animate-string ";; Yo moma is a dirty skank!" (/ (frame-height) 2))))
 
 
 ;;;; Packages
