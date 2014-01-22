@@ -288,16 +288,7 @@
     (use-package macrostep
       :bind ("C-c e" . macrostep-expand))
     (use-package ert
-      :config
-      (progn
-        (put 'ert-deftest 'lisp-indent-function 'defun)
-        (add-hook 'emacs-lisp-mode-hook
-                  (lambda ()
-                    (font-lock-add-keywords
-                     nil
-                     '(("(\\(\\<ert-deftest\\)\\>\\s *\\(\\sw+\\)?"
-                        (1 font-lock-keyword-face nil t)
-                        (2 font-lock-function-name-face nil t)))))))))
+      :config (add-to-list 'emacs-lisp-mode-hook 'ert--activate-font-lock-keywords)))
   :bind (("M-&" . lisp-complete-symbol)
          ("M-." . find-function-at-point))
   :interpreter (("emacs" . emacs-lisp-mode))
