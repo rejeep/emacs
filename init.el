@@ -353,6 +353,7 @@
 (bind-key "C-o" 'occur)
 (bind-key "C-6" 'linum-mode)
 (bind-key "C-v" 'scroll-up-five)
+(bind-key "C-j" 'newline)
 
 (bind-key "M-g" 'goto-line)
 (bind-key "M-n" 'open-line-below)
