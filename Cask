@@ -4,6 +4,7 @@
 (depends-on "ace-jump-mode")
 (depends-on "ack-and-a-half")
 (depends-on "bind-key")
+(depends-on "cl-lib-highlight")
 (depends-on "coffee-mode")
 (depends-on "color-theme")
 (depends-on "commander")
