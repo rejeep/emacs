@@ -345,6 +345,9 @@
   :config (setq ibuffer-expert t)
   :bind ("C-x C-b" . ibuffer))
 
+(use-package cl-lib-highlight
+  :init (cl-lib-highlight-initialize))
+
 
 ;;;; Bindings
 
