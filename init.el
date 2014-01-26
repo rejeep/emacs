@@ -348,6 +348,9 @@
 (use-package cl-lib-highlight
   :init (cl-lib-highlight-initialize))
 
+(use-package idomenu
+  :bind ("C-c ." . idomenu))
+
 
 ;;;; Bindings
 
