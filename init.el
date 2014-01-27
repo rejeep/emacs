@@ -157,7 +157,6 @@
             ad-do-it)))))
   :config
   (progn
-    (add-hook 'ruby-mode-hook 'rspec-mode)
     (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
     (setq ruby-deep-indent-paren nil))
   :bind (("C-M-h" . backward-kill-word)
