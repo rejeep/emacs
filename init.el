@@ -351,6 +351,8 @@
 (use-package idomenu
   :bind ("C-c ." . idomenu))
 
+(use-package httprepl)
+
 
 ;;;; Bindings
 
