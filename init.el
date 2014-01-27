@@ -1,4 +1,4 @@
-;;; init.el - Fragor Maximus
+;;; init.el - Fragor Maximus -*- lexical-binding: t; -*-
 
 (mapc
  (lambda (mode)

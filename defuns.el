@@ -1,3 +1,5 @@
+;;; defuns.el --- Functions -*- lexical-binding: t; -*-
+
 (defun nuke-all-buffers ()
   "Kill all buffers, leaving *scratch* only."
   (interactive)

@@ -1,3 +1,5 @@
+;;; misc.el --- Misc configuration -*- lexical-binding: t; -*-
+
 ;; Do not pause on redisplay
 (setq redisplay-dont-pause t)
 
