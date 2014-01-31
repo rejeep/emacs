@@ -25,7 +25,6 @@
 (depends-on "flycheck-cask")
 (depends-on "git")
 (depends-on "haml-mode")
-(depends-on "haskell-mode")
 (depends-on "ht")
 (depends-on "html-script-src")
 (depends-on "htmlize")
