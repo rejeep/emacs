@@ -28,6 +28,7 @@
 (depends-on "ht")
 (depends-on "html-script-src")
 (depends-on "htmlize")
+(depends-on "httprepl")
 (depends-on "idle-highlight-mode")
 (depends-on "ido-vertical-mode")
 (depends-on "idomenu")
