@@ -352,6 +352,8 @@
 
 (use-package httprepl)
 
+(use-package ack-and-a-half)
+
 
 ;;;; Bindings
 
