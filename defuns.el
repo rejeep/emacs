@@ -294,7 +294,7 @@ them. These include the path relative to the project root."
         (if (s-ends-with? "(done) ->" line)
             (progn
               (forward-char -3)
-              (delete-backward-char 7))
+              (delete-char -7))
           (progn
             (forward-char -2)
             (insert "(done) ")))))))
