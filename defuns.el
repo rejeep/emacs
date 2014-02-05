@@ -210,7 +210,7 @@ there's a region, all lines that region covers will be duplicated."
                                 current-prefix-arg))))
 
 (defun find-project-root (dir)
-  (f--up (f-dir? (f-expand ".git" it)) dir))
+  (f--traverse-upwards (f-dir? (f-expand ".git" it)) dir))
 
 (defun projectile-completion-fn (prompt choises)
   "Projectile completion function that only shows file name.
