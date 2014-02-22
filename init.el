@@ -32,7 +32,8 @@
 
 (add-hook 'emacs-startup-hook
           (lambda ()
-            (animate-string ";; Yo moma is a dirty skank!" (/ (frame-height) 2))))
+            (when (string= (buffer-name) "*scratch*")
+              (animate-string ";; Yo moma is a dirty skank!" (/ (frame-height) 2)))))
 
 
 ;;;; Packages
