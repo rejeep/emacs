@@ -190,9 +190,9 @@
   :config
   (progn
     (setq smartparens-strict-mode t)
+    (setq sp-autoescape-string-quote nil)
     (setq sp-autoinsert-if-followed-by-word t)
-    (sp-local-pair 'emacs-lisp-mode "`" nil :when '(sp-in-string-p))
-    (sp-local-tag '(sgml-mode html-mode rhtml-mode) "<" "<_>" "</_>" :transform 'sp-match-sgml-tags))
+    (sp-local-pair 'emacs-lisp-mode "`" nil :when '(sp-in-string-p)))
   :bind
   (("C-M-k" . sp-kill-sexp-with-a-twist-of-lime)
    ("C-M-f" . sp-forward-sexp)
