@@ -353,7 +353,7 @@
   :init (cl-lib-highlight-initialize))
 
 (use-package idomenu
-  :bind ("C-c ." . idomenu))
+  :bind ("M-i" . idomenu))
 
 (use-package httprepl)
 
