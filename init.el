@@ -234,7 +234,11 @@
   :mode ("\\.yml$" . yaml-mode))
 
 (use-package feature-mode
-  :mode ("\\.feature$" . feature-mode))
+  :mode ("\\.feature$" . feature-mode)
+  :config
+  (add-hook 'feature-mode-hook
+            (lambda ()
+              (electric-indent-mode -1))))
 
 (use-package cc-mode
   :config
