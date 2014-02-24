@@ -79,3 +79,6 @@
 
 ;; Make default mode Emacs lisp mode
 (setq default-major-mode 'emacs-lisp-mode)
+
+;; Show column number in mode line
+(column-number-mode 1)
