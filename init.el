@@ -359,12 +359,14 @@
 
 (use-package ack-and-a-half)
 
+(use-package swoop
+  :bind ("C-o" . swoop))
+
 
 ;;;; Bindings
 
 (bind-key "C-a" 'back-to-indentation-or-beginning-of-line)
 (bind-key "C-7" 'comment-or-uncomment-current-line-or-region)
-(bind-key "C-o" 'occur)
 (bind-key "C-6" 'linum-mode)
 (bind-key "C-v" 'scroll-up-five)
 (bind-key "C-j" 'newline-and-indent)

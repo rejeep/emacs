@@ -55,6 +55,7 @@
 (depends-on "scss-mode")
 (depends-on "smartparens")
 (depends-on "smex")
+(depends-on "swoop")
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yaml-mode")
