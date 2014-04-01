@@ -3,6 +3,7 @@
 
 (depends-on "ace-jump-mode")
 (depends-on "ack-and-a-half")
+(depends-on "ag")
 (depends-on "bind-key")
 (depends-on "cl-lib-highlight")
 (depends-on "coffee-mode")

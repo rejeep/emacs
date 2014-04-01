@@ -358,6 +358,8 @@
 (use-package swoop
   :bind ("C-o" . swoop))
 
+(use-package ag)
+
 
 ;;;; Bindings
 
