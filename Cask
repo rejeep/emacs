@@ -5,6 +5,7 @@
 (depends-on "ack-and-a-half")
 (depends-on "ag")
 (depends-on "bind-key")
+(depends-on "browse-kill-ring")
 (depends-on "cl-lib-highlight")
 (depends-on "coffee-mode")
 (depends-on "color-theme")
