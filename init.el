@@ -360,6 +360,9 @@
 
 (use-package ag)
 
+(use-package git-gutter
+  :init (global-git-gutter-mode +1))
+
 
 ;;;; Bindings
 

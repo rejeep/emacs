@@ -25,6 +25,7 @@
 (depends-on "flycheck")
 (depends-on "flycheck-cask")
 (depends-on "git")
+(depends-on "git-gutter")
 (depends-on "haml-mode")
 (depends-on "ht")
 (depends-on "html-script-src")
