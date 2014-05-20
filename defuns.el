@@ -298,3 +298,7 @@ them. These include the path relative to the project root."
           (progn
             (forward-char -2)
             (insert "(done) ")))))))
+
+(defun beautify-json (beg end)
+  (interactive "r")
+  (shell-command-on-region beg end "python -mjson.tool" (current-buffer) 'replace))
