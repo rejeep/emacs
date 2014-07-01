@@ -363,6 +363,9 @@
 (use-package git-gutter
   :init (global-git-gutter-mode +1))
 
+(use-package ibuffer-vc
+  :init (ibuffer-vc-set-filter-groups-by-vc-root))
+
 
 ;;;; Bindings
 
