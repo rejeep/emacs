@@ -138,15 +138,18 @@ there's a region, all lines that region covers will be duplicated."
         (kill-buffer buffer)
         (message "File '%s' successfully removed" filename)))))
 
-(defun google ()
-  "Googles a query or region if any."
-  (interactive)
-  (browse-url
-   (concat
-    "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
-    (if (region-active-p)
-        (buffer-substring (region-beginning) (region-end))
-      (read-string "Query: ")))))
+(defun google (arg)
+  "Googles a query or region if any.
+
+With prefix argument, wrap search query in quotes."
+  (interactive "P")
+  (let ((query
+         (if (region-active-p)
+             (buffer-substring (region-beginning) (region-end))
+           (read-string "Query: "))))
+    (when arg (setq query (concat "\"" query "\"")))
+    (browse-url
+     (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" query))))
 
 (defun comment-or-uncomment-current-line-or-region ()
   "Comments or uncomments current current line or whole lines in region."
