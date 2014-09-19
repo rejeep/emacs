@@ -339,7 +339,9 @@
   :init (global-discover-mode 1))
 
 (use-package ert-async
-  :config (add-to-list 'emacs-lisp-mode-hook 'ert-async-activate-font-lock-keywords))
+  :config (progn
+            (remove-hook 'emacs-lisp-mode-hook 'ert--activate-font-lock-keywords)
+            (add-hook 'emacs-lisp-mode-hook 'ert-async-activate-font-lock-keywords)))
 
 (use-package ibuffer
   :config (setq ibuffer-expert t)
