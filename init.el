@@ -150,7 +150,7 @@
       :config
       (progn
         (setq rspec-use-rvm t)
-        (setq rspec-use-rake-flag nil)
+        (setq rspec-use-rake-when-possible nil)
         (defadvice rspec-compile (around rspec-compile-around activate)
           "Use BASH shell for running the specs because of ZSH issues."
           (let ((shell-file-name "/bin/bash"))
