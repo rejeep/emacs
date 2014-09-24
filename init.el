@@ -415,7 +415,7 @@
  "C-8"
  (lambda ()
    (interactive)
-   (find-file (f-expand "init.el" user-emacs-directory))))
+   (find-file user-init-file)))
 
 
 ;;;; Sandbox
