@@ -71,7 +71,7 @@
          ("C-<" . mc/mark-previous-like-this)))
 
 (use-package popwin
-  :config (setq display-buffer-function 'popwin:display-buffer))
+  :init (popwin-mode 1))
 
 (use-package projectile
   :init (projectile-global-mode 1)
