@@ -56,6 +56,7 @@
     (setq ido-enable-flex-matching t)
     (setq ido-create-new-buffer 'always)
     (setq ido-max-prospects 10)
+    (setq ido-use-faces nil)
     (setq ido-file-extensions-order '(".rb" ".el" ".coffee" ".js"))
     (add-to-list 'ido-ignore-files "\\.DS_Store")))
 
@@ -310,8 +311,7 @@
     (setq eshell-save-history-on-exit t)))
 
 (use-package flx-ido
-  :init (flx-ido-mode 1)
-  :config (setq ido-use-face nil))
+  :init (flx-ido-mode 1))
 
 (use-package ido-vertical-mode
   :init (ido-vertical-mode 1))
