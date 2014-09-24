@@ -289,8 +289,7 @@
       :bind ("C-c e" . macrostep-expand))
     (use-package ert
       :config (add-to-list 'emacs-lisp-mode-hook 'ert--activate-font-lock-keywords)))
-  :bind (("M-&" . lisp-complete-symbol)
-         ("M-." . find-function-at-point))
+  :bind (("M-." . find-function-at-point))
   :interpreter (("emacs" . emacs-lisp-mode))
   :mode ("Cask" . emacs-lisp-mode))
 
