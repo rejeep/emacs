@@ -273,8 +273,7 @@
               (lambda ()
                 (bind-key "C-j" 'coffee-newline-and-indent coffee-mode-map)
                 (bind-key "C-M-h" 'backward-kill-word coffee-mode-map)
-                (setq coffee-tab-width 2)
-                (setq coffee-cleanup-whitespace nil)))))
+                (setq coffee-tab-width 2)))))
 
 (use-package nvm)
 
