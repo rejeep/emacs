@@ -367,6 +367,9 @@
 (use-package ibuffer-vc
   :init (ibuffer-vc-set-filter-groups-by-vc-root))
 
+(use-package rainbow-delimiters
+  :config (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+
 
 ;;;; Bindings
 
