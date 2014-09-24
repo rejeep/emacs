@@ -46,7 +46,8 @@
 (use-package dired-x)
 
 (use-package ido
-  :init (ido-mode 1)
+  :init (progn (ido-mode 1)
+               (ido-everywhere 1))
   :config
   (progn
     (setq ido-case-fold t)
