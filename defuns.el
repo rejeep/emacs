@@ -112,7 +112,8 @@ there's a region, all lines that region covers will be duplicated."
   "Renames current buffer and file it is visiting."
   (interactive)
   (let ((name (buffer-name))
-        (filename (buffer-file-name)))
+        (filename (buffer-file-name))
+        (read-file-name-function 'read-file-name-default))
     (if (not (and filename (file-exists-p filename)))
         (error "Buffer '%s' is not visiting a file!" name)
       (let ((new-name (read-file-name "New name: " filename)))
