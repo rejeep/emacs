@@ -46,6 +46,7 @@
 (depends-on "nvm")
 (depends-on "nyan-mode")
 (depends-on "pallet")
+(depends-on "paradox")
 (depends-on "popwin")
 (depends-on "pretty-mode")
 (depends-on "prodigy")
