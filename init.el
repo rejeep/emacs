@@ -364,8 +364,12 @@
 (use-package git-gutter
   :init (global-git-gutter-mode +1))
 
-(use-package ibuffer-vc
-  :init (ibuffer-vc-set-filter-groups-by-vc-root))
+(use-package ibuffer-projectile
+  :init (add-hook 'ibuffer-hook
+                  (lambda ()
+                    (ibuffer-projectile-set-filter-groups)
+                    (unless (eq ibuffer-sorting-mode 'alphabetic)
+                      (ibuffer-do-sort-by-alphabetic)))))
 
 (use-package rainbow-delimiters
   :config (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))

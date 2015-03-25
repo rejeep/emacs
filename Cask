@@ -32,7 +32,6 @@
 (depends-on "htmlize")
 (depends-on "httprepl")
 (depends-on "ibuffer-projectile")
-(depends-on "ibuffer-vc")
 (depends-on "idle-highlight-mode")
 (depends-on "ido-vertical-mode")
 (depends-on "idomenu")
