@@ -356,8 +356,6 @@
 
 (use-package httprepl)
 
-(use-package ack-and-a-half)
-
 (use-package swoop
   :bind ("C-o" . swoop))
 
