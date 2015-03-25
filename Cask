@@ -60,6 +60,7 @@
 (depends-on "sass-mode")
 (depends-on "scss-mode")
 (depends-on "smartparens")
+(depends-on "smart-mode-line")
 (depends-on "smex")
 (depends-on "swoop")
 (depends-on "use-package")

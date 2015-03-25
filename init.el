@@ -376,6 +376,13 @@
 (use-package overseer
   :init (add-hook 'emacs-lisp-mode-hook 'overseer-mode-hook))
 
+(use-package smart-mode-line
+  :init
+  (progn
+    (setq sml/no-confirm-load-theme t)
+    (sml/setup)))
+
+
 
 ;;;; Bindings
 
