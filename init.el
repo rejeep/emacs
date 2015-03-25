@@ -72,7 +72,7 @@
          ("C-<" . mc/mark-previous-like-this)))
 
 (use-package popwin
-  :init (popwin-mode 1))
+  :config (popwin-mode 1))
 
 (use-package projectile
   :init (projectile-global-mode 1)
