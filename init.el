@@ -382,6 +382,9 @@
     (setq sml/no-confirm-load-theme t)
     (sml/setup)))
 
+(use-package visible-mark
+  :init (global-visible-mark-mode 1))
+
 
 
 ;;;; Bindings
