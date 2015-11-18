@@ -98,12 +98,9 @@
     (bind-key "C-c C-a" 'magit-just-amend magit-mode-map))
   :config
   (progn
-    (setq magit-emacsclient-executable (evm-emacsclient))
-    (setq magit-default-tracking-name-function 'magit-default-tracking-name-branch-only)
-    (setq magit-set-upstream-on-push t)
     (setq magit-completing-read-function 'magit-ido-completing-read)
-    (setq magit-stage-all-confirm nil)
-    (setq magit-unstage-all-confirm nil)
+    (setq magit-branch-arguments nil)
+    (setq magit-push-always-verify nil)
     (setq magit-restore-window-configuration t)
     (add-hook 'magit-mode-hook 'rinari-launch))
   :bind ("C-x g" . magit-status))
