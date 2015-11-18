@@ -27,7 +27,7 @@
 (when (eq system-type 'darwin)
   (load-local "osx"))
 
-(load-theme 'zenburn :no-confirm)
+(load-theme 'dracula :no-confirm)
 
 (add-hook 'emacs-startup-hook
           (lambda ()

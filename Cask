@@ -12,6 +12,7 @@
 (depends-on "dash")
 (depends-on "diff-hl")
 (depends-on "discover")
+(depends-on "dracula-theme")
 (depends-on "drag-stuff")
 (depends-on "ecukes")
 (depends-on "epl")
