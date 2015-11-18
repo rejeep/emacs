@@ -66,6 +66,7 @@
 (depends-on "swoop")
 (depends-on "use-package")
 (depends-on "visible-mark")
+(depends-on "overseer")
 (depends-on "web-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
