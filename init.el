@@ -395,6 +395,9 @@
 (use-package visible-mark
   :init (global-visible-mark-mode 1))
 
+(use-package beacon
+  :init (beacon-mode 1))
+
 
 
 ;;;; Bindings

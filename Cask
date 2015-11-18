@@ -3,6 +3,7 @@
 
 (depends-on "ace-jump-mode")
 (depends-on "ag")
+(depends-on "beacon")
 (depends-on "bind-key")
 (depends-on "browse-kill-ring")
 (depends-on "cl-lib-highlight")
