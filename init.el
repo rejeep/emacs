@@ -147,6 +147,15 @@
     (use-package rspec-mode
       :config
       (progn
+
+        (add-hook 'compilation-mode-hook
+                  (lambda ()
+                    (when (eq major-mode 'rspec-compilation-mode)
+                      (setq compilation-scroll-output t)
+                      (local-set-key (kbd "g") (lambda ()
+                                                 (interactive)
+                                                 (rspec-rerun))))))
+
         (setq rspec-use-rvm t)
         (setq rspec-use-rake-when-possible nil)
         (defadvice rspec-compile (around rspec-compile-around activate)
