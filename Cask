@@ -37,6 +37,7 @@
 (depends-on "idle-highlight-mode")
 (depends-on "ido-vertical-mode")
 (depends-on "idomenu")
+(depends-on "ido-completing-read+") ; magit
 (depends-on "jade-mode")
 (depends-on "js2-mode")
 (depends-on "macrostep")
