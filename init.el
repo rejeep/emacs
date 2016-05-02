@@ -95,7 +95,9 @@
   :init
   (progn
     (use-package magit-blame)
-    (bind-key "C-c C-a" 'magit-just-amend magit-mode-map))
+    (bind-key "C-c C-a" 'magit-just-amend magit-mode-map)
+    (use-package magit-gh-pulls
+      :config (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)))
   :config
   (progn
     (setq magit-completing-read-function 'magit-ido-completing-read)
