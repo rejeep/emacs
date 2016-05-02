@@ -69,7 +69,6 @@
 (depends-on "smart-mode-line")
 (depends-on "smartparens")
 (depends-on "smex")
-(depends-on "swoop")
 (depends-on "use-package")
 (depends-on "visible-mark")
 (depends-on "web-mode")
