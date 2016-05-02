@@ -58,7 +58,8 @@
     (setq ido-max-prospects 10)
     (setq ido-use-faces nil)
     (setq ido-file-extensions-order '(".rb" ".el" ".coffee" ".js"))
-    (add-to-list 'ido-ignore-files "\\.DS_Store")))
+    (add-to-list 'ido-ignore-files "\\.DS_Store")
+    (add-to-list 'ido-ignore-files "appspec.yml")))
 
 (use-package nyan-mode
   :init (nyan-mode 1))
