@@ -140,9 +140,8 @@
     (use-package rhtml-mode
       :mode (("\\.rhtml$" . rhtml-mode)
              ("\\.html\\.erb$" . rhtml-mode)))
-    (use-package rinari
-      :init (global-rinari-mode 1)
-      :config (setq ruby-insert-encoding-magic-comment nil))
+    (use-package projectile-rails
+      :init (add-hook 'projectile-mode-hook 'projectile-rails-on))
     (use-package rspec-mode
       :config
       (progn
