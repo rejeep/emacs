@@ -105,9 +105,6 @@
     (add-hook 'magit-mode-hook 'rinari-launch))
   :bind ("C-x g" . magit-status))
 
-(use-package ace-jump-mode
-  :bind ("C-c SPC" . ace-jump-mode))
-
 (use-package expand-region
   :bind ("C-=" . er/expand-region))
 
@@ -400,6 +397,10 @@
 (use-package beacon
   :init (beacon-mode 1))
 
+(use-package avy
+  :bind (("C-\\" . avy-goto-char)
+         ("M-g" . avy-goto-line))
+  :config (avy-setup-default))
 
 
 ;;;; Bindings
@@ -410,7 +411,6 @@
 (bind-key "C-v" 'scroll-up-five)
 (bind-key "C-j" 'newline-and-indent)
 
-(bind-key "M-g" 'goto-line)
 (bind-key "M-n" 'open-line-below)
 (bind-key "M-p" 'open-line-above)
 (bind-key "M-+" 'text-scale-increase)
