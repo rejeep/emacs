@@ -104,8 +104,7 @@
     (setq magit-completing-read-function 'magit-ido-completing-read)
     (setq magit-branch-arguments nil)
     (setq magit-push-always-verify nil)
-    (setq magit-restore-window-configuration t)
-    (add-hook 'magit-mode-hook 'rinari-launch))
+    (setq magit-restore-window-configuration t))
   :bind ("C-x g" . magit-status))
 
 (use-package expand-region
