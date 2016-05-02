@@ -142,6 +142,7 @@
              ("\\.html\\.erb$" . rhtml-mode)))
     (use-package projectile-rails
       :init (add-hook 'projectile-mode-hook 'projectile-rails-on))
+    (use-package bundler)
     (use-package rspec-mode
       :config
       (progn
