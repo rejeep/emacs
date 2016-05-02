@@ -368,6 +368,8 @@
 
 (use-package swoop
   :bind ("C-o" . swoop))
+(use-package cask-mode)
+
 
 (use-package ag)
 

@@ -6,6 +6,7 @@
 (depends-on "beacon")
 (depends-on "bind-key")
 (depends-on "browse-kill-ring")
+(depends-on "cask-mode")
 (depends-on "cl-lib-highlight")
 (depends-on "coffee-mode")
 (depends-on "color-theme")
