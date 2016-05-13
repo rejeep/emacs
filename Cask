@@ -74,5 +74,4 @@
 (depends-on "web-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
-(depends-on "yasnippets" :git "https://github.com/rejeep/yasnippets.git" :files ("*" (:exclude ".git")))
 (depends-on "zenburn-theme")

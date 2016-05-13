@@ -226,9 +226,14 @@
 (use-package yasnippet
   :init
   (progn
-    (use-package yasnippets)
-    (yas-global-mode 1)
-    (setq-default yas/prompt-functions '(yas/ido-prompt))))
+    (add-hook 'after-save-hook
+              (lambda ()
+                (when (eql major-mode 'snippet-mode)
+                  (yas-reload-all))))
+    (setq yas-snippet-dirs (list (f-expand "snippets" user-emacs-directory)))
+    (setq yas-prompt-functions '(yas/ido-prompt))
+    (yas-global-mode 1))
+  :mode ("\\.yasnippet" . snippet-mode))
 
 (use-package yaml-mode
   :mode ("\\.yml$" . yaml-mode))
