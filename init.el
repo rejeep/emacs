@@ -161,6 +161,7 @@
   (progn
     (setq ruby-align-to-stmt-keywords '(begin if while unless until case for def))
     (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
+    (setq ruby-insert-encoding-magic-comment nil)
     (setq ruby-deep-indent-paren nil))
   :bind (("C-M-h" . backward-kill-word)
          ("C-M-n" . scroll-up-five)
