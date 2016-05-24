@@ -404,6 +404,16 @@
          ("M-g" . avy-goto-line))
   :config (avy-setup-default))
 
+(use-package mocha
+  :init
+  (progn (setq mocha-reporter "spec"))
+  :config
+  (progn
+    (add-hook 'mocha-compilation-mode-hook
+              (lambda () (setq-local show-trailing-whitespace nil))))
+  :bind (("C-c , v" . mocha-test-file)
+         ("C-c , s" . mocha-test-file)))
+
 
 ;;;; Bindings
 

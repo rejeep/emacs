@@ -45,6 +45,7 @@
 (depends-on "macrostep")
 (depends-on "magit")
 (depends-on "markdown-mode")
+(depends-on "mocha")
 (depends-on "multiple-cursors")
 (depends-on "nvm")
 (depends-on "nyan-mode")
