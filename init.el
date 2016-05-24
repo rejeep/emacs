@@ -444,8 +444,8 @@
  "C-x C-c"
  (lambda ()
    (interactive)
-   (if (y-or-n-p "Quit Emacs? ")
-       (save-buffers-kill-emacs))))
+   (when (y-or-n-p "Quit Emacs? ")
+     (save-buffers-kill-emacs))))
 
 (bind-key
  "C-8"
