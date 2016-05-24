@@ -231,6 +231,7 @@
                   (yas-reload-all))))
     (setq yas-snippet-dirs (list (f-expand "snippets" user-emacs-directory)))
     (setq yas-prompt-functions '(yas/ido-prompt))
+    (setq yas-indent-line 'fixed)
     (yas-global-mode 1))
   :mode ("\\.yasnippet" . snippet-mode))
 
