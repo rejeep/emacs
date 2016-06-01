@@ -1,0 +1,6 @@
+#name: class
+#key: cls
+# --
+class ${1:`(-if-let (name (buffer-file-name)) (mapconcat 'capitalize (s-split "_" (f-filename (f-no-ext name))) "") "ClassName")`}
+  $0
+end
