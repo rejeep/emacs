@@ -348,9 +348,6 @@
   :demand t
   :bind ("C-x p" . prodigy))
 
-(use-package discover
-  :init (global-discover-mode 1))
-
 (use-package ert-async
   :config (progn
             (remove-hook 'emacs-lisp-mode-hook 'ert--activate-font-lock-keywords)
