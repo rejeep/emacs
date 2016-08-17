@@ -1,4 +1,4 @@
 #name: expect(double).to receive(:message)
 #key: exp
 # --
-expect(${1:double}).to receive(:${2:message}).with(${3:args})
+expect(${1:double}).to receive(:${2:message}).with(${3:args}).and_return($0)
