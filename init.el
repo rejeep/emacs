@@ -408,7 +408,8 @@
     (add-hook 'mocha-compilation-mode-hook
               (lambda () (setq-local show-trailing-whitespace nil))))
   :bind (("C-c , v" . mocha-test-file)
-         ("C-c , s" . mocha-test-file)))
+         ("C-c , s" . mocha-test-at-point)))
+
 (use-package mustache)
 
 
