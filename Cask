@@ -46,6 +46,7 @@
 (depends-on "markdown-mode")
 (depends-on "mocha")
 (depends-on "multiple-cursors")
+(depends-on "mustache")
 (depends-on "nvm")
 (depends-on "nyan-mode")
 (depends-on "overseer")
