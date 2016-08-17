@@ -303,8 +303,7 @@
     (add-to-list 'completion-styles 'initials t))
   :bind (("M-." . find-function-at-point)
          ("M-&" . complete-symbol))
-  :interpreter (("emacs" . emacs-lisp-mode))
-  :mode ("Cask" . emacs-lisp-mode))
+  :interpreter (("emacs" . emacs-lisp-mode)))
 
 (use-package html-script-src)
 
