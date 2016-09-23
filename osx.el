@@ -16,7 +16,7 @@
 (setq delete-by-moving-to-trash t)
 
 ;; Set font
-(set-default-font "-apple-Source_Code_Pro-medium-normal-normal-*-*-*-*-*-m-0-iso10646-1")
+(set-face-attribute 'default nil :family "Source Code Pro" :height 130)
 
 (defun finder ()
   "Opens file directory in Finder."
