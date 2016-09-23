@@ -142,7 +142,6 @@
     (use-package rspec-mode
       :config
       (progn
-
         (add-hook 'compilation-mode-hook
                   (lambda ()
                     (when (eq major-mode 'rspec-compilation-mode)
