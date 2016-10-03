@@ -400,7 +400,9 @@
    ("C-c C-r" . ivy-resume)
    ("C-c a" . counsel-ag)
    ("M-x" . counsel-M-x)
-   ("C-x C-f" . counsel-find-file)))
+   ("C-x C-f" . counsel-find-file)
+   ("C-f" . ivy-alt-done)
+   ("C-b" . ivy-backward-delete-char)))
 
 
 ;;;; Bindings
