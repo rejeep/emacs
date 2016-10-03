@@ -118,9 +118,6 @@
       :init (rvm-use-default)
       :config (setq rvm-verbose nil))
     (use-package ruby-tools)
-    (use-package rhtml-mode
-      :mode (("\\.rhtml$" . rhtml-mode)
-             ("\\.html\\.erb$" . rhtml-mode)))
     (use-package projectile-rails
       :init (add-hook 'projectile-mode-hook 'projectile-rails-on))
     (use-package bundler)

@@ -59,7 +59,6 @@
 (depends-on "projectile")
 (depends-on "projectile-rails")
 (depends-on "rainbow-delimiters")
-(depends-on "rhtml-mode")
 (depends-on "rspec-mode")
 (depends-on "ruby-tools")
 (depends-on "rvm")
