@@ -45,22 +45,6 @@
 
 (use-package dired-x)
 
-(use-package ido
-  :init (progn (ido-mode 1)
-               (ido-everywhere 1))
-  :config
-  (progn
-    (setq ido-case-fold t)
-    (setq ido-everywhere t)
-    (setq ido-enable-prefix nil)
-    (setq ido-enable-flex-matching t)
-    (setq ido-create-new-buffer 'always)
-    (setq ido-max-prospects 10)
-    (setq ido-use-faces nil)
-    (setq ido-file-extensions-order '(".rb" ".el" ".coffee" ".js"))
-    (add-to-list 'ido-ignore-files "\\.DS_Store")
-    (add-to-list 'ido-ignore-files "appspec.yml")))
-
 (use-package nyan-mode
   :init (nyan-mode 1))
 
@@ -81,7 +65,7 @@
   (progn
     (setq projectile-enable-caching t)
     (setq projectile-require-project-root nil)
-    (setq projectile-completion-system 'ido)
+    (setq projectile-completion-system 'ivy)
     (add-to-list 'projectile-globally-ignored-files ".DS_Store")))
 
 (use-package drag-stuff
@@ -99,7 +83,7 @@
     (bind-key "C-c C-a" 'magit-just-amend magit-mode-map))
   :config
   (progn
-    (setq magit-completing-read-function 'magit-ido-completing-read)
+    (setq magit-completing-read-function 'ivy-completing-read)
     (setq magit-branch-arguments nil))
   :bind ("C-x g" . magit-status))
 
@@ -229,7 +213,6 @@
                 (when (eql major-mode 'snippet-mode)
                   (yas-reload-all))))
     (setq yas-snippet-dirs (list (f-expand "snippets" user-emacs-directory)))
-    (setq yas-prompt-functions '(yas/ido-prompt))
     (setq yas-indent-line 'fixed)
     (yas-global-mode 1))
   :mode ("\\.yasnippet" . snippet-mode))
@@ -320,12 +303,6 @@
     (setq eshell-history-size 5000)
     (setq eshell-save-history-on-exit t)))
 
-(use-package flx-ido
-  :init (flx-ido-mode 1))
-
-(use-package ido-vertical-mode
-  :init (ido-vertical-mode 1))
-
 (use-package web-mode
   :init (progn
           (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
@@ -357,9 +334,6 @@
 
 (use-package cl-lib-highlight
   :init (cl-lib-highlight-initialize))
-
-(use-package idomenu
-  :bind ("M-i" . idomenu))
 
 (use-package httprepl)
 
@@ -411,6 +385,21 @@
 
 (use-package mustache)
 
+(use-package ivy
+  :init (ivy-mode 1)
+  :config
+  (progn
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-extra-directories nil)
+    (add-hook 'ivy-mode-hook
+              (lambda ()
+                (define-key read-expression-map (kbd "C-r") 'counsel-expression-history))))
+  :bind
+  (("C-s" . swiper)
+   ("C-c C-r" . ivy-resume)
+   ("C-c a" . counsel-ag)
+   ("M-x" . counsel-M-x)
+   ("C-x C-f" . counsel-find-file)))
 
 
 ;;;; Bindings
