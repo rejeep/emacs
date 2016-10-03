@@ -101,6 +101,7 @@
   :config (setq uniquify-buffer-name-style 'forward))
 
 (use-package saveplace
+  :init (save-place-mode 1)
   :config (setq-default save-place t))
 
 (use-package diff-hl
