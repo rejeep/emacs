@@ -392,17 +392,15 @@
   (progn
     (setq ivy-use-virtual-buffers t)
     (setq ivy-extra-directories nil)
-    (add-hook 'ivy-mode-hook
-              (lambda ()
-                (define-key read-expression-map (kbd "C-r") 'counsel-expression-history))))
+    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+    (define-key ivy-minibuffer-map (kbd "C-f") 'ivy-alt-done)
+    (define-key ivy-minibuffer-map (kbd "C-b") 'ivy-backward-delete-char))
   :bind
   (("C-s" . swiper)
    ("C-c C-r" . ivy-resume)
    ("C-c a" . counsel-ag)
    ("M-x" . counsel-M-x)
-   ("C-x C-f" . counsel-find-file)
-   ("C-f" . ivy-alt-done)
-   ("C-b" . ivy-backward-delete-char)))
+   ("C-x C-f" . counsel-find-file)))
 
 
 ;;;; Bindings
