@@ -102,7 +102,10 @@
 
 (use-package saveplace
   :init (save-place-mode 1)
-  :config (setq-default save-place t))
+  :config
+  (progn
+    (setq-default save-place t)
+    (setq save-place-limit nil)))
 
 (use-package diff-hl
   :init (global-diff-hl-mode)
