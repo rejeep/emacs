@@ -380,7 +380,6 @@
   (progn
     (setq ivy-use-virtual-buffers t)
     (setq ivy-extra-directories nil)
-    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     (define-key ivy-minibuffer-map (kbd "C-f") 'ivy-alt-done)
     (define-key ivy-minibuffer-map (kbd "C-b") 'ivy-backward-delete-char))
   :bind
