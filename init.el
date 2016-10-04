@@ -387,6 +387,7 @@
     (define-key ivy-minibuffer-map (kbd "C-b") 'ivy-backward-delete-char))
   :bind
   (("C-s" . swiper)
+   ("C-r" . swiper)
    ("C-c C-r" . ivy-resume)
    ("C-c a" . counsel-ag)
    ("M-x" . counsel-M-x)
