@@ -383,8 +383,8 @@
   (progn
     (setq ivy-use-virtual-buffers t)
     (setq ivy-extra-directories nil)
-    (define-key ivy-minibuffer-map (kbd "C-f") 'ivy-alt-done)
-    (define-key ivy-minibuffer-map (kbd "C-b") 'ivy-backward-delete-char))
+    (bind-key "C-f" 'ivy-alt-done ivy-minibuffer-map)
+    (bind-key "C-b" 'ivy-backward-delete-char ivy-minibuffer-map))
   :bind
   (("C-s" . swiper)
    ("C-r" . swiper)
