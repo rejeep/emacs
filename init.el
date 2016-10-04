@@ -308,11 +308,9 @@
                         (setq web-mode-script-padding 2)))))
 
 (use-package prodigy
-  :init (progn
-          (add-hook 'prodigy-mode-hook
-                    (lambda ()
-                      (setq-local show-trailing-whitespace nil))))
-  :demand t
+  :config
+  (progn
+    (add-hook 'prodigy-mode-hook (lambda () (setq-local show-trailing-whitespace nil))))
   :bind ("C-x p" . prodigy))
 
 (use-package ert-async
