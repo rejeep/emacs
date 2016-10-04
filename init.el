@@ -112,7 +112,7 @@
   :config (windmove-default-keybindings 'shift))
 
 (use-package ruby-mode
-  :init
+  :config
   (progn
     (use-package rvm
       :init (rvm-use-default)
@@ -134,9 +134,7 @@
         (defadvice rspec-compile (around rspec-compile-around activate)
           "Use BASH shell for running the specs because of ZSH issues."
           (let ((shell-file-name "/bin/bash"))
-            ad-do-it)))))
-  :config
-  (progn
+            ad-do-it))))
     (setq ruby-align-to-stmt-keywords '(begin if while unless until case for def))
     (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
     (setq ruby-insert-encoding-magic-comment nil)
