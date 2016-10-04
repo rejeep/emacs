@@ -56,7 +56,6 @@
 (depends-on "pretty-mode")
 (depends-on "prodigy")
 (depends-on "projectile")
-(depends-on "projectile-rails")
 (depends-on "rainbow-delimiters")
 (depends-on "rspec-mode")
 (depends-on "ruby-tools")

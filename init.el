@@ -118,8 +118,6 @@
       :init (rvm-use-default)
       :config (setq rvm-verbose nil))
     (use-package ruby-tools)
-    (use-package projectile-rails
-      :init (add-hook 'projectile-mode-hook 'projectile-rails-on))
     (use-package rspec-mode
       :config
       (progn
