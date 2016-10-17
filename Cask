@@ -75,3 +75,4 @@
 (depends-on "ivy")
 (depends-on "counsel")
 (depends-on "swiper")
+(depends-on "scala-mode")

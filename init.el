@@ -391,6 +391,9 @@
    ("M-x" . counsel-M-x)
    ("C-x C-f" . counsel-find-file)))
 
+(use-package scala-mode
+  :interpreter ("scala" . scala-mode))
+
 
 ;;;; Bindings
 
