@@ -60,7 +60,7 @@
   :config (popwin-mode 1))
 
 (use-package projectile
-  :init (projectile-global-mode 1)
+  :init (projectile-mode 1)
   :config
   (progn
     (setq projectile-enable-caching t)
