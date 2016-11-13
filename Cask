@@ -76,3 +76,4 @@
 (depends-on "counsel")
 (depends-on "swiper")
 (depends-on "scala-mode")
+(depends-on "zencoding-mode")

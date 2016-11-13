@@ -307,6 +307,16 @@
                         (setq web-mode-style-padding 2)
                         (setq web-mode-script-padding 2)))))
 
+(use-package zencoding-mode
+  :init (add-hook 'web-mode-hook 'zencoding-mode)
+  :config
+  (progn
+    (setq zencoding-preview-default nil)
+    (setq zencoding-indentation 2)
+    (add-hook 'zencoding-mode-hook
+              (lambda ()
+                (define-key zencoding-mode-keymap (kbd "M-RET") 'zencoding-expand-line)))))
+
 (use-package prodigy
   :config
   (progn
