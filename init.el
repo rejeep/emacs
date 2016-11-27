@@ -404,6 +404,8 @@
 (use-package scala-mode
   :interpreter ("scala" . scala-mode))
 
+(use-package csv-mode)
+
 
 ;;;; Bindings
 

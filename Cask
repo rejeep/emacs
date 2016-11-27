@@ -11,6 +11,7 @@
 (depends-on "coffee-mode")
 (depends-on "color-theme")
 (depends-on "commander")
+(depends-on "csv-mode")
 (depends-on "dash")
 (depends-on "diff-hl")
 (depends-on "dracula-theme")
