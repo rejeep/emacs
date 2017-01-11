@@ -406,6 +406,9 @@
 
 (use-package csv-mode)
 
+(use-package idle-highlight
+  :init (idle-highlight-mode 1))
+
 
 ;;;; Bindings
 
