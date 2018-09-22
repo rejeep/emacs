@@ -58,6 +58,7 @@
 (depends-on "prodigy")
 (depends-on "projectile")
 (depends-on "rainbow-delimiters")
+(depends-on "rbenv")
 (depends-on "rspec-mode")
 (depends-on "ruby-tools")
 (depends-on "rvm")

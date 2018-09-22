@@ -120,6 +120,8 @@
     (use-package rvm
       :init (rvm-use-default)
       :config (setq rvm-verbose nil))
+    (use-package rbenv
+      :init (global-rbenv-mode))
     (use-package ruby-tools)
     (use-package rspec-mode
       :config
