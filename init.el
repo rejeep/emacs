@@ -409,7 +409,7 @@
 
 (use-package csv-mode)
 
-(use-package idle-highlight
+(use-package idle-highlight-mode
   :init (idle-highlight-mode 1))
 
 
