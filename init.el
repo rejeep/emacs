@@ -27,7 +27,7 @@
 (when (eq system-type 'darwin)
   (load-local "osx"))
 
-(load-theme 'dracula :no-confirm)
+(load-theme 'solarized-light :no-confirm)
 
 (add-hook 'emacs-startup-hook
           (lambda ()
