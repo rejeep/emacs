@@ -1,0 +1,7 @@
+#name: CSV.parse(...)
+#key: csv
+# --
+rows = CSV.parse(${1:csv}, headers: true, header_converters: :symbol$2)
+rows.map do |row|
+  row.to_h
+end
