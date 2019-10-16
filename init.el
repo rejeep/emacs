@@ -359,12 +359,6 @@
 
 (use-package overseer)
 
-(use-package smart-mode-line
-  :init
-  (progn
-    (setq sml/no-confirm-load-theme t)
-    (sml/setup)))
-
 (use-package visible-mark
   :init (global-visible-mark-mode 1))
 

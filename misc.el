@@ -82,3 +82,6 @@
 
 ;; Show column number in mode line
 (column-number-mode 1)
+
+;; Make cursor movement faster
+(setq auto-window-vscroll nil)
