@@ -412,6 +412,9 @@
 (use-package idle-highlight-mode
   :init (idle-highlight-mode 1))
 
+(use-package flyspell
+  :init (flyspell-mode +1))
+
 (use-package dockerfile-mode)
 
 
