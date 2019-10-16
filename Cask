@@ -81,3 +81,4 @@
 (depends-on "zencoding-mode")
 (depends-on "solarized-theme")
 (depends-on "ripgrep")
+(depends-on "dockerfile-mode")
