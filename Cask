@@ -80,3 +80,4 @@
 (depends-on "scala-mode")
 (depends-on "zencoding-mode")
 (depends-on "solarized-theme")
+(depends-on "ripgrep")
